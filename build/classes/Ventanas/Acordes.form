@@ -3,6 +3,9 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+      <Connection component="Form" name="iconImage" type="property"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -795,7 +798,7 @@
     <Component class="javax.swing.JComboBox" name="CmbFamilia">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="14">
+          <StringArray count="15">
             <StringItem index="0" value="Mayor"/>
             <StringItem index="1" value="Menor"/>
             <StringItem index="2" value="Quinta"/>
@@ -805,11 +808,12 @@
             <StringItem index="6" value="Disminuido"/>
             <StringItem index="7" value="S&#xe9;ptima"/>
             <StringItem index="8" value="Octava"/>
-            <StringItem index="9" value="Maj6"/>
-            <StringItem index="10" value="Maj7"/>
-            <StringItem index="11" value="Maj9"/>
-            <StringItem index="12" value="Maj11"/>
-            <StringItem index="13" value="Maj13"/>
+            <StringItem index="9" value="Novena"/>
+            <StringItem index="10" value="Maj6"/>
+            <StringItem index="11" value="Maj7"/>
+            <StringItem index="12" value="Maj9"/>
+            <StringItem index="13" value="Maj11"/>
+            <StringItem index="14" value="Maj13"/>
           </StringArray>
         </Property>
       </Properties>

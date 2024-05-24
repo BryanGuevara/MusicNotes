@@ -5,6 +5,8 @@
 package Ventanas;
 
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 
 /**
  *
@@ -22,6 +24,13 @@ public class Acordes extends javax.swing.JFrame {
         setResizable(false);
         setTitle(" Galeria de Acordes");
         this.setLocationRelativeTo(null);
+    }
+    
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(
+                "img/icono.png"));
+        return retValue;
     }
 
     /**
@@ -85,6 +94,7 @@ public class Acordes extends javax.swing.JFrame {
         LabelAcordeName = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
 
         DO1.setBackground(new java.awt.Color(255, 255, 255));
         DO1.setForeground(new java.awt.Color(0, 0, 0));
@@ -262,7 +272,7 @@ public class Acordes extends javax.swing.JFrame {
 
         CmbAcorde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI" }));
 
-        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor", "Quinta", "Sus2", "Sus4", "Aumentado", "Disminuido", "Séptima", "Octava", "Maj6", "Maj7", "Maj9", "Maj11", "Maj13" }));
+        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor", "Quinta", "Sus2", "Sus4", "Aumentado", "Disminuido", "Séptima", "Octava", "Novena", "Maj6", "Maj7", "Maj9", "Maj11", "Maj13" }));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("C = DO");
@@ -562,117 +572,106 @@ public class Acordes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        /*Quinta
-Sus2
-Sus4
-Aumentado
-Disminuido
-Séptima
-Octava
-Maj6
-Maj7
-Maj9
-Maj11
-Maj13*/
         int Acorde = CmbAcorde.getSelectedIndex();
         int Familia = CmbFamilia.getSelectedIndex();
+        Color ColorTecla = Color.BLUE;
 
         //Naturales
         if (Familia == 0) {
             if (Acorde == 0) {
 
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                MI1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
                 LabelAcorde.setText("C");
                 LabelAcordeName.setText("Do Mayor");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                FA1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
                 LabelAcorde.setText("C#");
                 LabelAcordeName.setText("Do Sostenido Mayor");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                FASos1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
                 LabelAcorde.setText("D");
                 LabelAcordeName.setText("RE Mayor");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
                 LabelAcorde.setText("D#");
                 LabelAcordeName.setText("RE Sostenido Mayor");
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
                 LabelAcorde.setText("E");
                 LabelAcordeName.setText("MI Mayor");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
                 LabelAcorde.setText("F");
                 LabelAcordeName.setText("FA Mayor");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
                 LabelAcorde.setText("F#");
                 LabelAcordeName.setText("FA Sostenido Mayor");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
                 LabelAcorde.setText("G");
                 LabelAcordeName.setText("SOL Mayor");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOLSos1.setBackground(Color.BLUE);
-                SI2.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                LabelAcorde.setText("G#m");
-                LabelAcordeName.setText("SOL Sostenido Menor");
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#");
+                LabelAcordeName.setText("SOL Sostenido Mayor");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
                 LabelAcorde.setText("A");
                 LabelAcordeName.setText("LA Mayor");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
                 LabelAcorde.setText("A#");
                 LabelAcordeName.setText("LA Sostenido Mayor");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("B");
                 LabelAcordeName.setText("SI Mayor");
             }
@@ -682,98 +681,98 @@ Maj13*/
         if (Familia == 1) {
             if (Acorde == 0) {
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                RESos1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
                 LabelAcorde.setText("Cm");
                 LabelAcordeName.setText("Do Menor");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                MI1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
                 LabelAcorde.setText("C#m");
                 LabelAcordeName.setText("Do Sostenido Menor");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                FA1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
                 LabelAcorde.setText("Dm");
                 LabelAcordeName.setText("RE Menor");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                FASos1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
                 LabelAcorde.setText("D#m");
                 LabelAcordeName.setText("RE Sostenido Menor");
 
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
                 LabelAcorde.setText("Em");
                 LabelAcordeName.setText("MI Menor");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
                 LabelAcorde.setText("Fm");
                 LabelAcordeName.setText("FA menor");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
                 LabelAcorde.setText("F#m");
                 LabelAcordeName.setText("FA Sostenido Menor");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
                 LabelAcorde.setText("Gm");
                 LabelAcordeName.setText("SOL Menor");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOLSos1.setBackground(Color.BLUE);
-                SI2.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
                 LabelAcorde.setText("G#m");
                 LabelAcordeName.setText("SOL Sostenido Menor");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
                 LabelAcorde.setText("Am");
                 LabelAcordeName.setText("LA Menor");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
                 LabelAcorde.setText("A#m");
                 LabelAcordeName.setText("LA Sostenido Menor");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Bm");
                 LabelAcordeName.setText("SI Menor");
             }
@@ -783,85 +782,85 @@ Maj13*/
         if (Familia == 2) {
             if (Acorde == 0) {
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
                 LabelAcorde.setText("C5");
                 LabelAcordeName.setText("Do Quinta");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
                 LabelAcorde.setText("C#5");
                 LabelAcordeName.setText("Do Sostenido Quinta");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
                 LabelAcorde.setText("D5");
                 LabelAcordeName.setText("RE Quinta");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
                 LabelAcorde.setText("D#5");
                 LabelAcordeName.setText("RE Sostenido Quinta");
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
                 LabelAcorde.setText("E5");
                 LabelAcordeName.setText("MI Quinta");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
                 LabelAcorde.setText("F5");
                 LabelAcordeName.setText("FA Quinta");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
                 LabelAcorde.setText("F#5");
                 LabelAcordeName.setText("FA Sostenido Quinta");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
                 LabelAcorde.setText("G5");
                 LabelAcordeName.setText("SOL Quinta");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
+                SOLSos1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
                 LabelAcorde.setText("G#5");
                 LabelAcordeName.setText("SOL Sostenido Quinta");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
                 LabelAcorde.setText("A5");
                 LabelAcordeName.setText("LA Quinta");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
                 LabelAcorde.setText("A#5");
                 LabelAcordeName.setText("LA Sostenido Quinta");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("B5");
                 LabelAcordeName.setText("SI Quinta");
             }
@@ -871,459 +870,1331 @@ Maj13*/
         if (Familia == 3) {
             if (Acorde == 0) {
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                RE1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                RE1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
                 LabelAcorde.setText("Csus2");
                 LabelAcordeName.setText("Do Suspendido 2");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                RESos1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                RESos1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
                 LabelAcorde.setText("C#sus2");
                 LabelAcordeName.setText("Do Sostenido Suspendido 2");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                MI1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
                 LabelAcorde.setText("Dsus2");
                 LabelAcordeName.setText("RE Suspendido 2");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                FA1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
                 LabelAcorde.setText("D#sus2");
-                LabelAcordeName.setText("RE Sostenido Suspendido");
+                LabelAcordeName.setText("RE Sostenido Suspendido 2");
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                FASos1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
                 LabelAcorde.setText("Esus2");
                 LabelAcordeName.setText("MI Suspendido 2");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
                 LabelAcorde.setText("Fsus2");
                 LabelAcordeName.setText("FA Suspendido 2");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
                 LabelAcorde.setText("F#sus2");
                 LabelAcordeName.setText("FA Sostenido Suspendido 2");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
                 LabelAcorde.setText("Gsus2");
                 LabelAcordeName.setText("SOL Suspendido 2");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOLSos1.setBackground(Color.BLUE);
-                LASos2.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
+                SOLSos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
                 LabelAcorde.setText("G#Sus2");
                 LabelAcordeName.setText("SOL Sostenido Suspendido 2");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                SI2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
                 LabelAcorde.setText("Asus2");
                 LabelAcordeName.setText("LA Suspendido 2");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
                 LabelAcorde.setText("A#sus2");
                 LabelAcordeName.setText("LA Sostenido Suspendido 2");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Bsus2");
                 LabelAcordeName.setText("SI Suspendido 2");
             }
         }
 
-        //Maj7
+        //Sus4
+        if (Familia == 4) {
+            if (Acorde == 0) {
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LabelAcorde.setText("Csus4");
+                LabelAcordeName.setText("Do Suspendido 4");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                LabelAcorde.setText("C#sus4");
+                LabelAcordeName.setText("Do Sostenido Suspendido 4");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                LabelAcorde.setText("Dsus4");
+                LabelAcordeName.setText("RE Suspendido 4");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                LabelAcorde.setText("D#sus4");
+                LabelAcordeName.setText("RE Sostenido Suspendido 4");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                LabelAcorde.setText("Esus4");
+                LabelAcordeName.setText("MI Suspendido 4");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("Fsus4");
+                LabelAcordeName.setText("FA Suspendido 4");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#sus4");
+                LabelAcordeName.setText("FA Sostenido Suspendido 4");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("Gsus4");
+                LabelAcordeName.setText("SOL Suspendido 4");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#Sus4");
+                LabelAcordeName.setText("SOL Sostenido Suspendido 4");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("Asus4");
+                LabelAcordeName.setText("LA Suspendido 4");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("A#sus4");
+                LabelAcordeName.setText("LA Sostenido Suspendido 4");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Bsus4");
+                LabelAcordeName.setText("SI Suspendido 4");
+            }
+        }
+
+        //aumentado
+        if (Familia == 5) {
+            if (Acorde == 0) {
+
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                LabelAcorde.setText("Caug");
+                LabelAcordeName.setText("Do Aumentado");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                LabelAcorde.setText("C#aug");
+                LabelAcordeName.setText("Do Sostenido Aumentado");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                LabelAcorde.setText("Daug");
+                LabelAcordeName.setText("RE Aumentado");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                LabelAcorde.setText("D#aug");
+                LabelAcordeName.setText("RE Sostenido Aumentado");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("Eaug");
+                LabelAcordeName.setText("MI Aumentado");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Faug");
+                LabelAcordeName.setText("FA Aumentado");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#aug");
+                LabelAcordeName.setText("FA Sostenido Aumentado");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Gaug");
+                LabelAcordeName.setText("SOL Aumentado");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#aug");
+                LabelAcordeName.setText("SOL Sostenido Aumentado");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("Aaug");
+                LabelAcordeName.setText("LA Aumentado");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("A#aug");
+                LabelAcordeName.setText("LA Sostenido Aumentado");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LabelAcorde.setText("Baug");
+                LabelAcordeName.setText("SI Aumentado");
+            }
+        }
+
+        //disminuido
+        if (Familia == 6) {
+            if (Acorde == 0) {
+
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                RESos1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LabelAcorde.setText("Cdism");
+                LabelAcordeName.setText("Do Disminuido");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LabelAcorde.setText("C#dism");
+                LabelAcordeName.setText("Do Sostenido Disminuido");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                LabelAcorde.setText("Ddism");
+                LabelAcordeName.setText("RE Disminuido");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                LabelAcorde.setText("D#dism");
+                LabelAcordeName.setText("RE Sostenido Mayor");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("Edism");
+                LabelAcordeName.setText("MI Disminuido");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
+                LabelAcorde.setText("Fdism");
+                LabelAcordeName.setText("FA Disminuido");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#dism");
+                LabelAcordeName.setText("FA Sostenido Disminuido");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Gdism");
+                LabelAcordeName.setText("SOL Disminuido");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#dism");
+                LabelAcordeName.setText("SOL Sostenido Disminuido");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Adism");
+                LabelAcordeName.setText("LA Disminuido");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("A#dism");
+                LabelAcordeName.setText("LA Sostenido Disminuido");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("Bdism");
+                LabelAcordeName.setText("SI Disminuido");
+            }
+        }
+
+        //Septima
+        if (Familia == 7) {
+            if (Acorde == 0) {
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                LabelAcorde.setText("C7");
+                LabelAcordeName.setText("Do septima");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                LabelAcorde.setText("C#7");
+                LabelAcordeName.setText("Do Sostenido septima");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("D7");
+                LabelAcordeName.setText("RE septima");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("D#7");
+                LabelAcordeName.setText("RE Sostenido septima");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("E7");
+                LabelAcordeName.setText("MI septima");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("F7");
+                LabelAcordeName.setText("FA septima");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#7");
+                LabelAcordeName.setText("FA Sostenido septima");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("G7");
+                LabelAcordeName.setText("SOL septima");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#7");
+                LabelAcordeName.setText("SOL Sostenido septima");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LabelAcorde.setText("A7");
+                LabelAcordeName.setText("LA septima");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("A#7");
+                LabelAcordeName.setText("LA Sostenido septima");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                LabelAcorde.setText("B7");
+                LabelAcordeName.setText("SI septima");
+            }
+        }
+
+        //Octava
+        if (Familia == 8) {
+            if (Acorde == 0) {
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("C");
+                LabelAcordeName.setText("Do Octava");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("C#");
+                LabelAcordeName.setText("Do Sostenido Octava");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("D");
+                LabelAcordeName.setText("RE Octava");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("D#");
+                LabelAcordeName.setText("RE Sostenido Octava");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("E");
+                LabelAcordeName.setText("MI Octava");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("F");
+                LabelAcordeName.setText("FA Octava");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#");
+                LabelAcordeName.setText("FA Sostenido Octava");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LabelAcorde.setText("G");
+                LabelAcordeName.setText("SOL Octava");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#m");
+                LabelAcordeName.setText("SOL Sostenido Octava");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                LabelAcorde.setText("A");
+                LabelAcordeName.setText("LA Octava");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("A#");
+                LabelAcordeName.setText("LA Sostenido Octava");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
+                LabelAcorde.setText("B");
+                LabelAcordeName.setText("SI Octava");
+            }
+        }
+
+        //novena
+        if (Familia == 9) {
+            if (Acorde == 0) {
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("C9");
+                LabelAcordeName.setText("Do novena");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("C#9");
+                LabelAcordeName.setText("Do Sostenido novena");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("D9");
+                LabelAcordeName.setText("RE novena");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("D#9");
+                LabelAcordeName.setText("RE Sostenido novena");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("E9");
+                LabelAcordeName.setText("MI novena");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LabelAcorde.setText("F9");
+                LabelAcordeName.setText("FA novena");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#9");
+                LabelAcordeName.setText("FA Sostenido novena");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                LabelAcorde.setText("G9");
+                LabelAcordeName.setText("SOL novena");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#9");
+                LabelAcordeName.setText("SOL Sostenido novena");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
+                LabelAcorde.setText("A9");
+                LabelAcordeName.setText("LA novena");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                DO3.setBackground(ColorTecla);
+                LabelAcorde.setText("A#9");
+                LabelAcordeName.setText("LA Sostenido novena");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                DOSos3.setBackground(ColorTecla);
+                LabelAcorde.setText("B9");
+                LabelAcordeName.setText("SI novena");
+            }
+        }
+
+        //Maj6
         if (Familia == 10) {
             if (Acorde == 0) {
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                MI1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                LabelAcorde.setText("Cmaj6");
+                LabelAcordeName.setText("Do con sexta añadida");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                LabelAcorde.setText("C#maj6");
+                LabelAcordeName.setText("Do Sostenido con sexta añadida");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                LabelAcorde.setText("Dmaj6");
+                LabelAcordeName.setText("RE con sexta añadida");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LabelAcorde.setText("D#maj6");
+                LabelAcordeName.setText("RE Sostenido con sexta añadida");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Emaj6");
+                LabelAcordeName.setText("MI con sexta añadida");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("Fmaj6");
+                LabelAcordeName.setText("FA con sexta añadida");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#maj6");
+                LabelAcordeName.setText("FA Sostenido con sexta añadida");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("Gmaj7");
+                LabelAcordeName.setText("SOL con sexta añadida");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#maj6");
+                LabelAcordeName.setText("SOL Sostenido con sexta añadida");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Amaj6");
+                LabelAcordeName.setText("LA con septima añadida");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LabelAcorde.setText("A#maj6");
+                LabelAcordeName.setText("LA Sostenido con sexta añadida");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Bmaj6");
+                LabelAcordeName.setText("SI con sexta añadida");
+            }
+        }
+
+        //Maj7
+        if (Familia == 11) {
+            if (Acorde == 0) {
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
                 LabelAcorde.setText("Cmaj7");
                 LabelAcordeName.setText("Do con septima añadida");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                FA1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
                 LabelAcorde.setText("C#maj7");
                 LabelAcordeName.setText("Do Sostenido con septima añadida");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                FASos1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Dmaj7");
                 LabelAcordeName.setText("RE con septima añadida");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
                 LabelAcorde.setText("D#maj7");
                 LabelAcordeName.setText("RE Sostenido con septima añadida");
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Emaj7");
                 LabelAcordeName.setText("MI con septima añadida");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
                 LabelAcorde.setText("Fmaj7");
                 LabelAcordeName.setText("FA con septima añadida");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
                 LabelAcorde.setText("F#maj7");
                 LabelAcordeName.setText("FA Sostenido con septima añadida");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Gmaj7");
                 LabelAcordeName.setText("SOL con septima añadida");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                SOL2.setBackground(Color.BLUE);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
                 LabelAcorde.setText("G#maj7");
                 LabelAcordeName.setText("SOL Sostenido con septima añadida");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
-                SOLSos2.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Amaj7");
                 LabelAcordeName.setText("LA con septima añadida");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
-                LA2.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
                 LabelAcorde.setText("A#maj7");
                 LabelAcordeName.setText("LA Sostenido con septima añadida");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
-                LASos2.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("Bmaj7");
                 LabelAcordeName.setText("SI con septima añadida");
             }
         }
 
-        
-        //Maj11
+        //maj9
         if (Familia == 12) {
             if (Acorde == 0) {
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                MI1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                LabelAcorde.setText("Cmaj9");
+                LabelAcordeName.setText("Do con novena añadida");
+            }
+            if (Acorde == 1) {
+                Limpiar();
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LabelAcorde.setText("C#maj9");
+                LabelAcordeName.setText("Do Sostenido con novena añadida");
+            }
+            if (Acorde == 2) {
+                Limpiar();
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LabelAcorde.setText("Dmaj9");
+                LabelAcordeName.setText("RE con novena añadida");
+            }
+            if (Acorde == 3) {
+                Limpiar();
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LabelAcorde.setText("D#maj9");
+                LabelAcordeName.setText("RE Sostenido con novena añadida");
+            }
+            if (Acorde == 4) {
+                Limpiar();
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("Emaj9");
+                LabelAcordeName.setText("MI con novena añadida");
+            }
+            if (Acorde == 5) {
+                Limpiar();
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LabelAcorde.setText("Fmaj9");
+                LabelAcordeName.setText("FA con novena añadida");
+            }
+            if (Acorde == 6) {
+                Limpiar();
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                LabelAcorde.setText("F#maj9");
+                LabelAcordeName.setText("FA Sostenido con novena añadida");
+            }
+            if (Acorde == 7) {
+                Limpiar();
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                LabelAcorde.setText("Gmaj9");
+                LabelAcordeName.setText("SOLcon  novena añadida");
+            }
+            if (Acorde == 8) {
+                Limpiar();
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
+                LabelAcorde.setText("G#maj9");
+                LabelAcordeName.setText("SOL Sostenido con novena añadida");
+            }
+            if (Acorde == 9) {
+                Limpiar();
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
+                LabelAcorde.setText("Amaj9");
+                LabelAcordeName.setText("LA co novena añadida");
+            }
+            if (Acorde == 10) {
+                Limpiar();
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                DO3.setBackground(ColorTecla);
+                LabelAcorde.setText("A#maj9");
+                LabelAcordeName.setText("LA Sostenido con novena añadida");
+            }
+            if (Acorde == 11) {
+                Limpiar();
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
+                DOSos3.setBackground(ColorTecla);
+                LabelAcorde.setText("Bmaj9");
+                LabelAcordeName.setText("SI con novena añadida");
+            }
+        }
+
+        //Maj11
+        if (Familia == 13) {
+            if (Acorde == 0) {
+                Limpiar();
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
                 LabelAcorde.setText("Cmaj11");
                 LabelAcordeName.setText("Do con onceaba añadida");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                FA1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("C#maj11");
                 LabelAcordeName.setText("Do Sostenido con onceaba añadida");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                FASos1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                SOL2.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
                 LabelAcorde.setText("Dmaj11");
                 LabelAcordeName.setText("RE con onceaba añadida");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                SOLSos3.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                SOLSos3.setBackground(ColorTecla);
                 LabelAcorde.setText("D#maj11");
                 LabelAcordeName.setText("RE Sostenido con onceaba añadida");
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                LA3.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                LA3.setBackground(ColorTecla);
                 LabelAcorde.setText("Emaj11");
                 LabelAcordeName.setText("MI con onceaba añadida");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
-                LASos3.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                LASos3.setBackground(ColorTecla);
                 LabelAcorde.setText("Fmaj11");
                 LabelAcordeName.setText("FA con onceaba añadida");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
-                SI2.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
                 LabelAcorde.setText("F#maj11");
                 LabelAcordeName.setText("FA Sostenido con onceba añadida");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
-                DO3.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                DO3.setBackground(ColorTecla);
                 LabelAcorde.setText("Gmaj11");
                 LabelAcordeName.setText("SOL con onceaba añadida");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                SOL2.setBackground(Color.BLUE);
-                DOSos3.setBackground(Color.BLUE);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                DOSos3.setBackground(ColorTecla);
                 LabelAcorde.setText("G#maj11");
                 LabelAcordeName.setText("SOL Sostenido con onceaba añadida");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
-                SOLSos2.setBackground(Color.BLUE);
-                RE3.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                RE3.setBackground(ColorTecla);
                 LabelAcorde.setText("Amaj11");
                 LabelAcordeName.setText("LA con onceaba añadida");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
-                LA2.setBackground(Color.BLUE);
-                RESos3.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                RESos3.setBackground(ColorTecla);
                 LabelAcorde.setText("A#maj11");
                 LabelAcordeName.setText("LA Sostenido con onceaba añadida");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
-                LASos2.setBackground(Color.BLUE);
-                MI3.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
+                MI3.setBackground(ColorTecla);
                 LabelAcorde.setText("Bmaj11");
                 LabelAcordeName.setText("SI con onceaba añadida");
             }
         }
 
-        
         //Maj13
-        if (Familia == 13) {
+        if (Familia == 14) {
             if (Acorde == 0) {
                 Limpiar();
-                DO1.setBackground(Color.BLUE);
-                MI1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                LA2.setBackground(Color.BLUE);
+                DO1.setBackground(ColorTecla);
+                MI1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
                 LabelAcorde.setText("Cmaj13");
                 LabelAcordeName.setText("Do con treceaba añadida");
             }
             if (Acorde == 1) {
                 Limpiar();
-                DOSos1.setBackground(Color.BLUE);
-                FA1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                LASos2.setBackground(Color.BLUE);
+                DOSos1.setBackground(ColorTecla);
+                FA1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
                 LabelAcorde.setText("C#maj13");
                 LabelAcordeName.setText("Do Sostenido con treceaba añadida");
             }
             if (Acorde == 2) {
                 Limpiar();
-                RE1.setBackground(Color.BLUE);
-                FASos1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                SI2.setBackground(Color.BLUE);
+                RE1.setBackground(ColorTecla);
+                FASos1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                SI2.setBackground(ColorTecla);
                 LabelAcorde.setText("Dmaj13");
                 LabelAcordeName.setText("RE con treceaba añadida");
             }
             if (Acorde == 3) {
                 Limpiar();
-                RESos1.setBackground(Color.BLUE);
-                SOL1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                DO3.setBackground(Color.BLUE);
+                RESos1.setBackground(ColorTecla);
+                SOL1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                DO3.setBackground(ColorTecla);
                 LabelAcorde.setText("D#maj13");
                 LabelAcordeName.setText("RE Sostenido con treceaba añadida");
             }
             if (Acorde == 4) {
                 Limpiar();
-                MI1.setBackground(Color.BLUE);
-                SOLSos1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                DOSos3.setBackground(Color.BLUE);
+                MI1.setBackground(ColorTecla);
+                SOLSos1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                DOSos3.setBackground(ColorTecla);
                 LabelAcorde.setText("Emaj13");
                 LabelAcordeName.setText("MI con treceaba añadida");
             }
             if (Acorde == 5) {
                 Limpiar();
-                FA1.setBackground(Color.BLUE);
-                LA1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
-                RE3.setBackground(Color.BLUE);
+                FA1.setBackground(ColorTecla);
+                LA1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                RE3.setBackground(ColorTecla);
                 LabelAcorde.setText("Fmaj13");
                 LabelAcordeName.setText("FA con treceaba añadida");
             }
             if (Acorde == 6) {
                 Limpiar();
-                FASos1.setBackground(Color.BLUE);
-                LASos1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
-                RESos3.setBackground(Color.BLUE);
+                FASos1.setBackground(ColorTecla);
+                LASos1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                RESos3.setBackground(ColorTecla);
                 LabelAcorde.setText("F#maj13");
                 LabelAcordeName.setText("FA Sostenido con treceaba añadida");
             }
             if (Acorde == 7) {
                 Limpiar();
-                SOL1.setBackground(Color.BLUE);
-                SI1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
-                MI3.setBackground(Color.BLUE);
+                SOL1.setBackground(ColorTecla);
+                SI1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                MI3.setBackground(ColorTecla);
                 LabelAcorde.setText("Gmaj13");
                 LabelAcordeName.setText("SOL con treceaba añadida");
             }
             if (Acorde == 8) {
                 Limpiar();
-                SOLSos1.setBackground(Color.BLUE);
-                DO2.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                SOL2.setBackground(Color.BLUE);
-                FA3.setBackground(Color.BLUE);
+                SOLSos1.setBackground(ColorTecla);
+                DO2.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                SOL2.setBackground(ColorTecla);
+                FA3.setBackground(ColorTecla);
                 LabelAcorde.setText("G#maj13");
                 LabelAcordeName.setText("SOL Sostenido con treceaba añadida");
             }
             if (Acorde == 9) {
                 Limpiar();
-                LA1.setBackground(Color.BLUE);
-                DOSos2.setBackground(Color.BLUE);
-                MI2.setBackground(Color.BLUE);
-                SOLSos2.setBackground(Color.BLUE);
-                FASos3.setBackground(Color.BLUE);
+                LA1.setBackground(ColorTecla);
+                DOSos2.setBackground(ColorTecla);
+                MI2.setBackground(ColorTecla);
+                SOLSos2.setBackground(ColorTecla);
+                FASos3.setBackground(ColorTecla);
                 LabelAcorde.setText("Amaj13");
                 LabelAcordeName.setText("LA con treceaba añadida");
             }
             if (Acorde == 10) {
                 Limpiar();
-                LASos1.setBackground(Color.BLUE);
-                RE2.setBackground(Color.BLUE);
-                FA2.setBackground(Color.BLUE);
-                LA2.setBackground(Color.BLUE);
-                SOL3.setBackground(Color.BLUE);
+                LASos1.setBackground(ColorTecla);
+                RE2.setBackground(ColorTecla);
+                FA2.setBackground(ColorTecla);
+                LA2.setBackground(ColorTecla);
+                SOL3.setBackground(ColorTecla);
                 LabelAcorde.setText("A#maj13");
                 LabelAcordeName.setText("LA Sostenido con treceaba añadida");
             }
             if (Acorde == 11) {
                 Limpiar();
-                SI1.setBackground(Color.BLUE);
-                RESos2.setBackground(Color.BLUE);
-                FASos2.setBackground(Color.BLUE);
-                LASos2.setBackground(Color.BLUE);
-                SOLSos3.setBackground(Color.BLUE);
+                SI1.setBackground(ColorTecla);
+                RESos2.setBackground(ColorTecla);
+                FASos2.setBackground(ColorTecla);
+                LASos2.setBackground(ColorTecla);
+                SOLSos3.setBackground(ColorTecla);
                 LabelAcorde.setText("Bmaj13");
                 LabelAcordeName.setText("SI con treceaba añadida");
             }

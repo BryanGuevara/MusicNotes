@@ -6,6 +6,8 @@ package Ventanas;
 
 import Clases.Escala;
 import Clases.Nota;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ItemEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,6 +55,12 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         circulo.addColumn("Acompañante");
         circulo.addColumn("Complemento");
     }
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(
+                "img/icono.png"));
+        return retValue;
+    }
 
     public static String[] EscalaGenerada(List<Nota> notas, String notaInicial, List<Integer> progresion) {
         String[] escala = new String[progresion.size() + 1];
@@ -81,6 +89,7 @@ public class GaleriaEscalas extends javax.swing.JFrame {
 
         return escala;
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -104,6 +113,7 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         LabelSecuencia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setIconImage(getIconImage());
 
         TableNotas.setBackground(new java.awt.Color(51, 51, 51));
         TableNotas.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -283,7 +293,6 @@ public class GaleriaEscalas extends javax.swing.JFrame {
                 escala.removeRow(0);
             }
 
-            // Limpiar la tabla del círculo de quintas antes de agregar nuevas filas
             while (circulo.getRowCount() > 0) {
                 circulo.removeRow(0);
             }
