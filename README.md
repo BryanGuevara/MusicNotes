@@ -1,15 +1,59 @@
-# MusicNotes
-**MusicNotes** es una aplicación diseñada para ayudar a **músicos novatos** a adentrarse en el mundo de la teoría musical, proporcionando herramientas para formar sus primeros acordes y escalas musicales.
+<div align="center">
+  <img src="src/img/Icono.png" alt="MusicNotes Logo">
+  <h1>MusicNotes</h1>
+</div>
+MusicNotes es una aplicación diseñada para ayudar a músicos novatos y avanzados a explorar el mundo de la teoría musical y mejorar sus habilidades. Desde formar los primeros acordes hasta explorar escalas complejas, MusicNotes ofrece herramientas para todos los niveles de experiencia.
 
-## Funciones
-### Generador de Escalas
-El generador de escalas de MusicNotes permite a los usuarios explorar una variedad de escalas musicales, tanto mayores como menores. Simplemente selecciona la escala deseada y la aplicación mostrará las notas que la componen, así como su disposición en el diapasón de un instrumento.
+---
+# Funciones
 
 ### Escalas Mayores y Menores
-MusicNotes incluye una amplia gama de escalas mayores y menores para que los usuarios las exploren y practiquen. Desde las clásicas escalas mayores hasta las escalas menores melódicas y armónicas, hay opciones para todos los gustos y estilos musicales.
+Descubre una amplia gama de escalas mayores y menores para practicar y perfeccionar. Desde las tradicionales hasta las melódicas y armónicas, hay opciones para todos los gustos y estilos musicales.
 
+**Notas Disponibles en el Piano:**
+| N° | Notas |
+|----|-------|
+| 1  | Do    |
+| 2  | Do#   |
+| 3  | Re    |
+| 4  | Re#   |
+| 5  | Mi    |
+| 6  | Fa    |
+| 7  | Fa#   |
+| 8  | Sol   |
+| 9  | Sol#  |
+| 10 | La    |
+| 11 | La#   |
+| 12 | Si    |
+
+
+---
 ### Círculos Básicos
-MusicNotes incluye una gama de círculos básicos para que los usuarios los exploren y practiquen. Estos círculos básicos proporcionan una base sólida para entender la relación entre los acordes y las escalas, lo que es fundamental para cualquier músico en desarrollo.
+Comprende la relación entre los acordes y las escalas con los círculos básicos de MusicNotes. Estos círculos proporcionan una base sólida para cualquier músico en desarrollo.
 
+---
 ### Librería de Acordes
-La librería de acordes de MusicNotes ofrece una extensa colección de acordes para que los usuarios los aprendan y practiquen. Desde acordes básicos como el acorde de Do mayor hasta acordes más avanzados como el acorde disminuido de séptima, los usuarios encontrarán todo lo que necesitan para comenzar a tocar sus canciones favoritas.
+Explora una extensa colección de acordes en la librería de MusicNotes. Desde los básicos hasta los más avanzados, encontrarás todo lo que necesitas para tocar tus canciones favoritas.
+
+**Familias de Acordes Disponibles:**
+
+| N° | Familia |
+|----|---------|
+| 1  | Mayor   |
+| 2  | Menor   |
+| 3  | Quinta  |
+| 4  | Sus2    |
+| 5  | Sus4    |
+| 6  | Aumentado    |
+| 7  | Disminuido   |
+| 8  | Séptima  |
+| 9  | Octava   |
+| 10 | Novena   |
+| 11 | Maj6     |
+| 12 | Maj7     |
+| 13 | Maj9     |
+| 14 | Maj11    |
+| 15 | Maj13    |
+
+---
+Con MusicNotes, ¡nunca ha sido tan fácil explorar y aprender música!

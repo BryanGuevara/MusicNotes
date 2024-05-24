@@ -7,6 +7,7 @@ package Ventanas;
 import Clases.Nota;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.net.URL;
 
 /**
  *
@@ -39,12 +40,17 @@ public class Inicio extends javax.swing.JFrame {
         
     }
     
-    @Override
-    public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(
-                "img/icono.png"));
+@Override
+public Image getIconImage() {
+    URL resourceUrl = ClassLoader.getSystemResource("img/icono.png");
+    if (resourceUrl != null) {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(resourceUrl);
         return retValue;
+    } else {
+        System.err.println("No se pudo encontrar el recurso 'icono.png'");
+        return null;
     }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

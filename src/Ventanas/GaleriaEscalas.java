@@ -9,6 +9,7 @@ import Clases.Nota;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ItemEvent;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -55,13 +56,18 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         circulo.addColumn("Acompañante");
         circulo.addColumn("Complemento");
     }
-    @Override
-    public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(
-                "img/icono.png"));
+    
+@Override
+public Image getIconImage() {
+    URL resourceUrl = ClassLoader.getSystemResource("img/icono.png");
+    if (resourceUrl != null) {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(resourceUrl);
         return retValue;
+    } else {
+        System.err.println("No se pudo encontrar el recurso 'icono.png'");
+        return null;
     }
-
+}
     public static String[] EscalaGenerada(List<Nota> notas, String notaInicial, List<Integer> progresion) {
         String[] escala = new String[progresion.size() + 1];
 
