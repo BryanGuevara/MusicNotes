@@ -279,10 +279,10 @@ public Image getIconImage() {
         List<Integer> progresion = null;
         String tipoEscala = "";
 
-        if (escalaindex == 0) { // Escala Mayor
+        if (escalaindex == 0) { 
             progresion = Arrays.asList(2, 2, 1, 2, 2, 2, 1);
             tipoEscala = "Mayor";
-        } else if (escalaindex == 1) { // Escala Menor
+        } else if (escalaindex == 1) { 
             progresion = Arrays.asList(2, 1, 2, 2, 1, 2, 2);
             tipoEscala = "Menor";
         }
@@ -292,7 +292,6 @@ public Image getIconImage() {
             String notaInicial = notas[notaIndex].getNombre();
             String[] escalaGenerada = escalaGenerada(notasList, notaInicial, progresion);
 
-            // Limpiar la tabla antes de agregar nuevas filas
             while (escala.getRowCount() > 0) {
                 escala.removeRow(0);
             }
@@ -311,119 +310,119 @@ public Image getIconImage() {
         if (notaIndex == 0) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"DO", "FA", "SOL", "REm / LAm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"DOm", "FAm", "SOL", "REm / LAm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 1) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"DO#", "FA#", "SOL#", "RE#m / LA#m"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"DO#m", "FA#m", "SOL#", "RE#m / LA#m"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 2) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"RE", "SOL", "LA", "MIm / SIm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"REm", "SOLm", "LA", "MIm / SIm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 3) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"RE#", "SOL#", "LA#", "FAm / DOm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"RE#m", "SOL#m", "LA#", "FAm / DOm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 4) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"MI", "LA", "SI", "FA#m / REm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"MIm", "LAm", "SI", "FA#m / DO#m"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 5) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"FA", "LA#", "DO", "SOLm / REm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"FAm", "LA#m", "DO", "SOLm / REm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 6) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"FA#", "SI", "DO#", "SOL#m / RE#m"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"FA#m", "SIm", "DO#", "SOL#m / RE#m"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 7) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"SOL", "DO", "RE", "LAm /  MIm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"SOL", "DO", "RE", "LAm /  MIm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 8) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"SOL#", "DO#", "RE#", "LA#m / FAm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"SOL#m", "DO#m", "RE#", "LA#m / FAm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 9) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"LA", "RE", "MI", "SIm / FA#m"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"LAm", "REm", "MI", "SIm / FA#m"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
 
         if (notaIndex == 10) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"LA#", "RE#", "FA", "DOm / SOLm"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"LA#m", "RE#m", "FA", "DOm / SOLm"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
         if (notaIndex == 11) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"SI", "MI", "FA#", "DO#m / SOL#m"});
-                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono- Tono - Tono - SemiTono");
+                LabelSecuencia.setText("Tono - Tono - SemiTono - Tono - Tono - Tono - SemiTono");
             } else {
                 circulo.addRow(new Object[]{"SIm", "MIm", "FA#", "DO#m / SOL#m"});
-                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono- SemiTono - Tono - Tono");
+                LabelSecuencia.setText("Tono - SemiTono - Tono - Tono - SemiTono - Tono - Tono");
             }
         }
     }

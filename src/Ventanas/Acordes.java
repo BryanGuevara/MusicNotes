@@ -125,7 +125,7 @@ public Image getIconImage() {
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("C=DO   D=RE   E=MI   F=FA   G=SOL   A=LA   B=SI   #=SOSTENIDO");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 530, 29));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 530, 29));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -427,7 +427,7 @@ public Image getIconImage() {
 
         jTextField10.setEditable(false);
         jTextField10.setBackground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 530, 30));
+        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 530, 30));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
 
         pack();
