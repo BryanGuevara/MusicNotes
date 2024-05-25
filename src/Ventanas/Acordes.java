@@ -8,6 +8,8 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -21,10 +23,17 @@ public class Acordes extends javax.swing.JFrame {
     public Acordes() {
         initComponents();
 
-        setSize(750, 500);
+        setSize(730, 535);
         setResizable(false);
         setTitle(" Galeria de Acordes");
         this.setLocationRelativeTo(null);
+         
+        ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPiano.jpg");
+        Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
+                LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
+
+        LabelWallpaper.setIcon(icon);
+
     }
     
 @Override
@@ -47,537 +56,386 @@ public Image getIconImage() {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        DO1 = new javax.swing.JLabel();
-        RE1 = new javax.swing.JLabel();
-        MI1 = new javax.swing.JLabel();
-        LA1 = new javax.swing.JLabel();
-        SOL1 = new javax.swing.JLabel();
-        FA1 = new javax.swing.JLabel();
-        SI1 = new javax.swing.JLabel();
-        SI2 = new javax.swing.JLabel();
-        LA2 = new javax.swing.JLabel();
-        SOL2 = new javax.swing.JLabel();
-        FA2 = new javax.swing.JLabel();
-        MI2 = new javax.swing.JLabel();
-        RE2 = new javax.swing.JLabel();
-        DO2 = new javax.swing.JLabel();
-        DO3 = new javax.swing.JLabel();
-        RE3 = new javax.swing.JLabel();
-        MI3 = new javax.swing.JLabel();
-        LASos1 = new javax.swing.JLabel();
-        SOLSos1 = new javax.swing.JLabel();
-        FASos1 = new javax.swing.JLabel();
-        RESos1 = new javax.swing.JLabel();
-        DOSos1 = new javax.swing.JLabel();
-        LASos2 = new javax.swing.JLabel();
-        DOSos2 = new javax.swing.JLabel();
-        FASos2 = new javax.swing.JLabel();
-        SOLSos2 = new javax.swing.JLabel();
-        RESos2 = new javax.swing.JLabel();
-        RESos3 = new javax.swing.JLabel();
-        DOSos3 = new javax.swing.JLabel();
         CmbAcorde = new javax.swing.JComboBox<>();
         CmbFamilia = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        SI3 = new javax.swing.JLabel();
-        FA3 = new javax.swing.JLabel();
-        SOL3 = new javax.swing.JLabel();
-        LA3 = new javax.swing.JLabel();
-        LASos3 = new javax.swing.JLabel();
-        SOLSos3 = new javax.swing.JLabel();
-        FASos3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         LabelAcorde = new javax.swing.JLabel();
         LabelAcordeName = new javax.swing.JLabel();
+        DOSos3 = new javax.swing.JButton();
+        RESos3 = new javax.swing.JButton();
+        FASos3 = new javax.swing.JButton();
+        SOLSos3 = new javax.swing.JButton();
+        LASos3 = new javax.swing.JButton();
+        DO3 = new javax.swing.JButton();
+        RE3 = new javax.swing.JButton();
+        MI3 = new javax.swing.JButton();
+        FA3 = new javax.swing.JButton();
+        SOL3 = new javax.swing.JButton();
+        LA3 = new javax.swing.JButton();
+        SI3 = new javax.swing.JButton();
+        DOSos2 = new javax.swing.JButton();
+        RESos2 = new javax.swing.JButton();
+        FASos2 = new javax.swing.JButton();
+        SOLSos2 = new javax.swing.JButton();
+        LASos2 = new javax.swing.JButton();
+        DO2 = new javax.swing.JButton();
+        RE2 = new javax.swing.JButton();
+        MI2 = new javax.swing.JButton();
+        FA2 = new javax.swing.JButton();
+        SOL2 = new javax.swing.JButton();
+        LA2 = new javax.swing.JButton();
+        SI2 = new javax.swing.JButton();
+        DOSos1 = new javax.swing.JButton();
+        RESos1 = new javax.swing.JButton();
+        FASos1 = new javax.swing.JButton();
+        LASos1 = new javax.swing.JButton();
+        SOLSos1 = new javax.swing.JButton();
+        MI1 = new javax.swing.JButton();
+        FA1 = new javax.swing.JButton();
+        RE1 = new javax.swing.JButton();
+        DO1 = new javax.swing.JButton();
+        SOL1 = new javax.swing.JButton();
+        LA1 = new javax.swing.JButton();
+        SI1 = new javax.swing.JButton();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImage(getIconImage());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DO1.setBackground(new java.awt.Color(255, 255, 255));
-        DO1.setForeground(new java.awt.Color(0, 0, 0));
-        DO1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DO1.setText("C");
-        DO1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        RE1.setBackground(new java.awt.Color(255, 255, 255));
-        RE1.setForeground(new java.awt.Color(0, 0, 0));
-        RE1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RE1.setText("D");
-        RE1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        MI1.setBackground(new java.awt.Color(255, 255, 255));
-        MI1.setForeground(new java.awt.Color(0, 0, 0));
-        MI1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MI1.setText("E");
-        MI1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        LA1.setBackground(new java.awt.Color(255, 255, 255));
-        LA1.setForeground(new java.awt.Color(0, 0, 0));
-        LA1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LA1.setText("A");
-        LA1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SOL1.setBackground(new java.awt.Color(255, 255, 255));
-        SOL1.setForeground(new java.awt.Color(0, 0, 0));
-        SOL1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SOL1.setText("G");
-        SOL1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        FA1.setBackground(new java.awt.Color(255, 255, 255));
-        FA1.setForeground(new java.awt.Color(0, 0, 0));
-        FA1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FA1.setText("F");
-        FA1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SI1.setBackground(new java.awt.Color(255, 255, 255));
-        SI1.setForeground(new java.awt.Color(0, 0, 0));
-        SI1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SI1.setText("B");
-        SI1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SI2.setBackground(new java.awt.Color(255, 255, 255));
-        SI2.setForeground(new java.awt.Color(0, 0, 0));
-        SI2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SI2.setText("B");
-        SI2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        LA2.setBackground(new java.awt.Color(255, 255, 255));
-        LA2.setForeground(new java.awt.Color(0, 0, 0));
-        LA2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LA2.setText("A");
-        LA2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SOL2.setBackground(new java.awt.Color(255, 255, 255));
-        SOL2.setForeground(new java.awt.Color(0, 0, 0));
-        SOL2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SOL2.setText("G");
-        SOL2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        FA2.setBackground(new java.awt.Color(255, 255, 255));
-        FA2.setForeground(new java.awt.Color(0, 0, 0));
-        FA2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FA2.setText("F");
-        FA2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        MI2.setBackground(new java.awt.Color(255, 255, 255));
-        MI2.setForeground(new java.awt.Color(0, 0, 0));
-        MI2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MI2.setText("E");
-        MI2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        RE2.setBackground(new java.awt.Color(255, 255, 255));
-        RE2.setForeground(new java.awt.Color(0, 0, 0));
-        RE2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RE2.setText("D");
-        RE2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        DO2.setBackground(new java.awt.Color(255, 255, 255));
-        DO2.setForeground(new java.awt.Color(0, 0, 0));
-        DO2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DO2.setText("C");
-        DO2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        DO3.setBackground(new java.awt.Color(255, 255, 255));
-        DO3.setForeground(new java.awt.Color(0, 0, 0));
-        DO3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DO3.setText("C");
-        DO3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        RE3.setBackground(new java.awt.Color(255, 255, 255));
-        RE3.setForeground(new java.awt.Color(0, 0, 0));
-        RE3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RE3.setText("D");
-        RE3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        MI3.setBackground(new java.awt.Color(255, 255, 255));
-        MI3.setForeground(new java.awt.Color(0, 0, 0));
-        MI3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MI3.setText("E");
-        MI3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        LASos1.setBackground(new java.awt.Color(0, 0, 0));
-        LASos1.setForeground(new java.awt.Color(0, 0, 0));
-        LASos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LASos1.setText("A#");
-        LASos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SOLSos1.setBackground(new java.awt.Color(0, 0, 0));
-        SOLSos1.setForeground(new java.awt.Color(0, 0, 0));
-        SOLSos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SOLSos1.setText("G#");
-        SOLSos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        FASos1.setBackground(new java.awt.Color(0, 0, 0));
-        FASos1.setForeground(new java.awt.Color(0, 0, 0));
-        FASos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FASos1.setText("F#");
-        FASos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        RESos1.setBackground(new java.awt.Color(0, 0, 0));
-        RESos1.setForeground(new java.awt.Color(0, 0, 0));
-        RESos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RESos1.setText("D#");
-        RESos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        DOSos1.setBackground(new java.awt.Color(0, 0, 0));
-        DOSos1.setForeground(new java.awt.Color(0, 0, 0));
-        DOSos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DOSos1.setText("C#");
-        DOSos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        LASos2.setBackground(new java.awt.Color(0, 0, 0));
-        LASos2.setForeground(new java.awt.Color(0, 0, 0));
-        LASos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LASos2.setText("A#");
-        LASos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        DOSos2.setBackground(new java.awt.Color(0, 0, 0));
-        DOSos2.setForeground(new java.awt.Color(0, 0, 0));
-        DOSos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DOSos2.setText("C#");
-        DOSos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        FASos2.setBackground(new java.awt.Color(0, 0, 0));
-        FASos2.setForeground(new java.awt.Color(0, 0, 0));
-        FASos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FASos2.setText("F#");
-        FASos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SOLSos2.setBackground(new java.awt.Color(0, 0, 0));
-        SOLSos2.setForeground(new java.awt.Color(0, 0, 0));
-        SOLSos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SOLSos2.setText("G#");
-        SOLSos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        RESos2.setBackground(new java.awt.Color(0, 0, 0));
-        RESos2.setForeground(new java.awt.Color(0, 0, 0));
-        RESos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RESos2.setText("D#");
-        RESos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        RESos3.setBackground(new java.awt.Color(0, 0, 0));
-        RESos3.setForeground(new java.awt.Color(0, 0, 0));
-        RESos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RESos3.setText("D#");
-        RESos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        DOSos3.setBackground(new java.awt.Color(0, 0, 0));
-        DOSos3.setForeground(new java.awt.Color(0, 0, 0));
-        DOSos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DOSos3.setText("C#");
-        DOSos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
+        CmbAcorde.setBackground(new java.awt.Color(51, 51, 51));
+        CmbAcorde.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        CmbAcorde.setForeground(new java.awt.Color(255, 255, 255));
         CmbAcorde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI" }));
+        getContentPane().add(CmbAcorde, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 207, 40));
 
+        CmbFamilia.setBackground(new java.awt.Color(51, 51, 51));
+        CmbFamilia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        CmbFamilia.setForeground(new java.awt.Color(255, 255, 255));
         CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor", "Quinta", "Sus2", "Sus4", "Aumentado", "Disminuido", "Séptima", "Octava", "Novena", "Maj6", "Maj7", "Maj9", "Maj11", "Maj13" }));
+        getContentPane().add(CmbFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 40, 212, 40));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("C = DO");
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("C=DO   D=RE   E=MI   F=FA   G=SOL   A=LA   B=SI   #=SOSTENIDO");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 530, 29));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("D = RE");
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("E = MI");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("F = FA");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("A = LA");
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("B = SI");
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("# = Sostenido");
-
+        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Acorde");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 11, -1, 30));
 
+        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Familia");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 70, 30));
 
-        SI3.setBackground(new java.awt.Color(255, 255, 255));
-        SI3.setForeground(new java.awt.Color(0, 0, 0));
-        SI3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SI3.setText("B");
-        SI3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        FA3.setBackground(new java.awt.Color(255, 255, 255));
-        FA3.setForeground(new java.awt.Color(0, 0, 0));
-        FA3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FA3.setText("F");
-        FA3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SOL3.setBackground(new java.awt.Color(255, 255, 255));
-        SOL3.setForeground(new java.awt.Color(0, 0, 0));
-        SOL3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SOL3.setText("G");
-        SOL3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        LA3.setBackground(new java.awt.Color(255, 255, 255));
-        LA3.setForeground(new java.awt.Color(0, 0, 0));
-        LA3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LA3.setText("A");
-        LA3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        LASos3.setBackground(new java.awt.Color(0, 0, 0));
-        LASos3.setForeground(new java.awt.Color(0, 0, 0));
-        LASos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LASos3.setText("A#");
-        LASos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        SOLSos3.setBackground(new java.awt.Color(0, 0, 0));
-        SOLSos3.setForeground(new java.awt.Color(0, 0, 0));
-        SOLSos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SOLSos3.setText("G#");
-        SOLSos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        FASos3.setBackground(new java.awt.Color(0, 0, 0));
-        FASos3.setForeground(new java.awt.Color(0, 0, 0));
-        FASos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FASos3.setText("F#");
-        FASos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Generar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 41, 119, 40));
 
         LabelAcorde.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        LabelAcorde.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        LabelAcorde.setForeground(new java.awt.Color(255, 255, 255));
+        LabelAcorde.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelAcorde.setText("ACORDE");
+        getContentPane().add(LabelAcorde, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 418, 430, -1));
 
-        LabelAcordeName.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        LabelAcordeName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        LabelAcordeName.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        LabelAcordeName.setForeground(new java.awt.Color(255, 255, 255));
+        LabelAcordeName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelAcordeName.setText("Nombre del acorde");
+        getContentPane().add(LabelAcordeName, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 476, 430, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(DOSos1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RESos1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(37, 37, 37)
-                                .addComponent(FASos1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SOLSos1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LASos1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(DOSos2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RESos2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
-                        .addComponent(FASos2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SOLSos2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LASos2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(DOSos3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(CmbAcorde, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(CmbFamilia, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RESos3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(279, 279, 279)
-                .addComponent(LabelAcordeName)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(DO1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RE1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(LabelAcorde)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(MI1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(FA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SOL1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LA1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SI1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DO2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RE2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MI2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(FA2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SOL2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LA2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(SI2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DO3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RE3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(MI3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(FASos3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SOLSos3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(LASos3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(FA3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SOL3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(LA3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SI3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(26, 26, 26))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FASos3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SOLSos3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LASos3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FA3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SOL3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LA3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(SI3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CmbAcorde, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CmbFamilia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FASos1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SOLSos1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LASos1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(DOSos1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RESos1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(FASos2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SOLSos2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LASos2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(DOSos2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RESos2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(DOSos3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RESos3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DO3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(RE3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(MI3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(FA2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SOL2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LA2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(SI2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(DO2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(RE2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(MI2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(FA1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(SOL1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LA1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(SI1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(DO1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(RE1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(MI1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(LabelAcorde)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LabelAcordeName)
-                .addContainerGap())
-        );
+        DOSos3.setBackground(new java.awt.Color(0, 0, 0));
+        DOSos3.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        DOSos3.setForeground(new java.awt.Color(255, 255, 255));
+        DOSos3.setText("C#");
+        DOSos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DOSos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 20, 80));
+
+        RESos3.setBackground(new java.awt.Color(0, 0, 0));
+        RESos3.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        RESos3.setForeground(new java.awt.Color(255, 255, 255));
+        RESos3.setText("D#");
+        RESos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RESos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 20, 80));
+
+        FASos3.setBackground(new java.awt.Color(0, 0, 0));
+        FASos3.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        FASos3.setForeground(new java.awt.Color(255, 255, 255));
+        FASos3.setText("F#");
+        FASos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(FASos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 160, 20, 80));
+
+        SOLSos3.setBackground(new java.awt.Color(0, 0, 0));
+        SOLSos3.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        SOLSos3.setForeground(new java.awt.Color(255, 255, 255));
+        SOLSos3.setText("G#");
+        SOLSos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SOLSos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, 20, 80));
+
+        LASos3.setBackground(new java.awt.Color(0, 0, 0));
+        LASos3.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        LASos3.setForeground(new java.awt.Color(255, 255, 255));
+        LASos3.setText("A#");
+        LASos3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LASos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 20, 80));
+
+        DO3.setBackground(new java.awt.Color(255, 255, 255));
+        DO3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        DO3.setForeground(new java.awt.Color(0, 0, 0));
+        DO3.setText("C");
+        DO3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DO3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 30, 130));
+
+        RE3.setBackground(new java.awt.Color(255, 255, 255));
+        RE3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        RE3.setForeground(new java.awt.Color(0, 0, 0));
+        RE3.setText("D");
+        RE3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RE3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 30, 130));
+
+        MI3.setBackground(new java.awt.Color(255, 255, 255));
+        MI3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        MI3.setForeground(new java.awt.Color(0, 0, 0));
+        MI3.setText("E");
+        MI3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(MI3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 30, 130));
+
+        FA3.setBackground(new java.awt.Color(255, 255, 255));
+        FA3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        FA3.setForeground(new java.awt.Color(0, 0, 0));
+        FA3.setText("F");
+        FA3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(FA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 190, 30, 130));
+
+        SOL3.setBackground(new java.awt.Color(255, 255, 255));
+        SOL3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        SOL3.setForeground(new java.awt.Color(0, 0, 0));
+        SOL3.setText("G");
+        SOL3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SOL3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 30, 130));
+
+        LA3.setBackground(new java.awt.Color(255, 255, 255));
+        LA3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        LA3.setForeground(new java.awt.Color(0, 0, 0));
+        LA3.setText("A");
+        LA3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 30, 130));
+
+        SI3.setBackground(new java.awt.Color(255, 255, 255));
+        SI3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        SI3.setForeground(new java.awt.Color(0, 0, 0));
+        SI3.setText("B");
+        SI3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SI3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, 30, 130));
+
+        DOSos2.setBackground(new java.awt.Color(0, 0, 0));
+        DOSos2.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        DOSos2.setForeground(new java.awt.Color(255, 255, 255));
+        DOSos2.setText("C#");
+        DOSos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DOSos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 20, 80));
+
+        RESos2.setBackground(new java.awt.Color(0, 0, 0));
+        RESos2.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        RESos2.setForeground(new java.awt.Color(255, 255, 255));
+        RESos2.setText("D#");
+        RESos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RESos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 20, 80));
+
+        FASos2.setBackground(new java.awt.Color(0, 0, 0));
+        FASos2.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        FASos2.setForeground(new java.awt.Color(255, 255, 255));
+        FASos2.setText("F#");
+        FASos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(FASos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 20, 80));
+
+        SOLSos2.setBackground(new java.awt.Color(0, 0, 0));
+        SOLSos2.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        SOLSos2.setForeground(new java.awt.Color(255, 255, 255));
+        SOLSos2.setText("G#");
+        SOLSos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SOLSos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 20, 80));
+
+        LASos2.setBackground(new java.awt.Color(0, 0, 0));
+        LASos2.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        LASos2.setForeground(new java.awt.Color(255, 255, 255));
+        LASos2.setText("A#");
+        LASos2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LASos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 20, 80));
+
+        DO2.setBackground(new java.awt.Color(255, 255, 255));
+        DO2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        DO2.setForeground(new java.awt.Color(0, 0, 0));
+        DO2.setText("C");
+        DO2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 30, 130));
+
+        RE2.setBackground(new java.awt.Color(255, 255, 255));
+        RE2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        RE2.setForeground(new java.awt.Color(0, 0, 0));
+        RE2.setText("D");
+        RE2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RE2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 30, 130));
+
+        MI2.setBackground(new java.awt.Color(255, 255, 255));
+        MI2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        MI2.setForeground(new java.awt.Color(0, 0, 0));
+        MI2.setText("E");
+        MI2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(MI2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 30, 130));
+
+        FA2.setBackground(new java.awt.Color(255, 255, 255));
+        FA2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        FA2.setForeground(new java.awt.Color(0, 0, 0));
+        FA2.setText("F");
+        FA2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(FA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 30, 130));
+
+        SOL2.setBackground(new java.awt.Color(255, 255, 255));
+        SOL2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        SOL2.setForeground(new java.awt.Color(0, 0, 0));
+        SOL2.setText("G");
+        SOL2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SOL2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 30, 130));
+
+        LA2.setBackground(new java.awt.Color(255, 255, 255));
+        LA2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        LA2.setForeground(new java.awt.Color(0, 0, 0));
+        LA2.setText("A");
+        LA2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 30, 130));
+
+        SI2.setBackground(new java.awt.Color(255, 255, 255));
+        SI2.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        SI2.setForeground(new java.awt.Color(0, 0, 0));
+        SI2.setText("B");
+        SI2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SI2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 30, 130));
+
+        DOSos1.setBackground(new java.awt.Color(0, 0, 0));
+        DOSos1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        DOSos1.setForeground(new java.awt.Color(255, 255, 255));
+        DOSos1.setText("C#");
+        DOSos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DOSos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 20, 80));
+
+        RESos1.setBackground(new java.awt.Color(0, 0, 0));
+        RESos1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        RESos1.setForeground(new java.awt.Color(255, 255, 255));
+        RESos1.setText("D#");
+        RESos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RESos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 20, 80));
+
+        FASos1.setBackground(new java.awt.Color(0, 0, 0));
+        FASos1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        FASos1.setForeground(new java.awt.Color(255, 255, 255));
+        FASos1.setText("F#");
+        FASos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(FASos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 20, 80));
+
+        LASos1.setBackground(new java.awt.Color(0, 0, 0));
+        LASos1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        LASos1.setForeground(new java.awt.Color(255, 255, 255));
+        LASos1.setText("A#");
+        LASos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LASos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 20, 80));
+
+        SOLSos1.setBackground(new java.awt.Color(0, 0, 0));
+        SOLSos1.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        SOLSos1.setForeground(new java.awt.Color(255, 255, 255));
+        SOLSos1.setText("G#");
+        SOLSos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SOLSos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 20, 80));
+
+        MI1.setBackground(new java.awt.Color(255, 255, 255));
+        MI1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        MI1.setForeground(new java.awt.Color(0, 0, 0));
+        MI1.setText("E");
+        MI1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(MI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 30, 130));
+
+        FA1.setBackground(new java.awt.Color(255, 255, 255));
+        FA1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        FA1.setForeground(new java.awt.Color(0, 0, 0));
+        FA1.setText("F");
+        FA1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(FA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 30, 130));
+
+        RE1.setBackground(new java.awt.Color(255, 255, 255));
+        RE1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        RE1.setForeground(new java.awt.Color(0, 0, 0));
+        RE1.setText("D");
+        RE1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 30, 130));
+
+        DO1.setBackground(new java.awt.Color(255, 255, 255));
+        DO1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        DO1.setForeground(new java.awt.Color(0, 0, 0));
+        DO1.setText("C");
+        DO1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 30, 130));
+
+        SOL1.setBackground(new java.awt.Color(255, 255, 255));
+        SOL1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        SOL1.setForeground(new java.awt.Color(0, 0, 0));
+        SOL1.setText("G");
+        SOL1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SOL1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 30, 130));
+
+        LA1.setBackground(new java.awt.Color(255, 255, 255));
+        LA1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        LA1.setForeground(new java.awt.Color(0, 0, 0));
+        LA1.setText("A");
+        LA1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 30, 130));
+
+        SI1.setBackground(new java.awt.Color(255, 255, 255));
+        SI1.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        SI1.setForeground(new java.awt.Color(0, 0, 0));
+        SI1.setText("B");
+        SI1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(SI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 30, 130));
+
+        jTextField7.setEditable(false);
+        jTextField7.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 450, 90));
+
+        jTextField8.setEditable(false);
+        jTextField8.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 80, 30));
+        jTextField8.getAccessibleContext().setAccessibleName("");
+
+        jTextField9.setEditable(false);
+        jTextField9.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 80, 30));
+
+        jTextField10.setEditable(false);
+        jTextField10.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 530, 30));
+        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        int Acorde = CmbAcorde.getSelectedIndex();
+ int Acorde = CmbAcorde.getSelectedIndex();
         int Familia = CmbFamilia.getSelectedIndex();
         Color ColorTecla = Color.BLUE;
 
@@ -2284,53 +2142,52 @@ public Image getIconImage() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CmbAcorde;
     private javax.swing.JComboBox<String> CmbFamilia;
-    private javax.swing.JLabel DO1;
-    private javax.swing.JLabel DO2;
-    private javax.swing.JLabel DO3;
-    private javax.swing.JLabel DOSos1;
-    private javax.swing.JLabel DOSos2;
-    private javax.swing.JLabel DOSos3;
-    private javax.swing.JLabel FA1;
-    private javax.swing.JLabel FA2;
-    private javax.swing.JLabel FA3;
-    private javax.swing.JLabel FASos1;
-    private javax.swing.JLabel FASos2;
-    private javax.swing.JLabel FASos3;
-    private javax.swing.JLabel LA1;
-    private javax.swing.JLabel LA2;
-    private javax.swing.JLabel LA3;
-    private javax.swing.JLabel LASos1;
-    private javax.swing.JLabel LASos2;
-    private javax.swing.JLabel LASos3;
+    private javax.swing.JButton DO1;
+    private javax.swing.JButton DO2;
+    private javax.swing.JButton DO3;
+    private javax.swing.JButton DOSos1;
+    private javax.swing.JButton DOSos2;
+    private javax.swing.JButton DOSos3;
+    private javax.swing.JButton FA1;
+    private javax.swing.JButton FA2;
+    private javax.swing.JButton FA3;
+    private javax.swing.JButton FASos1;
+    private javax.swing.JButton FASos2;
+    private javax.swing.JButton FASos3;
+    private javax.swing.JButton LA1;
+    private javax.swing.JButton LA2;
+    private javax.swing.JButton LA3;
+    private javax.swing.JButton LASos1;
+    private javax.swing.JButton LASos2;
+    private javax.swing.JButton LASos3;
     private javax.swing.JLabel LabelAcorde;
     private javax.swing.JLabel LabelAcordeName;
-    private javax.swing.JLabel MI1;
-    private javax.swing.JLabel MI2;
-    private javax.swing.JLabel MI3;
-    private javax.swing.JLabel RE1;
-    private javax.swing.JLabel RE2;
-    private javax.swing.JLabel RE3;
-    private javax.swing.JLabel RESos1;
-    private javax.swing.JLabel RESos2;
-    private javax.swing.JLabel RESos3;
-    private javax.swing.JLabel SI1;
-    private javax.swing.JLabel SI2;
-    private javax.swing.JLabel SI3;
-    private javax.swing.JLabel SOL1;
-    private javax.swing.JLabel SOL2;
-    private javax.swing.JLabel SOL3;
-    private javax.swing.JLabel SOLSos1;
-    private javax.swing.JLabel SOLSos2;
-    private javax.swing.JLabel SOLSos3;
+    private javax.swing.JLabel LabelWallpaper;
+    private javax.swing.JButton MI1;
+    private javax.swing.JButton MI2;
+    private javax.swing.JButton MI3;
+    private javax.swing.JButton RE1;
+    private javax.swing.JButton RE2;
+    private javax.swing.JButton RE3;
+    private javax.swing.JButton RESos1;
+    private javax.swing.JButton RESos2;
+    private javax.swing.JButton RESos3;
+    private javax.swing.JButton SI1;
+    private javax.swing.JButton SI2;
+    private javax.swing.JButton SI3;
+    private javax.swing.JButton SOL1;
+    private javax.swing.JButton SOL2;
+    private javax.swing.JButton SOL3;
+    private javax.swing.JButton SOLSos1;
+    private javax.swing.JButton SOLSos2;
+    private javax.swing.JButton SOLSos3;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

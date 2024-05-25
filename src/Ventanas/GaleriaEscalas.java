@@ -4,15 +4,14 @@
  */
 package Ventanas;
 
-import Clases.Escala;
 import Clases.Nota;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.ItemEvent;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -31,7 +30,7 @@ public class GaleriaEscalas extends javax.swing.JFrame {
     public GaleriaEscalas() {
         initComponents();
 
-        setSize(600, 500);
+        setSize(550, 445);
         setResizable(false);
         setTitle(" Escalas");
         this.setLocationRelativeTo(null);
@@ -55,6 +54,13 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         circulo.addColumn("Tension°");
         circulo.addColumn("Acompañante");
         circulo.addColumn("Complemento");
+        
+          ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPartitura.jpg");
+        Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
+                LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
+
+        LabelWallpaper.setIcon(icon);
+
     }
     
 @Override
@@ -117,9 +123,14 @@ public Image getIconImage() {
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         LabelSecuencia = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImage(getIconImage());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TableNotas.setBackground(new java.awt.Color(51, 51, 51));
         TableNotas.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -136,7 +147,10 @@ public Image getIconImage() {
             }
         ));
         TableNotas.setToolTipText("");
+        TableNotas.setAutoscrolls(false);
         jScrollPane1.setViewportView(TableNotas);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 499, 45));
 
         CmbEscala.setBackground(new java.awt.Color(51, 51, 51));
         CmbEscala.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -148,6 +162,7 @@ public Image getIconImage() {
                 CmbEscalaItemStateChanged(evt);
             }
         });
+        getContentPane().add(CmbEscala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 180, 47));
 
         CmbNota.setBackground(new java.awt.Color(51, 51, 51));
         CmbNota.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -159,6 +174,7 @@ public Image getIconImage() {
                 CmbNotaItemStateChanged(evt);
             }
         });
+        getContentPane().add(CmbNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 180, 47));
 
         TableCirculo.setBackground(new java.awt.Color(51, 51, 51));
         TableCirculo.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -175,76 +191,59 @@ public Image getIconImage() {
             }
         ));
         TableCirculo.setToolTipText("");
+        TableCirculo.setAutoscrolls(false);
         jScrollPane2.setViewportView(TableCirculo);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 499, 45));
 
         LabelEscala.setBackground(new java.awt.Color(255, 255, 255));
         LabelEscala.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        LabelEscala.setForeground(new java.awt.Color(51, 51, 51));
+        LabelEscala.setForeground(new java.awt.Color(255, 255, 255));
+        LabelEscala.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelEscala.setText("Escala");
+        getContentPane().add(LabelEscala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 80, -1));
 
         LabelNota.setBackground(new java.awt.Color(255, 255, 255));
         LabelNota.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        LabelNota.setForeground(new java.awt.Color(51, 51, 51));
+        LabelNota.setForeground(new java.awt.Color(255, 255, 255));
+        LabelNota.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelNota.setText("Circulo");
+        getContentPane().add(LabelNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 30));
 
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Generar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 127, 47));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Esta escala se arma usando la secuencia:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 499, 50));
 
         LabelSecuencia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        LabelSecuencia.setForeground(new java.awt.Color(255, 255, 255));
+        LabelSecuencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(LabelSecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 499, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelNota)
-                    .addComponent(LabelEscala, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(LabelSecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(CmbEscala, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CmbNota, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1)
-                            .addComponent(jScrollPane2)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CmbEscala, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CmbNota, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(LabelEscala)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(LabelNota)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LabelSecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
-        );
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 80, 40));
+
+        jTextField2.setEditable(false);
+        jTextField2.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 510, 90));
+
+        jTextField3.setEditable(false);
+        jTextField3.setBackground(new java.awt.Color(51, 51, 51));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 40));
+        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -290,7 +289,6 @@ public Image getIconImage() {
 
         if (progresion != null) {
             List<Nota> notasList = Arrays.asList(notas);
-            Escala escalaSeleccionada = new Escala(notasList, progresion, tipoEscala, escalaindex);
             String notaInicial = notas[notaIndex].getNombre();
             String[] escalaGenerada = escalaGenerada(notasList, notaInicial, progresion);
 
@@ -501,11 +499,15 @@ public Image getIconImage() {
     private javax.swing.JLabel LabelEscala;
     private javax.swing.JLabel LabelNota;
     private javax.swing.JLabel LabelSecuencia;
+    private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JTable TableCirculo;
     private javax.swing.JTable TableNotas;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
