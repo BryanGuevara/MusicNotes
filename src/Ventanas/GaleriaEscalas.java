@@ -5,6 +5,8 @@
 package Ventanas;
 
 import Clases.Nota;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
@@ -13,6 +15,7 @@ import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -30,9 +33,6 @@ public class GaleriaEscalas extends javax.swing.JFrame {
     public GaleriaEscalas() {
         initComponents();
 
-        setSize(550, 445);
-        setResizable(false);
-        setTitle(" Escalas");
         this.setLocationRelativeTo(null);
 
         TableNotas = new JTable(escala);
@@ -54,6 +54,21 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         circulo.addColumn("Tension°");
         circulo.addColumn("Acompañante");
         circulo.addColumn("Complemento");
+        
+        
+        Font font = new Font("Arial Black", Font.PLAIN, 12);
+        TableNotas.setFont(font);
+        TableCirculo.setFont(font);
+        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
+        renderer.setForeground(new Color(255, 255, 255)); 
+        renderer.setBackground(new Color(51, 51, 51));  
+        renderer.setFont(font);              
+        TableNotas.setDefaultRenderer(Object.class, renderer);
+        TableCirculo.setDefaultRenderer(Object.class, renderer);
+        TableNotas.setEnabled(false);
+        TableCirculo.setEnabled(false);
+
+        
         
           ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPartitura.jpg");
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
@@ -118,18 +133,19 @@ public Image getIconImage() {
         CmbNota = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         TableCirculo = new javax.swing.JTable();
-        LabelEscala = new javax.swing.JLabel();
-        LabelNota = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         LabelSecuencia = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setIconImage(getIconImage());
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TableNotas.setBackground(new java.awt.Color(51, 51, 51));
@@ -157,6 +173,7 @@ public Image getIconImage() {
         CmbEscala.setForeground(new java.awt.Color(255, 255, 255));
         CmbEscala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor" }));
         CmbEscala.setToolTipText("");
+        CmbEscala.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CmbEscala.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 CmbEscalaItemStateChanged(evt);
@@ -169,6 +186,7 @@ public Image getIconImage() {
         CmbNota.setForeground(new java.awt.Color(255, 255, 255));
         CmbNota.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI" }));
         CmbNota.setToolTipText("");
+        CmbNota.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CmbNota.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 CmbNotaItemStateChanged(evt);
@@ -196,24 +214,11 @@ public Image getIconImage() {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 499, 45));
 
-        LabelEscala.setBackground(new java.awt.Color(255, 255, 255));
-        LabelEscala.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        LabelEscala.setForeground(new java.awt.Color(255, 255, 255));
-        LabelEscala.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelEscala.setText("Escala");
-        getContentPane().add(LabelEscala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 80, -1));
-
-        LabelNota.setBackground(new java.awt.Color(255, 255, 255));
-        LabelNota.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        LabelNota.setForeground(new java.awt.Color(255, 255, 255));
-        LabelNota.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelNota.setText("Circulo");
-        getContentPane().add(LabelNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 30));
-
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Generar");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -225,25 +230,48 @@ public Image getIconImage() {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Esta escala se arma usando la secuencia:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 499, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 510, 50));
 
         LabelSecuencia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         LabelSecuencia.setForeground(new java.awt.Color(255, 255, 255));
         LabelSecuencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(LabelSecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 499, 40));
+        getContentPane().add(LabelSecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 350, 510, 40));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 80, 40));
+        jTextField1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("Escala");
+        jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 80, 30));
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 510, 90));
 
         jTextField3.setEditable(false);
         jTextField3.setBackground(new java.awt.Color(51, 51, 51));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 40));
-        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 410));
+        jTextField3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField3.setText("Circulo");
+        jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 30));
+
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 0, 0));
+        jButton2.setText("X");
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 40, 40));
+        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -263,7 +291,7 @@ public Image getIconImage() {
 
         Nota[] notas = {
             new Nota(1, "DO"),
-            new Nota(2, "Do#"),
+            new Nota(2, "DO#"),
             new Nota(3, "RE"),
             new Nota(4, "RE#"),
             new Nota(5, "MI"),
@@ -456,6 +484,10 @@ public Image getIconImage() {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -495,13 +527,12 @@ public Image getIconImage() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CmbEscala;
     private javax.swing.JComboBox<String> CmbNota;
-    private javax.swing.JLabel LabelEscala;
-    private javax.swing.JLabel LabelNota;
     private javax.swing.JLabel LabelSecuencia;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JTable TableCirculo;
     private javax.swing.JTable TableNotas;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

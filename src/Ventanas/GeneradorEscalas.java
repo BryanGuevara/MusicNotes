@@ -5,6 +5,8 @@
 package Ventanas;
 
 import Clases.Nota;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,6 +14,7 @@ import java.util.List;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class GeneradorEscalas extends javax.swing.JFrame {
@@ -26,8 +29,6 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         initComponents();
 
         this.setLocationRelativeTo(null);
-        setTitle("Generador de Escalas");
-        setResizable(false);
 
         TableNotas = new JTable(notas);
         jScrollPane2.setViewportView(TableNotas);
@@ -43,6 +44,20 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         jScrollPane1.getViewport().setOpaque(false);
         jScrollPane1.setBorder(null);
         TableSecuencia.setShowGrid(false);
+        TableNotas.setDefaultEditor(Object.class, null);
+        TableSecuencia.setDefaultEditor(Object.class, null);
+
+        Font font = new Font("Arial Black", Font.PLAIN, 12);
+        TableNotas.setFont(font);
+        TableSecuencia.setFont(font);
+        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
+        renderer.setForeground(new Color(255, 255, 255)); 
+        renderer.setBackground(new Color(51, 51, 51));  
+        renderer.setFont(font);              
+        TableNotas.setDefaultRenderer(Object.class, renderer);
+        TableSecuencia.setDefaultRenderer(Object.class, renderer);
+        TableNotas.setEnabled(false);
+        TableSecuencia.setEnabled(false);
 
         secuencia.addColumn("Secuencia");
         ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPartitura.jpg");
@@ -76,9 +91,12 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField2 = new javax.swing.JTextField();
         TextEscala = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
         LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TableSecuencia.setModel(new javax.swing.table.DefaultTableModel(
@@ -239,6 +257,20 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         TextEscala.setText("Generador de escalas");
         TextEscala.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(TextEscala, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 200, 40));
+
+        jButton5.setBackground(new java.awt.Color(51, 51, 51));
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 0, 0));
+        jButton5.setText("X");
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 40, 40));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 530));
 
         pack();
@@ -275,7 +307,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
             for (int notaIndex = 0; notaIndex < 12; notaIndex++) {
                 Nota[] notas = {
                     new Nota(1, "DO"),
-                    new Nota(2, "Do#"),
+                    new Nota(2, "DO#"),
                     new Nota(3, "RE"),
                     new Nota(4, "RE#"),
                     new Nota(5, "MI"),
@@ -402,7 +434,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         for (int notaIndex = 0; notaIndex < 12; notaIndex++) {
             Nota[] notas = {
                 new Nota(1, "DO"),
-                new Nota(2, "Do#"),
+                new Nota(2, "DO#"),
                 new Nota(3, "RE"),
                 new Nota(4, "RE#"),
                 new Nota(5, "MI"),
@@ -459,6 +491,10 @@ public class GeneradorEscalas extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_Tono2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -536,6 +572,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
     private javax.swing.JButton Tono1;
     private javax.swing.JButton Tono2;
     private javax.swing.JButton TonoMedio1;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
