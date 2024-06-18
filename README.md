@@ -10,6 +10,9 @@ MusicNotes es una aplicación diseñada para ayudar a músicos novatos y avanzad
 ### Escalas Mayores y Menores
 Descubre una amplia gama de escalas mayores y menores para practicar y perfeccionar. Desde las tradicionales hasta las melódicas y armónicas, hay opciones para todos los gustos y estilos musicales.
 
+### Generador de Escalas
+Puedes crear tus propias escalas usando **Tonos** y **SemiTonos**, Tambien incluye escalas precargadas por si te interesa experimentar mas allá de las escalas naturales mayores y menores
+
 **Notas Disponibles en el Piano:**
 | N° | Notas |
 |----|-------|
@@ -37,23 +40,48 @@ Explora una extensa colección de acordes en la librería de MusicNotes. Desde l
 
 **Familias de Acordes Disponibles:**
 
-| N° | Familia |
+| N° | Familia Piano|
+|----|---------|
+| -  | Nota    |
+| 1  | Mayor   |
+| 2  |Primera Inversion|
+| 3  |Segunda Inversion|
+| 4  | Menor   |
+| 5  | Quinta  |
+| 6  | Sus2    |
+| 7  | Sus4    |
+| 8  | Aumentado|
+| 9  | Disminuido|
+| 10 | Séptima  |
+| 11 | Octava   |
+| 12 | Novena   |
+| 13 | Maj6     |
+| 14 | Maj7     |
+| 15 | Maj9     |
+| 16 | Maj11    |
+| 17 | Maj13    |
+| 18 | Add2     |
+| 19 | Add4     |
+| 20 | Add9     |
+| 21 | add11    |
+| 22 | Add13    |
+| 23 | Sobre DO |
+| 24 | Sobre DO#|
+| 25 | Sobre RE |
+| 26 | Sobre RE#|
+| 27 | Sobre MI |
+| 28 | Sobre FA |
+| 29 | Sobre FA#|
+| 30 | Sobre SOL|
+| 31 | Sobre SOL#|
+| 32 | Sobre LA |
+| 33 | Sobre LA#|
+| 34 | Sobre SI |
+
+| N° | Familia Guitarra|
 |----|---------|
 | 1  | Mayor   |
 | 2  | Menor   |
-| 3  | Quinta  |
-| 4  | Sus2    |
-| 5  | Sus4    |
-| 6  | Aumentado    |
-| 7  | Disminuido   |
-| 8  | Séptima  |
-| 9  | Octava   |
-| 10 | Novena   |
-| 11 | Maj6     |
-| 12 | Maj7     |
-| 13 | Maj9     |
-| 14 | Maj11    |
-| 15 | Maj13    |
 
 ---
 Con MusicNotes, ¡nunca ha sido tan fácil explorar y aprender música!
