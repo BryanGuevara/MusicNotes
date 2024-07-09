@@ -55,7 +55,7 @@ public class Teoria extends javax.swing.JFrame {
         CmbIndex.setBackground(new java.awt.Color(51, 51, 51));
         CmbIndex.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         CmbIndex.setForeground(new java.awt.Color(255, 255, 255));
-        CmbIndex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---- Seleccione un tema ---", "Historia", "Músicas", "Músicos", "--- Tecnicas ---", "Legato", "Staccato", "Trecillo", "Quebrado", "Dinámicas", "--- Composicion ---", "Composición de Círculos", "Estructura de la Forma Musical", "Ornamentación", "Composición de Acordes", "--- Teoria Musical ---", "Escalas Mayores y Menores", "Tonalidad y Modalidad", "Intervalos", "Compass", "Acordes Invertidos", "Acordes Añadidos", "Acordes Maj", "Acordes sobre", "Alteraciones Accidentales", "Modulación", "Cadencias", "Notación Musical", "Contrapunto", "Polifonía", "Textura Musical", "Armonicos", "Contratiempo", "Transposición", "Figuras Rítmicas", "Ritmo y Metrica", "--- Tipos de Instrumentos ---", "Ejemplos de Instrumentos de Teclado", "Ejemplos de Instrumentos de Cuerda", "Ejemplos de Instrumentos de Viento Madera", "Ejemplos de Instrumentos de Viento Metal", "Ejemplos de Instrumentos de Percusión Afinada", "Ejemplos de Instrumentos de Percusión No Afinada", "Ejemplos de Instrumentos Electroacústicos", "Ejemplos de Instrumentos Digitales", "Ejemplos de Instrumentos Experimentales" }));
+        CmbIndex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---- Seleccione un tema ---", "Historia", "Músicas", "Músicos", "--- Tecnicas ---", "Legato", "Staccato", "Trecillo", "Quebrado", "Dinámicas", "--- Composicion ---", "Composición de Círculos", "Estructura de la Forma Musical", "Ornamentación", "Composición de Acordes", "--- Teoria Musical ---", "Escalas Mayores y Menores", "Escalas Modales", "Tonalidad y Modalidad", "Intervalos", "Compass", "Acordes Invertidos", "Acordes Añadidos", "Acordes Maj", "Acordes sobre", "Alteraciones Accidentales", "Modulación", "Cadencias", "Notación Musical", "Contrapunto", "Polifonía", "Textura Musical", "Armonicos", "Contratiempo", "Transposición", "Figuras Rítmicas", "Ritmo y Metrica", "--- Tipos de Instrumentos ---", "Ejemplos de Instrumentos de Teclado", "Ejemplos de Instrumentos de Cuerda", "Ejemplos de Instrumentos de Viento Madera", "Ejemplos de Instrumentos de Viento Metal", "Ejemplos de Instrumentos de Percusión Afinada", "Ejemplos de Instrumentos de Percusión No Afinada", "Ejemplos de Instrumentos Electroacústicos", "Ejemplos de Instrumentos Digitales", "Ejemplos de Instrumentos Experimentales" }));
         CmbIndex.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CmbIndex.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -77,6 +77,8 @@ public class Teoria extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 40, 40));
+
+        LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 590));
 
         pack();
@@ -123,62 +125,64 @@ public class Teoria extends javax.swing.JFrame {
         } else if (Index == 16) {
             AreaInfo.setText(informacion.EscalasMayoresYMenores());
         } else if (Index == 17) {
-            AreaInfo.setText(informacion.TonalidadYModalidad());
+            AreaInfo.setText(informacion.Modos());
         } else if (Index == 18) {
-            AreaInfo.setText(informacion.Intervalos());
+            AreaInfo.setText(informacion.TonalidadYModalidad());
         } else if (Index == 19) {
-            AreaInfo.setText(informacion.Compass());
+            AreaInfo.setText(informacion.Intervalos());
         } else if (Index == 20) {
-            AreaInfo.setText(informacion.AcordesInvertidos());
+            AreaInfo.setText(informacion.Compass());
         } else if (Index == 21) {
-            AreaInfo.setText(informacion.AcordesAñadidos());
+            AreaInfo.setText(informacion.AcordesInvertidos());
         } else if (Index == 22) {
-            AreaInfo.setText(informacion.AcordesMaj());
+            AreaInfo.setText(informacion.AcordesAñadidos());
         } else if (Index == 23) {
-            AreaInfo.setText(informacion.AcordesSobre());
+            AreaInfo.setText(informacion.AcordesMaj());
         } else if (Index == 24) {
-            AreaInfo.setText(informacion.AlteracionesAccidentales());
+            AreaInfo.setText(informacion.AcordesSobre());
         } else if (Index == 25) {
-            AreaInfo.setText(informacion.Modulacion());
+            AreaInfo.setText(informacion.AlteracionesAccidentales());
         } else if (Index == 26) {
-            AreaInfo.setText(informacion.Cadencias());
+            AreaInfo.setText(informacion.Modulacion());
         } else if (Index == 27) {
-            AreaInfo.setText(informacion.NotacionMusical());
+            AreaInfo.setText(informacion.Cadencias());
         } else if (Index == 28) {
-            AreaInfo.setText(informacion.Contrapunto());
+            AreaInfo.setText(informacion.NotacionMusical());
         } else if (Index == 29) {
-            AreaInfo.setText(informacion.Polifonia());
+            AreaInfo.setText(informacion.Contrapunto());
         } else if (Index == 30) {
-            AreaInfo.setText(informacion.TexturaMusical());
+            AreaInfo.setText(informacion.Polifonia());
         } else if (Index == 31) {
-            AreaInfo.setText(informacion.Armonicos());
+            AreaInfo.setText(informacion.TexturaMusical());
         } else if (Index == 32) {
-            AreaInfo.setText(informacion.Contratiempo());
+            AreaInfo.setText(informacion.Armonicos());
         } else if (Index == 33) {
-            AreaInfo.setText(informacion.Transposicion());
+            AreaInfo.setText(informacion.Contratiempo());
         } else if (Index == 34) {
-            AreaInfo.setText(informacion.FigurasRitmicas());
+            AreaInfo.setText(informacion.Transposicion());
         } else if (Index == 35) {
+            AreaInfo.setText(informacion.FigurasRitmicas());
+        } else if (Index == 36) {
             AreaInfo.setText(informacion.RitmoYMetrica());
-        }  else if (Index == 36) {
-            AreaInfo.setText(informacion.TiposDeInstrumentos());
         } else if (Index == 37) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeTeclado());
+            AreaInfo.setText(informacion.TiposDeInstrumentos());
         } else if (Index == 38) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeCuerda());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeTeclado());
         } else if (Index == 39) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeVientoMadera());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeCuerda());
         } else if (Index == 40) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeVientoMetal());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeVientoMadera());
         } else if (Index == 41) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDePercusionAfinada());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDeVientoMetal());
         } else if (Index == 42) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDePercusionNoAfinada());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDePercusionAfinada());
         } else if (Index == 43) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosElectroacusticos());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDePercusionNoAfinada());
         } else if (Index == 44) {
-            AreaInfo.setText(informacion.EjemplosDeInstrumentosDigitales());
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosElectroacusticos());
         } else if (Index == 45) {
+            AreaInfo.setText(informacion.EjemplosDeInstrumentosDigitales());
+        } else if (Index == 46) {
             AreaInfo.setText(informacion.EjemplosDeInstrumentosExperimentales());
         }
         AreaInfo.setCaretPosition(0);

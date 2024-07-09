@@ -906,7 +906,7 @@ public class Enciclopedia {
                 + "\nEjemplos de instrumentos de percusión no afinada incluyen: "
                 + "Batería, Bongós, Platillos, Tambor, Caja. "
                 + "\n\n"
-                +"Instrumentos Electroacústicos: "
+                + "Instrumentos Electroacústicos: "
                 + "Los instrumentos electroacústicos combinan elementos acústicos y electrónicos "
                 + "para amplificar o modificar el sonido. Utilizan micrófonos, pastillas y efectos electrónicos.\n"
                 + "Ejemplos de instrumentos electroacústicos incluyen: "
@@ -1915,5 +1915,36 @@ public class Enciclopedia {
                 + "-Música folklórica africana: Rítmica y percusiva, utiliza acordes polirrítmicos y ritmos tribales con letras que cuentan historias ancestrales.\n"
                 + "-Música folklórica india: Mística y espiritual, utiliza acordes modales y ritmos tabálicos con melodías que evocan la espiritualidad hindú.\n"
                 + "-Música folklórica china: Tradicional y ceremonial, utiliza acordes pentatónicos y ritmos ceremoniales con letras que honran la cultura china.\n";
+    }
+
+    public String Modos() {
+        return "En la música, los modos son escalas que se derivan de las notas de una escala mayor,"
+                + " pero cada una comienza en una nota diferente de la escala original. Los modos tienen "
+                + "diferentes patrones de tonos y semitonos, lo que les da características y colores distintivos.\n"
+                + "\n"
+                + "Aquí están los siete modos más comunes, usando la escala de Do mayor (C) como ejemplo:\n"
+                + "\n"
+                + "Jónico (Ionian): Este es simplemente la escala mayor. Ejemplo: Do (C) - Re (D) - Mi (E) - Fa (F) - Sol (G) - La (A) - Si (B) - Do (C).\n"
+                + "\n"
+                + "Dórico (Dorian): Comienza en la segunda nota de la escala mayor. Ejemplo: Re (D) - Mi (E) - Fa (F) - Sol (G) - La (A) - Si (B) - Do (C) - Re (D).\n"
+                + "\n"
+                + "Frigio (Phrygian): Comienza en la tercera nota de la escala mayor. Ejemplo: Mi (E) - Fa (F) - Sol (G) - La (A) - Si (B) - Do (C) - Re (D) - Mi (E).\n"
+                + "\n"
+                + "Lidio (Lydian): Comienza en la cuarta nota de la escala mayor. Ejemplo: Fa (F) - Sol (G) - La (A) - Si (B) - Do (C) - Re (D) - Mi (E) - Fa (F).\n"
+                + "\n"
+                + "Mixolidio (Mixolydian): Comienza en la quinta nota de la escala mayor. Ejemplo: Sol (G) - La (A) - Si (B) - Do (C) - Re (D) - Mi (E) - Fa (F) - Sol (G).\n"
+                + "\n"
+                + "Eólico (Aeolian): Este es el modo menor natural. Comienza en la sexta nota de la escala mayor. Ejemplo: La (A) - Si (B) - Do (C) - Re (D) - Mi (E) - Fa (F) - Sol (G) - La (A).\n"
+                + "\n"
+                + "Locrio (Locrian): Comienza en la séptima nota de la escala mayor. Ejemplo: Si (B) - Do (C) - Re (D) - Mi (E) - Fa (F) - Sol (G) - La (A) - Si (B).\n"
+                + "\n"
+                + "Cada uno de estos modos tiene un \"sabor\" diferente debido a los diferentes patrones de tonos (intervalos de un tono completo) y "
+                + "semitonos (intervalos de medio tono). Aquí hay una descripción breve de los modos mencionados en tu pregunta:\n"
+                + "\n"
+                + "Mixolidio: Similar a la escala mayor, pero con un séptimo grado menor (b7). Tiene un sonido más bluesero o rockero. Ejemplo: Sol (G) - La (A) - Si (B) - Do (C) - Re (D) - Mi (E) - Fa (F) - Sol (G).\n"
+                + "\n"
+                + "Frigio: Tiene un segundo grado menor (b2), lo que le da un sonido exótico o español. Ejemplo: Mi (E) - Fa (F) - Sol (G) - La (A) - Si (B) - Do (C) - Re (D) - Mi (E).\n"
+                + "\n"
+                + "Estos modos no solo se usan en la música clásica, sino que también se pueden encontrar en muchos otros géneros como el jazz, el rock, el pop y la música folclórica.";
     }
 }

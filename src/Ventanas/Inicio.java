@@ -13,12 +13,11 @@ import javax.swing.*;
  */
 public class Inicio extends javax.swing.JFrame {
 
-    
     public Inicio() {
         initComponents();
-        
+
         this.setLocationRelativeTo(null);
-        
+
         ImageIcon wallpaper = new ImageIcon("src/img/wallpaperMusica.jpg");
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
                 LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
@@ -26,7 +25,6 @@ public class Inicio extends javax.swing.JFrame {
         LabelWallpaper.setIcon(icon);
 
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -111,26 +109,28 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 40, 40));
+
+        LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 270));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         new GaleriaEscalas().setVisible(true);
+        new GaleriaEscalas().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      new Acordes().setVisible(true);
+        new AcordesPiano().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-           new Extra().setVisible(true);
-           this.dispose();
+        new Extra().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-          new GeneradorEscalas().setVisible(true);
+        new AcordesGuitarra().setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

@@ -26,6 +26,8 @@ public class GaleriaEscalas extends javax.swing.JFrame {
 
     DefaultTableModel escala = new DefaultTableModel();
     DefaultTableModel circulo = new DefaultTableModel();
+    DefaultTableModel acordes = new DefaultTableModel();
+    String tipoEscala = "";
 
     /**
      * Creates new form ArmadorEscalas
@@ -54,41 +56,45 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         circulo.addColumn("Tension°");
         circulo.addColumn("Acompañante");
         circulo.addColumn("Complemento");
-        
-        
+
+        TableAcordes = new JTable(acordes);
+        jScrollPane3.setViewportView(TableAcordes);
+
         Font font = new Font("Arial Black", Font.PLAIN, 12);
         TableNotas.setFont(font);
         TableCirculo.setFont(font);
+        TableAcordes.setFont(font);
         DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        renderer.setForeground(new Color(255, 255, 255)); 
-        renderer.setBackground(new Color(51, 51, 51));  
-        renderer.setFont(font);              
+        renderer.setForeground(new Color(255, 255, 255));
+        renderer.setBackground(new Color(51, 51, 51));
+        renderer.setFont(font);
         TableNotas.setDefaultRenderer(Object.class, renderer);
         TableCirculo.setDefaultRenderer(Object.class, renderer);
+        TableAcordes.setDefaultRenderer(Object.class, renderer);
+        TableAcordes.setEnabled(false);
         TableNotas.setEnabled(false);
         TableCirculo.setEnabled(false);
 
-        
-        
-          ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPartitura.jpg");
+        ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPartitura.jpg");
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
                 LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
 
         LabelWallpaper.setIcon(icon);
 
     }
-    
-@Override
-public Image getIconImage() {
-    URL resourceUrl = ClassLoader.getSystemResource("img/icono.png");
-    if (resourceUrl != null) {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(resourceUrl);
-        return retValue;
-    } else {
-        System.err.println("No se pudo encontrar el recurso 'icono.png'");
-        return null;
+
+    @Override
+    public Image getIconImage() {
+        URL resourceUrl = ClassLoader.getSystemResource("img/icono.png");
+        if (resourceUrl != null) {
+            Image retValue = Toolkit.getDefaultToolkit().getImage(resourceUrl);
+            return retValue;
+        } else {
+            System.err.println("No se pudo encontrar el recurso 'icono.png'");
+            return null;
+        }
     }
-}
+
     public static String[] EscalaGenerada(List<Nota> notas, String notaInicial, List<Integer> progresion) {
         String[] escala = new String[progresion.size() + 1];
 
@@ -116,7 +122,6 @@ public Image getIconImage() {
 
         return escala;
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -140,6 +145,9 @@ public Image getIconImage() {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jTextField4 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        TableAcordes = new javax.swing.JTable();
         LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -212,7 +220,7 @@ public Image getIconImage() {
         TableCirculo.setAutoscrolls(false);
         jScrollPane2.setViewportView(TableCirculo);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 499, 45));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 499, 45));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -230,17 +238,18 @@ public Image getIconImage() {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Esta escala se arma usando la secuencia:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 510, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 510, 50));
 
         LabelSecuencia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         LabelSecuencia.setForeground(new java.awt.Color(255, 255, 255));
         LabelSecuencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(LabelSecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 350, 510, 40));
+        getContentPane().add(LabelSecuencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 510, 40));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(51, 51, 51));
         jTextField1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("Escala");
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 80, 30));
@@ -248,15 +257,16 @@ public Image getIconImage() {
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(51, 51, 51));
         jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 510, 90));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 510, 90));
 
         jTextField3.setEditable(false);
         jTextField3.setBackground(new java.awt.Color(51, 51, 51));
         jTextField3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setText("Circulo");
         jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 80, 30));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 80, 30));
 
         jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -271,7 +281,38 @@ public Image getIconImage() {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 40, 40));
-        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 400));
+
+        jTextField4.setEditable(false);
+        jTextField4.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField4.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField4.setText("Acordes");
+        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 100, 30));
+
+        TableAcordes.setBackground(new java.awt.Color(51, 51, 51));
+        TableAcordes.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        TableAcordes.setForeground(new java.awt.Color(255, 255, 255));
+        TableAcordes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        TableAcordes.setToolTipText("");
+        TableAcordes.setAutoscrolls(false);
+        jScrollPane3.setViewportView(TableAcordes);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 499, 45));
+
+        LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -285,6 +326,11 @@ public Image getIconImage() {
     }//GEN-LAST:event_CmbEscalaItemStateChanged
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        int columnCount = acordes.getColumnCount();
+        for (int i = columnCount - 1; i >= 0; i--) {
+            acordes.setColumnCount(i);
+        }
 
         int notaIndex = CmbNota.getSelectedIndex();
         int escalaindex = CmbEscala.getSelectedIndex();
@@ -305,14 +351,29 @@ public Image getIconImage() {
         };
 
         List<Integer> progresion = null;
-        String tipoEscala = "";
 
-        if (escalaindex == 0) { 
+        if (escalaindex == 0) {
             progresion = Arrays.asList(2, 2, 1, 2, 2, 2, 1);
             tipoEscala = "Mayor";
-        } else if (escalaindex == 1) { 
+            acordes.addColumn("Mayor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Mayor");
+            acordes.addColumn("Mayor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Disminuido");
+
+        } else if (escalaindex == 1) {
             progresion = Arrays.asList(2, 1, 2, 2, 1, 2, 2);
             tipoEscala = "Menor";
+            acordes.addColumn("Menor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Mayor");
+            acordes.addColumn("Menor");
+            acordes.addColumn("Disminuido");
+
         }
 
         if (progresion != null) {
@@ -331,10 +392,24 @@ public Image getIconImage() {
             if (escalaGenerada != null) {
                 escala.addRow(escalaGenerada);
             } else {
-                System.out.println("La nota inicial no es válida para la escala " + tipoEscala + ".");
+                System.err.println("La nota inicial no es válida para la escala " + tipoEscala + ".");
             }
         }
+        if (progresion != null) {
+            List<Nota> notasList = Arrays.asList(notas);
+            String notaInicial = notas[notaIndex].getNombre();
+            String[] escalaGenerada = generarEscalaConModificaciones(notasList, notaInicial, progresion);
 
+            while (acordes.getRowCount() > 0) {
+                acordes.removeRow(0);
+            }
+
+            if (escalaGenerada != null) {
+                acordes.addRow(escalaGenerada);
+            } else {
+                System.err.println("La nota inicial no es válida para la escala " + tipoEscala + ".");
+            }
+        }
         if (notaIndex == 0) {
             if (escalaindex == 0) {
                 circulo.addRow(new Object[]{"DO", "FA", "SOL", "REm / LAm"});
@@ -455,6 +530,68 @@ public Image getIconImage() {
         }
     }
 
+    private String[] generarEscalaConModificaciones(List<Nota> notas, String notaInicial, List<Integer> progresion) {
+        String[] escala = new String[progresion.size() + 1];
+
+        int posInicial = -1;
+        for (Nota nota : notas) {
+            if (nota.getNombre().equalsIgnoreCase(notaInicial)) {
+                posInicial = nota.getNumero() - 1;
+                break;
+            }
+        }
+
+        if (posInicial == -1) {
+            return null;
+        }
+
+        escala[0] = notas.get(posInicial).getNombre();
+        int posicionActual = posInicial;
+        for (int i = 0; i < progresion.size(); i++) {
+            posicionActual += progresion.get(i);
+            if (posicionActual >= notas.size()) {
+                posicionActual -= notas.size();
+            }
+            escala[i + 1] = notas.get(posicionActual).getNombre();
+        }
+
+        if (tipoEscala.equals("Mayor")) {
+            if (escala.length > 1) {
+                escala[1] += "m";
+            }
+            if (escala.length > 2) {
+                escala[2] += "m";
+            }
+            if (escala.length > 5) {
+                escala[5] += "m";
+            }
+            if (escala.length > 6) {
+                escala[6] += "dism";
+            }
+        } else if (tipoEscala.equals("Menor")) {
+            if (escala.length > 0) {
+                escala[0] += "m";
+            }
+            if (escala.length > 1) {
+                escala[1] += "m";
+            }
+            if (escala.length > 2) {
+                escala[2] += "m";
+            }
+            if (escala.length > 3) {
+                escala[3] += "m";
+            }
+            if (escala.length > 5) {
+                escala[5] += "m";
+            }
+            if (escala.length > 6) {
+                escala[6] += "dism";
+            }
+        }
+
+        return escala;
+    }
+
     public static String[] escalaGenerada(List<Nota> notas, String notaInicial, List<Integer> progresion) {
         String[] escala = new String[progresion.size() + 1];
 
@@ -529,6 +666,7 @@ public Image getIconImage() {
     private javax.swing.JComboBox<String> CmbNota;
     private javax.swing.JLabel LabelSecuencia;
     private javax.swing.JLabel LabelWallpaper;
+    private javax.swing.JTable TableAcordes;
     private javax.swing.JTable TableCirculo;
     private javax.swing.JTable TableNotas;
     private javax.swing.JButton jButton1;
@@ -536,8 +674,10 @@ public Image getIconImage() {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

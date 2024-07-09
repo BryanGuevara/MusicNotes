@@ -81,7 +81,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="46">
+          <StringArray count="47">
             <StringItem index="0" value="---- Seleccione un tema ---"/>
             <StringItem index="1" value="Historia"/>
             <StringItem index="2" value="M&#xfa;sicas"/>
@@ -99,35 +99,36 @@
             <StringItem index="14" value="Composici&#xf3;n de Acordes"/>
             <StringItem index="15" value="--- Teoria Musical ---"/>
             <StringItem index="16" value="Escalas Mayores y Menores"/>
-            <StringItem index="17" value="Tonalidad y Modalidad"/>
-            <StringItem index="18" value="Intervalos"/>
-            <StringItem index="19" value="Compass"/>
-            <StringItem index="20" value="Acordes Invertidos"/>
-            <StringItem index="21" value="Acordes A&#xf1;adidos"/>
-            <StringItem index="22" value="Acordes Maj"/>
-            <StringItem index="23" value="Acordes sobre"/>
-            <StringItem index="24" value="Alteraciones Accidentales"/>
-            <StringItem index="25" value="Modulaci&#xf3;n"/>
-            <StringItem index="26" value="Cadencias"/>
-            <StringItem index="27" value="Notaci&#xf3;n Musical"/>
-            <StringItem index="28" value="Contrapunto"/>
-            <StringItem index="29" value="Polifon&#xed;a"/>
-            <StringItem index="30" value="Textura Musical"/>
-            <StringItem index="31" value="Armonicos"/>
-            <StringItem index="32" value="Contratiempo"/>
-            <StringItem index="33" value="Transposici&#xf3;n"/>
-            <StringItem index="34" value="Figuras R&#xed;tmicas"/>
-            <StringItem index="35" value="Ritmo y Metrica"/>
-            <StringItem index="36" value="--- Tipos de Instrumentos ---"/>
-            <StringItem index="37" value="Ejemplos de Instrumentos de Teclado"/>
-            <StringItem index="38" value="Ejemplos de Instrumentos de Cuerda"/>
-            <StringItem index="39" value="Ejemplos de Instrumentos de Viento Madera"/>
-            <StringItem index="40" value="Ejemplos de Instrumentos de Viento Metal"/>
-            <StringItem index="41" value="Ejemplos de Instrumentos de Percusi&#xf3;n Afinada"/>
-            <StringItem index="42" value="Ejemplos de Instrumentos de Percusi&#xf3;n No Afinada"/>
-            <StringItem index="43" value="Ejemplos de Instrumentos Electroac&#xfa;sticos"/>
-            <StringItem index="44" value="Ejemplos de Instrumentos Digitales"/>
-            <StringItem index="45" value="Ejemplos de Instrumentos Experimentales"/>
+            <StringItem index="17" value="Escalas Modales"/>
+            <StringItem index="18" value="Tonalidad y Modalidad"/>
+            <StringItem index="19" value="Intervalos"/>
+            <StringItem index="20" value="Compass"/>
+            <StringItem index="21" value="Acordes Invertidos"/>
+            <StringItem index="22" value="Acordes A&#xf1;adidos"/>
+            <StringItem index="23" value="Acordes Maj"/>
+            <StringItem index="24" value="Acordes sobre"/>
+            <StringItem index="25" value="Alteraciones Accidentales"/>
+            <StringItem index="26" value="Modulaci&#xf3;n"/>
+            <StringItem index="27" value="Cadencias"/>
+            <StringItem index="28" value="Notaci&#xf3;n Musical"/>
+            <StringItem index="29" value="Contrapunto"/>
+            <StringItem index="30" value="Polifon&#xed;a"/>
+            <StringItem index="31" value="Textura Musical"/>
+            <StringItem index="32" value="Armonicos"/>
+            <StringItem index="33" value="Contratiempo"/>
+            <StringItem index="34" value="Transposici&#xf3;n"/>
+            <StringItem index="35" value="Figuras R&#xed;tmicas"/>
+            <StringItem index="36" value="Ritmo y Metrica"/>
+            <StringItem index="37" value="--- Tipos de Instrumentos ---"/>
+            <StringItem index="38" value="Ejemplos de Instrumentos de Teclado"/>
+            <StringItem index="39" value="Ejemplos de Instrumentos de Cuerda"/>
+            <StringItem index="40" value="Ejemplos de Instrumentos de Viento Madera"/>
+            <StringItem index="41" value="Ejemplos de Instrumentos de Viento Metal"/>
+            <StringItem index="42" value="Ejemplos de Instrumentos de Percusi&#xf3;n Afinada"/>
+            <StringItem index="43" value="Ejemplos de Instrumentos de Percusi&#xf3;n No Afinada"/>
+            <StringItem index="44" value="Ejemplos de Instrumentos Electroac&#xfa;sticos"/>
+            <StringItem index="45" value="Ejemplos de Instrumentos Digitales"/>
+            <StringItem index="46" value="Ejemplos de Instrumentos Experimentales"/>
           </StringArray>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -176,6 +177,13 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="LabelWallpaper">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="0" y="0" width="820" height="590"/>
