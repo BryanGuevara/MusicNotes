@@ -55,7 +55,7 @@ public class Teoria extends javax.swing.JFrame {
         CmbIndex.setBackground(new java.awt.Color(51, 51, 51));
         CmbIndex.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         CmbIndex.setForeground(new java.awt.Color(255, 255, 255));
-        CmbIndex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---- Seleccione un tema ---", "Historia", "Músicas", "Músicos", "--- Tecnicas ---", "Legato", "Staccato", "Trecillo", "Quebrado", "Dinámicas", "--- Composicion ---", "Composición de Círculos", "Estructura de la Forma Musical", "Ornamentación", "Composición de Acordes", "--- Teoria Musical ---", "Escalas Mayores y Menores", "Escalas Modales", "Tonalidad y Modalidad", "Intervalos", "Compass", "Acordes Invertidos", "Acordes Añadidos", "Acordes Maj", "Acordes sobre", "Alteraciones Accidentales", "Modulación", "Cadencias", "Notación Musical", "Contrapunto", "Polifonía", "Textura Musical", "Armonicos", "Contratiempo", "Transposición", "Figuras Rítmicas", "Ritmo y Metrica", "--- Tipos de Instrumentos ---", "Ejemplos de Instrumentos de Teclado", "Ejemplos de Instrumentos de Cuerda", "Ejemplos de Instrumentos de Viento Madera", "Ejemplos de Instrumentos de Viento Metal", "Ejemplos de Instrumentos de Percusión Afinada", "Ejemplos de Instrumentos de Percusión No Afinada", "Ejemplos de Instrumentos Electroacústicos", "Ejemplos de Instrumentos Digitales", "Ejemplos de Instrumentos Experimentales" }));
+        CmbIndex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---- Seleccione un tema ---", "Historia", "Músicas", "Músicos", "--- Tecnicas ---", "Legato", "Staccato", "Trecillo", "Quebrado", "Dinámicas", "--- Composicion ---", "Composición de Círculos", "Estructura de la Forma Musical", "Ornamentación", "Composición de Acordes", "--- Teoria Musical ---", "Escalas Mayores y Menores", "Tonalidad y Modalidad", "Profundizando en las Escalas Modales", "Intervalos", "Compass", "Acordes Invertidos", "Acordes Añadidos", "Acordes Maj", "Acordes sobre", "Alteraciones Accidentales", "Modulación", "Cadencias", "Notación Musical", "Contrapunto", "Polifonía", "Textura Musical", "Armonicos", "Contratiempo", "Transposición", "Figuras Rítmicas", "Ritmo y Metrica", "--- Tipos de Instrumentos ---", "Ejemplos de Instrumentos de Teclado", "Ejemplos de Instrumentos de Cuerda", "Ejemplos de Instrumentos de Viento Madera", "Ejemplos de Instrumentos de Viento Metal", "Ejemplos de Instrumentos de Percusión Afinada", "Ejemplos de Instrumentos de Percusión No Afinada", "Ejemplos de Instrumentos Electroacústicos", "Ejemplos de Instrumentos Digitales", "Ejemplos de Instrumentos Experimentales", "--- Teoria avanzada ---", "Análisis Formal de Obras Complejas", "Sistemas de Notación Alternativa", "Policoralidad y Multitonalidad", "Teoría del Jazz y Armonía Extendida", "Composición Serial y Aleatoria", "Análisis de Composiciones del Siglo XX", "Composición Serial y Música Aleatoria", "Teoría de la Armonía Extendida", "Polifonía Compleja y Contrapunto Avanzado", "Técnicas de Composición Electrónica", "Musicología y Contexto Histórico", "Estudios sobre la Psicología de la Música", "Interacción entre Música y Tecnología", "Música Minimalista y su Impacto", "Estilos Musicales Contemporáneos", "Teoría de los Conjuntos Armónicos", "Desarrollo de Temas y Motivos", "Música y Cultura Global", "Análisis de Texturas Musicales Complejas", "Improvisación Avanzada en Diferentes Géneros", "Oido Musical y Absoluto", "--- Carta a los Musicos ---" }));
         CmbIndex.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         CmbIndex.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -87,12 +87,11 @@ public class Teoria extends javax.swing.JFrame {
     private void CmbIndexItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CmbIndexItemStateChanged
         int Index = CmbIndex.getSelectedIndex();
         Enciclopedia informacion = new Enciclopedia();
-        AreaInfo.setVisible(true);
 
-        if (Index == 0) {
-            AreaInfo.setVisible(false);
-            AreaInfo.setText("");
-        } else if (Index == 1) {
+        AreaInfo.setVisible(false);
+        AreaInfo.setText("");
+
+        if (Index == 1) {
             AreaInfo.setText(informacion.Historia());
         } else if (Index == 2) {
             AreaInfo.setText(informacion.Musicas());
@@ -125,9 +124,9 @@ public class Teoria extends javax.swing.JFrame {
         } else if (Index == 16) {
             AreaInfo.setText(informacion.EscalasMayoresYMenores());
         } else if (Index == 17) {
-            AreaInfo.setText(informacion.Modos());
-        } else if (Index == 18) {
             AreaInfo.setText(informacion.TonalidadYModalidad());
+        } else if (Index == 18) {
+            AreaInfo.setText(informacion.Modos());
         } else if (Index == 19) {
             AreaInfo.setText(informacion.Intervalos());
         } else if (Index == 20) {
@@ -184,7 +183,55 @@ public class Teoria extends javax.swing.JFrame {
             AreaInfo.setText(informacion.EjemplosDeInstrumentosDigitales());
         } else if (Index == 46) {
             AreaInfo.setText(informacion.EjemplosDeInstrumentosExperimentales());
+        } else if (Index == 47) {
+            AreaInfo.setText(informacion.TeoriaAvanzada());
+        } else if (Index == 48) {
+            AreaInfo.setText(informacion.AnalisisFormalDeObrasComplejas());
+        } else if (Index == 49) {
+            AreaInfo.setText(informacion.SistemasDeNotacionAlternativa());
+        } else if (Index == 50) {
+            AreaInfo.setText(informacion.PolicoralidadYMultitonalidad());
+        } else if (Index == 51) {
+            AreaInfo.setText(informacion.TeoriaDelJazzYArmoniaExtendida());
+        } else if (Index == 52) {
+            AreaInfo.setText(informacion.ComposicionSerialYAleatoria());
+        } else if (Index == 53) {
+            AreaInfo.setText(informacion.AnalisisDeComposicionesDelSigloXX());
+        } else if (Index == 54) {
+            AreaInfo.setText(informacion.ComposicionSerialYMuzicaAleatoria());
+        } else if (Index == 55) {
+            AreaInfo.setText(informacion.TeoriaDeLaArmoniaExtendida());
+        } else if (Index == 56) {
+            AreaInfo.setText(informacion.PolifoniaComplejaYContrapuntoAvanzado());
+        } else if (Index == 57) {
+            AreaInfo.setText(informacion.TecnicasDeComposicionElectronica());
+        } else if (Index == 58) {
+            AreaInfo.setText(informacion.MusicologiaYContextoHistorico());
+        } else if (Index == 59) {
+            AreaInfo.setText(informacion.EstudiosSobreLaPsicologiaDeLaMusica());
+        } else if (Index == 60) {
+            AreaInfo.setText(informacion.InteraccionEntreMusicaYTecnologia());
+        } else if (Index == 61) {
+            AreaInfo.setText(informacion.MusicaMinimalistaYSuImpacto());
+        } else if (Index == 62) {
+            AreaInfo.setText(informacion.EstilosMusicalesContemporaneos());
+        } else if (Index == 63) {
+            AreaInfo.setText(informacion.TeoriaDeLosConjuntosArmónicos());
+        } else if (Index == 64) {
+            AreaInfo.setText(informacion.DesarrolloDeTemasYMotivos());
+        } else if (Index == 65) {
+            AreaInfo.setText(informacion.MusicaYCulturaGlobal());
+        } else if (Index == 66) {
+            AreaInfo.setText(informacion.AnalisisDeTexturasMusicalesComplejas());
+        } else if (Index == 67) {
+            AreaInfo.setText(informacion.ImprovisacionAvanzadaEnDiferentesGeneros());
+        }else if (Index == 68) {
+            AreaInfo.setText(informacion.OidoMusicalYAbsoluto());
+        }else if (Index == 69) {
+            AreaInfo.setText(informacion.Carta());
         }
+
+        AreaInfo.setVisible(true);
         AreaInfo.setCaretPosition(0);
     }//GEN-LAST:event_CmbIndexItemStateChanged
 

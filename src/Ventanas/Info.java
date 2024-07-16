@@ -22,7 +22,6 @@ public class Info extends javax.swing.JFrame {
     public Info() {
         initComponents();
 
-        setTitle(" Informacion de la Aplicación");
         this.setLocationRelativeTo(null);
 
         ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPiano.jpg");
@@ -99,7 +98,7 @@ public class Info extends javax.swing.JFrame {
                 BtnFacebookActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 60, 60));
+        getContentPane().add(BtnFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 60, 60));
 
         BtnGithub.setBackground(new java.awt.Color(51, 51, 51));
         BtnGithub.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -110,7 +109,7 @@ public class Info extends javax.swing.JFrame {
                 BtnGithubActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnGithub, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 60, 60));
+        getContentPane().add(BtnGithub, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 60, 60));
 
         BtnInstagram.setBackground(new java.awt.Color(51, 51, 51));
         BtnInstagram.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -121,7 +120,7 @@ public class Info extends javax.swing.JFrame {
                 BtnInstagramActionPerformed(evt);
             }
         });
-        getContentPane().add(BtnInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 130, 60, 60));
+        getContentPane().add(BtnInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 60, 60));
 
         jTextField5.setEditable(false);
         jTextField5.setBackground(new java.awt.Color(51, 51, 51));
@@ -130,7 +129,7 @@ public class Info extends javax.swing.JFrame {
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("Redes Sociales");
         jTextField5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 230, 30));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 220, 30));
 
         jScrollPane1.setBorder(null);
 
@@ -141,7 +140,7 @@ public class Info extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("MusicNotes v2.0\n\n- Adicion de 1 tema nuevo en \"Teoria Musical\" -> \"Escalas Modales\"\n- Reorganizaion de botones\n- \"Acordes Piano\" movido a Inicio\n- \"Acordes Guitarra\" movido a Inicio\n- \"Generador de Escalas\" movido a Extra\n- Botones de redes sociales movido a Info\n- Eliminacion de la pestaña \"Redes Sociales\"\n\n----------------------------------------------------------------\nMusicNotes v1.0\n\n-Cambio en el diseño de todas las pestañas\n-Adicion de 39 Temas a la pestaña \"Teoria Muscal\"\n-Modificacion de Nombre de \"Acordes\" a \"Acordes de Piano\"\n-Adicion de la Pestaña \"Acordes de guitarra\"\n-Adicion de 2 familias de acordes a \"Acordes de Guitarra\"\n-Adicion de la tabla \"Acordes\" en la pestaña \"Galeria de Escalas\"\n\n----------------------------------------------------------------\nMusicNotes Beta v1.5\n\n-Actualización del software para formar los acordes\n-Modificación de la pestaña \"Extra\" para añadir sus funciones\n-Adición de pestaña \"Redes Sociales\"\n-Adición de Pestaña \"Teoría Musical\"\n-Adicion de Pestaña \"Informacion de la Aplicación\"\n-Modificación de estilo en las Tablas de \"Galería de Escalas\" y \"Generador de Escalas\"\n-Adicion de 20 Familias a \"Galeria de Acordes\"\n-Adicion de la pestaña \"Teoria Musical\"\n-Adicion de 9 Temas a la pestaña \"Teoria Musical\"\n----------------------------------------------------------------\nMusicNotes Beta v1.0\n\n-Adición de la pestaña \"Generador de Escalas\"\n-Modificación del estilo en todo el programa\n-Adición de fondos en todas las pestañas\n-Apertura del programa a todo el público\n-Adicion de 6 escalas PreCargadas en la pestaña \"Generador de Escalas\"\n----------------------------------------------------------------\nMusicNotes Alfa v0.1\n\n-Adición de la pestaña \"Galería de Acordes\"\n-Adición de la pestaña \"Galería de Escalas\"\n-Adición de 15 familias de acordes en la pestaña \"Galería de Acordes\"\n-Adición de las 24 escalas (12 mayores, 12 menores) en la pestaña \"Galería de Escalas\"\n\n----------------------------------------------------------------\nMusicNotes Pre Alfa v0.0.1\n\n- Creacion del Software para genera escalas\n- Adicion de las 12 notas disponibles\n- Adicion de la escala Mayor al generador de escalas de consola");
+        jTextArea1.setText("MusicNotes v2.0\n\n- Reorganizaion de botones\n- \"Acordes Piano\" movido a Inicio\n- \"Acordes Guitarra\" movido a Inicio\n- \"Generador de Escalas\" movido a Extra\n- Botones de redes sociales movido a Info\n- Eliminacion de la pestaña \"Redes Sociales\"\n- Optimizacion del Software para sacar los tonos de las escalas Precargadas en \"Genrador de Escalas\"\n- Adicion de 22 escalas Precargadas en la pestaña \"Generador de Escalas\"\n- Adicion de 23 tema nuevos en \"Teoria Musical\"\n- Adicion de 1 Carta de agradecimiento en \"Teoria Musical\"\n\n----------------------------------------------------------------\nMusicNotes v1.0\n\n-Cambio en el diseño de todas las pestañas\n-Adicion de 39 Temas a la pestaña \"Teoria Muscal\"\n-Modificacion de Nombre de \"Acordes\" a \"Acordes de Piano\"\n-Adicion de la Pestaña \"Acordes de guitarra\"\n-Adicion de 2 familias de acordes a \"Acordes de Guitarra\"\n-Adicion de la tabla \"Acordes\" en la pestaña \"Galeria de Escalas\"\n\n----------------------------------------------------------------\nMusicNotes Beta v1.5\n\n-Actualización del software para formar los acordes\n-Modificación de la pestaña \"Extra\" para añadir sus funciones\n-Adición de pestaña \"Redes Sociales\"\n-Adición de Pestaña \"Teoría Musical\"\n-Adicion de Pestaña \"Informacion de la Aplicación\"\n-Modificación de estilo en las Tablas de \"Galería de Escalas\" y \"Generador de Escalas\"\n-Adicion de 20 Familias a \"Galeria de Acordes\"\n-Adicion de la pestaña \"Teoria Musical\"\n-Adicion de 9 Temas a la pestaña \"Teoria Musical\"\n\n----------------------------------------------------------------\nMusicNotes Beta v1.0\n\n-Adición de la pestaña \"Generador de Escalas\"\n-Modificación del estilo en todo el programa\n-Adición de fondos en todas las pestañas\n-Apertura del programa a todo el público\n-Adicion de 6 escalas PreCargadas en la pestaña \"Generador de Escalas\"\n\n----------------------------------------------------------------\nMusicNotes Alfa v0.1\n\n-Adición de la pestaña \"Galería de Acordes\"\n-Adición de la pestaña \"Galería de Escalas\"\n-Adición de 15 familias de acordes en la pestaña \"Galería de Acordes\"\n-Adición de las 24 escalas (12 mayores, 12 menores) en la pestaña \"Galería de Escalas\"\n\n----------------------------------------------------------------\nMusicNotes Pre Alfa v0.0.1\n\n- Creacion del Software para genera escalas\n- Adicion de las 12 notas disponibles\n- Adicion de la escala Mayor al generador de escalas de consola");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane1.setViewportView(jTextArea1);
@@ -164,14 +163,14 @@ public class Info extends javax.swing.JFrame {
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("Notas de la version");
         jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 170, 40));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 170, 30));
 
         jTextField4.setEditable(false);
         jTextField4.setBackground(new java.awt.Color(51, 51, 51));
         jTextField4.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jTextField4.setForeground(new java.awt.Color(255, 255, 255));
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField4.setText("Hecho con Java17");
+        jTextField4.setText("Hecho con Java 17");
         jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 230, 30));
 

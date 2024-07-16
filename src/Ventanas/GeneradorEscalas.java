@@ -51,9 +51,9 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         TableNotas.setFont(font);
         TableSecuencia.setFont(font);
         DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        renderer.setForeground(new Color(255, 255, 255)); 
-        renderer.setBackground(new Color(51, 51, 51));  
-        renderer.setFont(font);              
+        renderer.setForeground(new Color(255, 255, 255));
+        renderer.setBackground(new Color(51, 51, 51));
+        renderer.setFont(font);
         TableNotas.setDefaultRenderer(Object.class, renderer);
         TableSecuencia.setDefaultRenderer(Object.class, renderer);
         TableNotas.setEnabled(false);
@@ -90,6 +90,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         Reset = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField2 = new javax.swing.JTextField();
+        TextNotas = new javax.swing.JTextField();
         TextEscala = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         LabelWallpaper = new javax.swing.JLabel();
@@ -124,7 +125,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("PreeCargadas");
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 200, 40));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 230, 40));
 
         SemiTono1.setBackground(new java.awt.Color(51, 51, 51));
         SemiTono1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -195,7 +196,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(TableNotas);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 287, 660, 220));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 287, 700, 220));
 
         Generar.setBackground(new java.awt.Color(51, 51, 51));
         Generar.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -207,7 +208,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
                 GenerarActionPerformed(evt);
             }
         });
-        getContentPane().add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 200, 40));
+        getContentPane().add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 230, 40));
 
         GenerarEscala.setBackground(new java.awt.Color(51, 51, 51));
         GenerarEscala.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -236,9 +237,10 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         jComboBox1.setBackground(new java.awt.Color(51, 51, 51));
         jComboBox1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor", "Blues", "Cromatica", "Pentatonica", "Armonica" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor ", "Menor", "Blues", "Cromática", "Pentatónica Mayor", "Menor Armónica", "Modo Dórico", "Modo Lidio", "Modo Mixolidio", "Modo Frigio", "Modo Locrio", "Frigio Dominante", "Gipsy", "Menor Melódica", "Pentatónica Menor", "Bebop Mayor", "Bebop Menor", "Enigmática", "Húngara Menor", "Húngara Mayor", "Doble Armónica", "Lidia Aumentada", "Lidia Dominante", "Superlocria", "Hexátona", "Tritónica", "Neopolitana Menor", "Neopolitana Mayor" }));
+        jComboBox1.setAutoscrolls(true);
         jComboBox1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 200, 40));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 230, 40));
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(51, 51, 51));
@@ -249,6 +251,15 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 220, 40));
 
+        TextNotas.setEditable(false);
+        TextNotas.setBackground(new java.awt.Color(51, 51, 51));
+        TextNotas.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        TextNotas.setForeground(new java.awt.Color(255, 255, 255));
+        TextNotas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TextNotas.setText("N° de Notas");
+        TextNotas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(TextNotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 230, 40));
+
         TextEscala.setEditable(false);
         TextEscala.setBackground(new java.awt.Color(51, 51, 51));
         TextEscala.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -256,7 +267,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         TextEscala.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         TextEscala.setText("Generador de escalas");
         TextEscala.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(TextEscala, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 200, 40));
+        getContentPane().add(TextEscala, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 230, 40));
 
         jButton5.setBackground(new java.awt.Color(51, 51, 51));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -270,10 +281,10 @@ public class GeneradorEscalas extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 40, 40));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 40, 40));
 
         LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 530));
+        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -291,8 +302,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
     private void GenerarEscalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenerarEscalaActionPerformed
         if (x != 1) {
             generada = 1;
-
-            TextEscala.setText("Escala Propia");
+            
             int y = 1;
 
             GenerarEscala.setVisible(false);
@@ -326,6 +336,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
                 List<Nota> notasList = Arrays.asList(notas);
                 String notaInicial = notas[notaIndex].getNombre();
                 todasLasEscalas[notaIndex] = escalaGenerada(notasList, notaInicial, escalaprog);
+                TextNotas.setText(x + " Notas");
             }
 
             for (String[] escalaGenerada : todasLasEscalas) {
@@ -349,79 +360,136 @@ public class GeneradorEscalas extends javax.swing.JFrame {
         while (secuencia.getRowCount() > 0) {
             secuencia.removeRow(0);
         }
+
         if (escala == 0) {
             x = 8;
             progresion = Arrays.asList(2, 2, 1, 2, 2, 2, 1);
-            TextEscala.setText("Escala Mayor");
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
+            TextEscala.setText("Mayor");
         } else if (escala == 1) {
             x = 8;
             progresion = Arrays.asList(2, 1, 2, 2, 1, 2, 2);
-            TextEscala.setText("Escala Menor");
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
+            TextEscala.setText("Menor");
         } else if (escala == 2) {
             x = 7;
             progresion = Arrays.asList(2, 3, 2, 1, 1, 3, 1);
-            TextEscala.setText("Escala Blues");
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono y Medio"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"Tono y Medio"});
-            secuencia.addRow(new Object[]{"SemiTono"});
+            TextEscala.setText("Blues");
         } else if (escala == 3) {
             x = 13;
             progresion = Arrays.asList(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-            TextEscala.setText("Escala Cromatica");
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
+            TextEscala.setText("Cromática");
         } else if (escala == 4) {
             x = 6;
             progresion = Arrays.asList(2, 2, 3, 2, 3, 2);
-            TextEscala.setText("Escala Pentatonica");
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono y Medio"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono y Medio"});
-            secuencia.addRow(new Object[]{"Tono"});
+            TextEscala.setText("Pentatónica Mayor");
         } else if (escala == 5) {
             x = 8;
             progresion = Arrays.asList(2, 1, 2, 2, 1, 3, 1);
-            TextEscala.setText("Escala Armonica");
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"Tono"});
-            secuencia.addRow(new Object[]{"SemiTono"});
-            secuencia.addRow(new Object[]{"Tono y Medio"});
-            secuencia.addRow(new Object[]{"SemiTono"});
+            TextEscala.setText("Menor Armónica");
+        } else if (escala == 6) {
+            x = 8;
+            progresion = Arrays.asList(2, 2, 1, 2, 2, 1, 2);
+            TextEscala.setText("Modo Dórico");
+        } else if (escala == 7) {
+            x = 8;
+            progresion = Arrays.asList(2, 2, 2, 1, 2, 2, 1);
+            TextEscala.setText("Modo Lidio");
+        } else if (escala == 8) {
+            x = 8;
+            progresion = Arrays.asList(2, 2, 1, 2, 2, 1, 2);
+            TextEscala.setText("Modo Mixolidio");
+        } else if (escala == 9) {
+            x = 8;
+            progresion = Arrays.asList(1, 2, 2, 2, 1, 2, 2);
+            TextEscala.setText("Modo Frigio");
+        } else if (escala == 10) {
+            x = 8;
+            progresion = Arrays.asList(1, 2, 2, 1, 2, 2, 2);
+            TextEscala.setText("Modo Locrio");
+        } else if (escala == 11) {
+            x = 8;
+            progresion = Arrays.asList(1, 3, 1, 2, 1, 2, 2);
+            TextEscala.setText("Frigio Dominante");
+        } else if (escala == 12) {
+            x = 7;
+            progresion = Arrays.asList(1, 2, 3, 2, 2, 2);
+            TextEscala.setText("Gipsy");
+        } else if (escala == 13) {
+            x = 8;
+            progresion = Arrays.asList(2, 1, 2, 2, 2, 2, 1);
+            TextEscala.setText("Menor Melódica");
+        } else if (escala == 14) {
+            x = 6;
+            progresion = Arrays.asList(3, 2, 1, 1, 3, 2);
+            TextEscala.setText("Pentatónica Menor");
+        } else if (escala == 15) {
+            x = 7;
+            progresion = Arrays.asList(2, 2, 1, 2, 2, 1, 2);
+            TextEscala.setText("Bebop Mayor");
+        } else if (escala == 16) {
+            x = 8;
+            progresion = Arrays.asList(2, 1, 2, 2, 1, 3, 1);
+            TextEscala.setText("Bebop Menor");
+        } else if (escala == 17) {
+            x = 7;
+            progresion = Arrays.asList(1, 2, 1, 2, 2, 1, 3);
+            TextEscala.setText("Enigmática");
+        } else if (escala == 18) {
+            x = 8;
+            progresion = Arrays.asList(2, 1, 3, 1, 2, 1, 2);
+            TextEscala.setText("Húngara Menor");
+        } else if (escala == 19) {
+            x = 8;
+            progresion = Arrays.asList(3, 1, 2, 1, 3, 1, 1);
+            TextEscala.setText("Húngara Mayor");
+        } else if (escala == 20) {
+            x = 8;
+            progresion = Arrays.asList(1, 3, 2, 1, 3, 1, 1);
+            TextEscala.setText("Doble Armónica");
+        } else if (escala == 21) {
+            x = 8;
+            progresion = Arrays.asList(2, 2, 2, 1, 3, 1, 1);
+            TextEscala.setText("Lidia Aumentada");
+        } else if (escala == 22) {
+            x = 8;
+            progresion = Arrays.asList(2, 2, 1, 3, 1, 2, 1);
+            TextEscala.setText("Lidia Dominante");
+        } else if (escala == 23) {
+            x = 8;
+            progresion = Arrays.asList(1, 2, 1, 2, 2, 2, 2);
+            TextEscala.setText("Superlocria (Alterada)");
+        } else if (escala == 24) {
+            x = 6;
+            progresion = Arrays.asList(2, 2, 2, 2, 2, 2);
+            TextEscala.setText("Hexátona");
+        } else if (escala == 25) {
+            x = 6;
+            progresion = Arrays.asList(3, 3, 2, 2, 2, 2);
+            TextEscala.setText("Tritónica");
+        } else if (escala == 26) {
+            x = 8;
+            progresion = Arrays.asList(1, 2, 1, 2, 2, 2, 2);
+            TextEscala.setText("Neopolitana Menor");
+        } else if (escala == 27) {
+            x = 8;
+            progresion = Arrays.asList(1, 2, 2, 2, 1, 2, 2);
+            TextEscala.setText("Neopolitana Mayor");
         }
+
         int y = 1;
 
+        for (Integer intervalo : progresion) {
+            if (intervalo == 1) {
+                secuencia.addRow(new Object[]{"SemiTono"});
+            } else if (intervalo == 2) {
+                secuencia.addRow(new Object[]{"Tono"});
+            } else if (intervalo == 3) {
+                secuencia.addRow(new Object[]{"Tono y Medio"});
+            } else if (intervalo == 4) {
+                secuencia.addRow(new Object[]{"2 Tonos"});
+            }
+        }
+
+        TextNotas.setText(x + " Notas");
         GenerarEscala.setVisible(false);
         Generar.setVisible(false);
 
@@ -571,6 +639,7 @@ public class GeneradorEscalas extends javax.swing.JFrame {
     private javax.swing.JTable TableNotas;
     private javax.swing.JTable TableSecuencia;
     private javax.swing.JTextField TextEscala;
+    private javax.swing.JTextField TextNotas;
     private javax.swing.JButton Tono1;
     private javax.swing.JButton Tono2;
     private javax.swing.JButton TonoMedio1;

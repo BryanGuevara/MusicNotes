@@ -81,7 +81,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="47">
+          <StringArray count="70">
             <StringItem index="0" value="---- Seleccione un tema ---"/>
             <StringItem index="1" value="Historia"/>
             <StringItem index="2" value="M&#xfa;sicas"/>
@@ -99,8 +99,8 @@
             <StringItem index="14" value="Composici&#xf3;n de Acordes"/>
             <StringItem index="15" value="--- Teoria Musical ---"/>
             <StringItem index="16" value="Escalas Mayores y Menores"/>
-            <StringItem index="17" value="Escalas Modales"/>
-            <StringItem index="18" value="Tonalidad y Modalidad"/>
+            <StringItem index="17" value="Tonalidad y Modalidad"/>
+            <StringItem index="18" value="Profundizando en las Escalas Modales"/>
             <StringItem index="19" value="Intervalos"/>
             <StringItem index="20" value="Compass"/>
             <StringItem index="21" value="Acordes Invertidos"/>
@@ -129,6 +129,29 @@
             <StringItem index="44" value="Ejemplos de Instrumentos Electroac&#xfa;sticos"/>
             <StringItem index="45" value="Ejemplos de Instrumentos Digitales"/>
             <StringItem index="46" value="Ejemplos de Instrumentos Experimentales"/>
+            <StringItem index="47" value="--- Teoria avanzada ---"/>
+            <StringItem index="48" value="An&#xe1;lisis Formal de Obras Complejas"/>
+            <StringItem index="49" value="Sistemas de Notaci&#xf3;n Alternativa"/>
+            <StringItem index="50" value="Policoralidad y Multitonalidad"/>
+            <StringItem index="51" value="Teor&#xed;a del Jazz y Armon&#xed;a Extendida"/>
+            <StringItem index="52" value="Composici&#xf3;n Serial y Aleatoria"/>
+            <StringItem index="53" value="An&#xe1;lisis de Composiciones del Siglo XX"/>
+            <StringItem index="54" value="Composici&#xf3;n Serial y M&#xfa;sica Aleatoria"/>
+            <StringItem index="55" value="Teor&#xed;a de la Armon&#xed;a Extendida"/>
+            <StringItem index="56" value="Polifon&#xed;a Compleja y Contrapunto Avanzado"/>
+            <StringItem index="57" value="T&#xe9;cnicas de Composici&#xf3;n Electr&#xf3;nica"/>
+            <StringItem index="58" value="Musicolog&#xed;a y Contexto Hist&#xf3;rico"/>
+            <StringItem index="59" value="Estudios sobre la Psicolog&#xed;a de la M&#xfa;sica"/>
+            <StringItem index="60" value="Interacci&#xf3;n entre M&#xfa;sica y Tecnolog&#xed;a"/>
+            <StringItem index="61" value="M&#xfa;sica Minimalista y su Impacto"/>
+            <StringItem index="62" value="Estilos Musicales Contempor&#xe1;neos"/>
+            <StringItem index="63" value="Teor&#xed;a de los Conjuntos Arm&#xf3;nicos"/>
+            <StringItem index="64" value="Desarrollo de Temas y Motivos"/>
+            <StringItem index="65" value="M&#xfa;sica y Cultura Global"/>
+            <StringItem index="66" value="An&#xe1;lisis de Texturas Musicales Complejas"/>
+            <StringItem index="67" value="Improvisaci&#xf3;n Avanzada en Diferentes G&#xe9;neros"/>
+            <StringItem index="68" value="Oido Musical y Absoluto"/>
+            <StringItem index="69" value="--- Carta a los Musicos ---"/>
           </StringArray>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
