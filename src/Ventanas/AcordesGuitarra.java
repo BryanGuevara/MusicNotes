@@ -28,7 +28,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
                 LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
 
         LabelWallpaper.setIcon(icon);
-
         Limpiar();
     }
 
@@ -540,6 +539,27 @@ public class AcordesGuitarra extends javax.swing.JFrame {
     }
 
     public void Encontrar(int Acorde, int Familia) {
+
+        int traste1 = 0;
+
+        if (Familia == 0) {
+            traste1 = Mayor(Acorde);
+        } else if (Familia == 1) {
+            traste1 = Menor(Acorde);
+        }
+
+        if (traste1 == 1) {
+            Clavijero.setVisible(true);
+        } else {
+            Clavijero.setVisible(false);
+        }
+        Espacio1.setText("" + traste1 + "");
+        Espacio2.setText("" + (traste1 + 1) + "");
+        Espacio3.setText("" + (traste1 + 2) + "");
+        Espacio4.setText("" + (traste1 + 3) + "");
+    }
+
+    public int Mayor(int Acorde) {
         int traste1 = 0;
 
         if (Acorde == 0) {
@@ -550,17 +570,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" DO Mayor");
             LabelAcorde.setText("C");
-            if (Familia == 1) {
-                Limpiar();
-                traste1 = 3;
-                Puente2.setVisible(true);
-                Dedos8.setVisible(true);
-                Dedos15.setVisible(true);
-                Dedos16.setVisible(true);
-                Cuerda6.setForeground(Color.red);
-                LabelAcordeName.setText(" DO Menor");
-                LabelAcorde.setText("Cm");
-            }
         } else if (Acorde == 1) {
             traste1 = 1;
             Puente3.setVisible(true);
@@ -570,17 +579,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" DO Sostenido Mayor");
             LabelAcorde.setText("C#");
-            if (Familia == 1) {
-                Limpiar();
-                traste1 = 4;
-                Puente2.setVisible(true);
-                Dedos8.setVisible(true);
-                Dedos15.setVisible(true);
-                Dedos16.setVisible(true);
-                Cuerda6.setForeground(Color.red);
-                LabelAcordeName.setText(" DO Sostenido Menorr");
-                LabelAcorde.setText("C#m");
-            }
         } else if (Acorde == 2) {
             traste1 = 1;
             Dedos7.setVisible(true);
@@ -590,12 +588,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" RE Mayor");
             LabelAcorde.setText("D");
-            if (Familia == 1) {
-                Dedos7.setVisible(false);
-                Dedos1.setVisible(true);
-                LabelAcordeName.setText(" RE Menor");
-                LabelAcorde.setText("Dm");
-            }
         } else if (Acorde == 3) {
             traste1 = 1;
             Dedos4.setVisible(true);
@@ -606,12 +598,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" RE Sostenido Mayor");
             LabelAcorde.setText("D#");
-            if (Familia == 1) {
-                Dedos13.setVisible(false);
-                Dedos7.setVisible(true);
-                LabelAcordeName.setText(" RE Sostenido Menor");
-                LabelAcorde.setText("D#m");
-            }
         } else if (Acorde == 4) {
             traste1 = 1;
             Dedos3.setVisible(true);
@@ -619,11 +605,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Dedos11.setVisible(true);
             LabelAcordeName.setText("MI Mayor");
             LabelAcorde.setText("E");
-            if (Familia == 1) {
-                Dedos3.setVisible(false);
-                LabelAcordeName.setText("MI Menor");
-                LabelAcorde.setText("Em");
-            }
         } else if (Acorde == 5) {
             traste1 = 1;
             Puente1.setVisible(true);
@@ -632,11 +613,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Dedos17.setVisible(true);
             LabelAcordeName.setText("FA Mayor");
             LabelAcorde.setText("F");
-            if (Familia == 1) {
-                Dedos9.setVisible(false);
-                LabelAcordeName.setText("FA Menor");
-                LabelAcorde.setText("Fm");
-            }
         } else if (Acorde == 6) {
             traste1 = 2;
             Puente1.setVisible(true);
@@ -645,27 +621,14 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Dedos17.setVisible(true);
             LabelAcordeName.setText("FA Sostenido Mayor");
             LabelAcorde.setText("F#");
-            if (Familia == 1) {
-                Dedos9.setVisible(false);
-                LabelAcordeName.setText("FA Sostenido Menor");
-                LabelAcorde.setText("F#m");
-            }
         } else if (Acorde == 7) {
+            traste1 = 1;
             Dedos11.setVisible(true);
             Dedos18.setVisible(true);
             Dedos13.setVisible(true);
             Dedos14.setVisible(true);
             LabelAcordeName.setText("SOL Mayor");
             LabelAcorde.setText("G");
-            if (Familia == 1) {
-                Limpiar();
-                traste1 = 3;
-                Puente1.setVisible(true);
-                Dedos16.setVisible(true);
-                Dedos17.setVisible(true);
-                LabelAcordeName.setText("SOL Menor");
-                LabelAcorde.setText("Gm");
-            }
         } else if (Acorde == 8) {
             traste1 = 4;
             Puente1.setVisible(true);
@@ -674,11 +637,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Dedos17.setVisible(true);
             LabelAcordeName.setText("SOL Sostenido Mayor");
             LabelAcorde.setText("G#");
-            if (Familia == 1) {
-                Dedos9.setVisible(false);
-                LabelAcordeName.setText("SOL Sostenido Menor");
-                LabelAcorde.setText("G#m");
-            }
         } else if (Acorde == 9) {
             traste1 = 1;
             Dedos8.setVisible(true);
@@ -687,12 +645,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" LA Mayor");
             LabelAcorde.setText("A");
-            if (Familia == 1) {
-                Dedos8.setVisible(false);
-                Dedos2.setVisible(true);
-                LabelAcordeName.setText(" LA Menor");
-                LabelAcorde.setText("Am");
-            }
         } else if (Acorde == 10) {
             traste1 = 1;
             Puente2.setVisible(true);
@@ -702,12 +654,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" LA Sostenido Mayor");
             LabelAcorde.setText("A#");
-            if (Familia == 1) {
-                Dedos14.setVisible(false);
-                Dedos8.setVisible(true);
-                LabelAcordeName.setText(" LA Sostenido Menor");
-                LabelAcorde.setText("A#m");
-            }
         } else if (Acorde == 11) {
             traste1 = 2;
             Puente2.setVisible(true);
@@ -717,26 +663,114 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" SI Mayor");
             LabelAcorde.setText("B");
-            if (Familia == 1) {
-                Dedos14.setVisible(false);
-                Dedos8.setVisible(true);
-                LabelAcordeName.setText(" SI Menor");
-                LabelAcorde.setText("B#m");
-            }
         }
 
-        if (traste1 == 1) {
-            Clavijero.setVisible(true);
-        } else {
-            Clavijero.setVisible(false);
+        return traste1;
+    }
+
+    
+    public int Menor(int Acorde) {
+        int traste1 = 0;
+        if (Acorde == 0) {
+            traste1 = 3;
+            Puente2.setVisible(true);
+            Dedos8.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos16.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" DO Menor");
+            LabelAcorde.setText("Cm");
+        } else if (Acorde == 1) {
+            traste1 = 4;
+            Puente2.setVisible(true);
+            Dedos8.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos16.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" DO Sostenido Menor");
+            LabelAcorde.setText("C#m");
+        } else if (Acorde == 2) {
+            traste1 = 1;
+            Dedos1.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos14.setVisible(true);
+            Cuerda5.setForeground(Color.red);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" RE Menor");
+            LabelAcorde.setText("Dm");
+        } else if (Acorde == 3) {
+            traste1 = 1;
+            Dedos4.setVisible(true);
+            Dedos7.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos20.setVisible(true);
+            Cuerda5.setForeground(Color.red);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" RE Sostenido Menor");
+            LabelAcorde.setText("D#m");
+        } else if (Acorde == 4) {
+            traste1 = 1;
+            Dedos10.setVisible(true);
+            Dedos11.setVisible(true);
+            LabelAcordeName.setText("MI Menor");
+            LabelAcorde.setText("Em");
+        } else if (Acorde == 5) {
+            traste1 = 1;
+            Puente1.setVisible(true);
+            Dedos16.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("FA Menor");
+            LabelAcorde.setText("Fm");
+        } else if (Acorde == 6) {
+            traste1 = 2;
+            Puente1.setVisible(true);
+            Dedos16.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("FA Sostenido Menor");
+            LabelAcorde.setText("F#m");
+        } else if (Acorde == 7) {
+            traste1 = 3;
+            Puente1.setVisible(true);
+            Dedos16.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("SOL Menor");
+            LabelAcorde.setText("Gm");
+        } else if (Acorde == 8) {
+            traste1 = 4;
+            Puente1.setVisible(true);
+            Dedos16.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("SOL Sostenido Menor");
+            LabelAcorde.setText("G#m");
+        } else if (Acorde == 9) {
+            traste1 = 1;
+            Dedos2.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos10.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" LA Menor");
+            LabelAcorde.setText("Am");
+        } else if (Acorde == 10) {
+            traste1 = 1;
+            Puente2.setVisible(true);
+            Dedos8.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos16.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" LA Sostenido Menor");
+            LabelAcorde.setText("A#m");
+        } else if (Acorde == 11) {
+            traste1 = 2;
+            Puente2.setVisible(true);
+            Dedos8.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos16.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" SI Menor");
+            LabelAcorde.setText("Bm");
         }
-        int traste2 = traste1 + 1;
-        int traste3 = traste1 + 2;
-        int traste4 = traste1 + 3;
-        Espacio1.setText("" + traste1 + "");
-        Espacio2.setText("" + traste2 + "");
-        Espacio3.setText("" + traste3 + "");
-        Espacio4.setText("" + traste4 + "");
+
+        return traste1;
     }
 
     public void Limpiar() {
