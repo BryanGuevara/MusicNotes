@@ -307,8 +307,8 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
-            <StringItem index="0" value="Mayor "/>
+          <StringArray count="40">
+            <StringItem index="0" value="Mayor"/>
             <StringItem index="1" value="Menor"/>
             <StringItem index="2" value="Blues"/>
             <StringItem index="3" value="Crom&#xe1;tica"/>
@@ -331,11 +331,23 @@
             <StringItem index="20" value="Doble Arm&#xf3;nica"/>
             <StringItem index="21" value="Lidia Aumentada"/>
             <StringItem index="22" value="Lidia Dominante"/>
-            <StringItem index="23" value="Superlocria"/>
+            <StringItem index="23" value="Superlocria (Alterada)"/>
             <StringItem index="24" value="Hex&#xe1;tona"/>
             <StringItem index="25" value="Trit&#xf3;nica"/>
             <StringItem index="26" value="Neopolitana Menor"/>
             <StringItem index="27" value="Neopolitana Mayor"/>
+            <StringItem index="28" value="D&#xf3;rica Menor"/>
+            <StringItem index="29" value="Mayor Natural"/>
+            <StringItem index="30" value="Menor Natural"/>
+            <StringItem index="31" value="Frigia Dominante"/>
+            <StringItem index="32" value="Whole Tone"/>
+            <StringItem index="33" value="Modo E&#xf3;lico"/>
+            <StringItem index="34" value="Menor Mel&#xf3;dica"/>
+            <StringItem index="35" value="Double Harmonic"/>
+            <StringItem index="36" value="Locrian "/>
+            <StringItem index="37" value="Sim&#xe9;trica"/>
+            <StringItem index="38" value="Mel&#xf3;dica de Jazz"/>
+            <StringItem index="39" value="Ar&#xe1;bica"/>
           </StringArray>
         </Property>
         <Property name="autoscrolls" type="boolean" value="true"/>

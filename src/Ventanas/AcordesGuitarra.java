@@ -116,7 +116,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         CmbFamilia.setBackground(new java.awt.Color(51, 51, 51));
         CmbFamilia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         CmbFamilia.setForeground(new java.awt.Color(255, 255, 255));
-        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor" }));
+        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mayor", "Menor", "Septima" }));
         CmbFamilia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(CmbFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 250, 40));
 
@@ -173,7 +173,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NTraste.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NTraste.setText("Traste:");
         NTraste.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NTraste, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 70, 30));
+        getContentPane().add(NTraste, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 70, 30));
 
         NCuerda1.setEditable(false);
         NCuerda1.setBackground(new java.awt.Color(51, 51, 51));
@@ -182,7 +182,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NCuerda1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NCuerda1.setText("Cuerda6 (E)");
         NCuerda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NCuerda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 110, 30));
+        getContentPane().add(NCuerda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 110, 30));
 
         NCuerda2.setEditable(false);
         NCuerda2.setBackground(new java.awt.Color(51, 51, 51));
@@ -191,7 +191,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NCuerda2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NCuerda2.setText("Cuerda1 (E)");
         NCuerda2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NCuerda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 110, 30));
+        getContentPane().add(NCuerda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 110, 30));
 
         NCuerda3.setEditable(false);
         NCuerda3.setBackground(new java.awt.Color(51, 51, 51));
@@ -200,7 +200,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NCuerda3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NCuerda3.setText("Cuerda2 (B)");
         NCuerda3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NCuerda3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 110, 30));
+        getContentPane().add(NCuerda3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 110, 30));
 
         NCuerda4.setEditable(false);
         NCuerda4.setBackground(new java.awt.Color(51, 51, 51));
@@ -209,7 +209,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NCuerda4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NCuerda4.setText("Cuerda3 (G)");
         NCuerda4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NCuerda4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 110, 30));
+        getContentPane().add(NCuerda4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 110, 30));
 
         NCuerda5.setEditable(false);
         NCuerda5.setBackground(new java.awt.Color(51, 51, 51));
@@ -218,7 +218,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NCuerda5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NCuerda5.setText("Cuerda4 (D)");
         NCuerda5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NCuerda5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 110, 30));
+        getContentPane().add(NCuerda5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 110, 30));
 
         NCuerda6.setEditable(false);
         NCuerda6.setBackground(new java.awt.Color(51, 51, 51));
@@ -227,7 +227,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         NCuerda6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NCuerda6.setText("Cuerda5 (A)");
         NCuerda6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(NCuerda6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 110, 30));
+        getContentPane().add(NCuerda6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 110, 30));
 
         Espacio4.setEditable(false);
         Espacio4.setBackground(new java.awt.Color(51, 51, 51));
@@ -236,7 +236,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Espacio4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Espacio4.setText("4");
         Espacio4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(Espacio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 30, 30));
+        getContentPane().add(Espacio4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 30, 30));
 
         Espacio3.setEditable(false);
         Espacio3.setBackground(new java.awt.Color(51, 51, 51));
@@ -245,7 +245,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Espacio3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Espacio3.setText("3");
         Espacio3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(Espacio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 30, 30));
+        getContentPane().add(Espacio3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 30, 30));
 
         Espacio2.setEditable(false);
         Espacio2.setBackground(new java.awt.Color(51, 51, 51));
@@ -254,7 +254,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Espacio2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Espacio2.setText("2");
         Espacio2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(Espacio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 30, 30));
+        getContentPane().add(Espacio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, 30, 30));
 
         Espacio1.setEditable(false);
         Espacio1.setBackground(new java.awt.Color(51, 51, 51));
@@ -263,7 +263,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Espacio1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Espacio1.setText("1");
         Espacio1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(Espacio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 30, 30));
+        getContentPane().add(Espacio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 30, 30));
 
         jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -287,21 +287,21 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Puente3.setColumns(20);
         Puente3.setRows(5);
         Puente3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Cuerdas.add(Puente3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 20, 100));
+        Cuerdas.add(Puente3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 30, 100));
 
         Puente2.setEditable(false);
         Puente2.setBackground(new java.awt.Color(255, 255, 255));
         Puente2.setColumns(20);
         Puente2.setRows(5);
         Puente2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Cuerdas.add(Puente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 20, 150));
+        Cuerdas.add(Puente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 30, 150));
 
         Puente1.setEditable(false);
         Puente1.setBackground(new java.awt.Color(255, 255, 255));
         Puente1.setColumns(20);
         Puente1.setRows(5);
         Puente1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        Cuerdas.add(Puente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 20, 185));
+        Cuerdas.add(Puente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 30, 185));
 
         Clavijero.setEditable(false);
         Clavijero.setBackground(new java.awt.Color(255, 255, 255));
@@ -313,32 +313,32 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Dedos1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos1.setForeground(new java.awt.Color(255, 255, 255));
         Dedos1.setText("O");
-        Cuerdas.add(Dedos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        Cuerdas.add(Dedos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         Dedos2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos2.setForeground(new java.awt.Color(255, 255, 255));
         Dedos2.setText("O");
-        Cuerdas.add(Dedos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        Cuerdas.add(Dedos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         Dedos3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos3.setForeground(new java.awt.Color(255, 255, 255));
         Dedos3.setText("O");
-        Cuerdas.add(Dedos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        Cuerdas.add(Dedos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         Dedos4.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos4.setForeground(new java.awt.Color(255, 255, 255));
         Dedos4.setText("O");
-        Cuerdas.add(Dedos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        Cuerdas.add(Dedos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         Dedos5.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos5.setForeground(new java.awt.Color(255, 255, 255));
         Dedos5.setText("O");
-        Cuerdas.add(Dedos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        Cuerdas.add(Dedos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         Dedos6.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos6.setForeground(new java.awt.Color(255, 255, 255));
         Dedos6.setText("O");
-        Cuerdas.add(Dedos6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        Cuerdas.add(Dedos6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         Dedos7.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         Dedos7.setForeground(new java.awt.Color(255, 255, 255));
@@ -479,7 +479,7 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         Cuerda6.setText("_______________");
         Cuerdas.add(Cuerda6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, -1));
 
-        getContentPane().add(Cuerdas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 400, 200));
+        getContentPane().add(Cuerdas, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 400, 200));
 
         LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
@@ -546,6 +546,8 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             traste1 = Mayor(Acorde);
         } else if (Familia == 1) {
             traste1 = Menor(Acorde);
+        } else if (Familia == 2) {
+            traste1 = Septima(Acorde);
         }
 
         if (traste1 == 1) {
@@ -668,7 +670,6 @@ public class AcordesGuitarra extends javax.swing.JFrame {
         return traste1;
     }
 
-    
     public int Menor(int Acorde) {
         int traste1 = 0;
         if (Acorde == 0) {
@@ -768,6 +769,111 @@ public class AcordesGuitarra extends javax.swing.JFrame {
             Cuerda6.setForeground(Color.red);
             LabelAcordeName.setText(" SI Menor");
             LabelAcorde.setText("Bm");
+        }
+
+        return traste1;
+    }
+
+    public int Septima(int Acorde) {
+        int traste1 = 0;
+
+        if (Acorde == 0) {
+            traste1 = 1;
+            Dedos2.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos10.setVisible(true);
+            Dedos17.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            Cuerda1.setForeground(Color.red);
+            LabelAcordeName.setText(" DO Septima");
+            LabelAcorde.setText("C7");
+        } else if (Acorde == 1) {
+            traste1 = 2;
+            Dedos2.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos10.setVisible(true);
+            Dedos17.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            Cuerda1.setForeground(Color.red);
+            LabelAcordeName.setText(" DO Sostenido Septima");
+            LabelAcorde.setText("C#7");
+        } else if (Acorde == 2) {
+            traste1 = 1;
+            Dedos7.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos2.setVisible(true);
+            Cuerda5.setForeground(Color.red);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" RE Septima");
+            LabelAcorde.setText("D7");
+        } else if (Acorde == 3) {
+            traste1 = 1;
+            Dedos4.setVisible(true);
+            Dedos13.setVisible(true);
+            Dedos15.setVisible(true);
+            Dedos8.setVisible(true);
+            Cuerda5.setForeground(Color.red);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" RE Sostenido Septima");
+            LabelAcorde.setText("D#7");
+        } else if (Acorde == 4) {
+            traste1 = 1;
+            Dedos3.setVisible(true);
+            Dedos11.setVisible(true);
+            LabelAcordeName.setText("MI Septima");
+            LabelAcorde.setText("E7");
+        } else if (Acorde == 5) {
+            traste1 = 1;
+            Puente1.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("FA Septima");
+            LabelAcorde.setText("F7");
+        } else if (Acorde == 6) {
+            traste1 = 2;
+            Puente1.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("FA Sostenido Septima");
+            LabelAcorde.setText("F#7");
+        } else if (Acorde == 7) {
+            traste1 = 3;
+            Puente1.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("SOL Septima");
+            LabelAcorde.setText("G7");
+        } else if (Acorde == 8) {
+            traste1 = 4;
+            Puente1.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos17.setVisible(true);
+            LabelAcordeName.setText("SOL Sostenido Septima");
+            LabelAcorde.setText("G#7");
+        } else if (Acorde == 9) {
+            traste1 = 1;
+            Dedos8.setVisible(true);
+            Dedos10.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" LA Septima");
+            LabelAcorde.setText("A7");
+        } else if (Acorde == 10) {
+            traste1 = 1;
+            Puente2.setVisible(true);
+            Dedos14.setVisible(true);
+            Dedos16.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            LabelAcordeName.setText(" LA Sostenido Septima");
+            LabelAcorde.setText("A#7");
+        } else if (Acorde == 11) {
+            traste1 = 2;
+            Dedos4.setVisible(true);
+            Dedos9.setVisible(true);
+            Dedos11.setVisible(true);
+            Cuerda6.setForeground(Color.red);
+            Cuerda1.setForeground(Color.red);
+            LabelAcordeName.setText(" SI Septima");
+            LabelAcorde.setText("B7");
         }
 
         return traste1;

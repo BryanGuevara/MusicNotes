@@ -6,16 +6,22 @@ package Ventanas;
 
 import java.awt.Color;
 import java.awt.Image;
-import java.awt.Toolkit;
-import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.sound.midi.*;
+import javax.swing.JButton;
+import javax.swing.Timer;
 
 /**
  *
  * @author MINEDUCYT
  */
 public class AcordesPiano extends javax.swing.JFrame {
+
+    private Synthesizer synthesizer;
+    private MidiChannel[] channels;
+    private boolean[] isNotePlaying = new boolean[128];
+    private Timer[] timers = new Timer[128];
 
     /**
      * Creates new form Acordes
@@ -24,6 +30,8 @@ public class AcordesPiano extends javax.swing.JFrame {
         initComponents();
 
         this.setLocationRelativeTo(null);
+
+        initializeSynthesizer();
 
         ImageIcon wallpaper = new ImageIcon("src/img/wallpaperPiano.jpg");
         Icon icon = new ImageIcon(wallpaper.getImage().getScaledInstance(LabelWallpaper.getWidth(),
@@ -47,6 +55,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         LabelAcorde = new javax.swing.JLabel();
         LabelAcordeName = new javax.swing.JLabel();
+        RESos4 = new javax.swing.JButton();
+        DOSos4 = new javax.swing.JButton();
+        DO4 = new javax.swing.JButton();
+        MI4 = new javax.swing.JButton();
+        RE4 = new javax.swing.JButton();
         DOSos3 = new javax.swing.JButton();
         RESos3 = new javax.swing.JButton();
         FASos3 = new javax.swing.JButton();
@@ -101,14 +114,14 @@ public class AcordesPiano extends javax.swing.JFrame {
         CmbAcorde.setForeground(new java.awt.Color(255, 255, 255));
         CmbAcorde.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DO", "DO#", "RE", "RE#", "MI", "FA", "FA#", "SOL", "SOL#", "LA", "LA#", "SI" }));
         CmbAcorde.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(CmbAcorde, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 210, 40));
+        getContentPane().add(CmbAcorde, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 120, 40));
 
         CmbFamilia.setBackground(new java.awt.Color(51, 51, 51));
         CmbFamilia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         CmbFamilia.setForeground(new java.awt.Color(255, 255, 255));
-        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nota", "Mayor", "Primera Inversion", "Segunda Inversion", "Menor (m)", "Quinta (5)", "Suspendido 2 (sus2)", "Suspendido 4 (sus4)", "Aumentado (aug)", "Disminuido (dism)", "Séptima (7)", "Octava", "Novena (9)", "Sexta Añadida (6)", "Septima Añadida (maj7)", "Novena Añadida (maj9)", "Onceaba Añadida (maj11)", "Treceaba añadida (maj13)", "Añadido 2 (add2)", "Añadido 4 (add4)", "Añadido 9 (add9)", "Añadido 11 (add11)", "Añadido 13 (add13)", "Sobre DO (/C)", "Sobre DO Sostenido (/C#)", "Sobre RE (/D)", "Sobre RE Sostenido (/D#)", "Sobre MI (/E)", "Sobre FA (/F)", "Sobre FA# (/F#)", "Sobre SOL (/G)", "Sobre SOL# (/G#)", "Sobre LA (/A)", "Sobre LA# (/A#)", "Sobre SI (/B)" }));
+        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nota", "Mayor", "Primera Inversion", "Segunda Inversion", "Menor (m)", "Quinta (5)", "Suspendido 2 (sus2)", "Suspendido 4 (sus4)", "Aumentado (aug)", "Disminuido (dism)", "Séptima (7)", "Octava", "Novena (9)", "Sexta Añadida (6)", "Septima Añadida (maj7)", "Novena Añadida (maj9)", "Onceaba Añadida (maj11)", "Treceaba añadida (maj13)", "Añadido 2 (add2)", "Añadido 4 (add4)", "Añadido 9 (add9)", "Añadido 11 (add11)", "Añadido 13 (add13)", "Sobre DO (/C)", "Sobre DO Sostenido (/C#)", "Sobre RE (/D)", "Sobre RE Sostenido (/D#)", "Sobre MI (/E)", "Sobre FA (/F)", "Sobre FA# (/F#)", "Sobre SOL (/G)", "Sobre SOL# (/G#)", "Sobre LA (/A)", "Sobre LA# (/A#)", "Sobre SI (/B)", "Septima Sobre obre DO (7/C)", "Septima Sobre DO Sostenido (7/C#)", "Septima Sobre RE (/D)", "Septima Sobre RE Sostenido (7/D#)", "Septima Sobre MI (7/E)", "Septima Sobre FA (7/F)", "Septima Sobre FA# (7/F#)", "Septima Sobre SOL (7/G)", "Septima Sobre SOL# (7/G#)", "Septima Sobre LA (7/A)", "Septima Sobre LA# (7/A#)", "Septima Sobre SI (7/B)", "voicing en octavas (/vo)", "Novena añadida añadido 11 (maj9add11)", "Onceaba añadida añadido 13 (maj11add13)", "Novena añadida añadido 11, 13 (maj9add11add13)" }));
         CmbFamilia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(CmbFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 250, 40));
+        getContentPane().add(CmbFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 440, 40));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -120,19 +133,54 @@ public class AcordesPiano extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 119, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 119, 40));
 
         LabelAcorde.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         LabelAcorde.setForeground(new java.awt.Color(255, 255, 255));
         LabelAcorde.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelAcorde.setText("ACORDE");
-        getContentPane().add(LabelAcorde, new org.netbeans.lib.awtextra.AbsoluteConstraints(138, 418, 430, -1));
+        getContentPane().add(LabelAcorde, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, 520, -1));
 
         LabelAcordeName.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         LabelAcordeName.setForeground(new java.awt.Color(255, 255, 255));
         LabelAcordeName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LabelAcordeName.setText("Nombre del acorde");
-        getContentPane().add(LabelAcordeName, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 476, 430, -1));
+        getContentPane().add(LabelAcordeName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 470, 520, -1));
+
+        RESos4.setBackground(new java.awt.Color(0, 0, 0));
+        RESos4.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        RESos4.setForeground(new java.awt.Color(255, 255, 255));
+        RESos4.setText("D#");
+        RESos4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RESos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 20, 80));
+
+        DOSos4.setBackground(new java.awt.Color(0, 0, 0));
+        DOSos4.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
+        DOSos4.setForeground(new java.awt.Color(255, 255, 255));
+        DOSos4.setText("C#");
+        DOSos4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DOSos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, 20, 80));
+
+        DO4.setBackground(new java.awt.Color(255, 255, 255));
+        DO4.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        DO4.setForeground(new java.awt.Color(0, 0, 0));
+        DO4.setText("C");
+        DO4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(DO4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 30, 130));
+
+        MI4.setBackground(new java.awt.Color(255, 255, 255));
+        MI4.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        MI4.setForeground(new java.awt.Color(0, 0, 0));
+        MI4.setText("E");
+        MI4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(MI4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 190, 30, 130));
+
+        RE4.setBackground(new java.awt.Color(255, 255, 255));
+        RE4.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        RE4.setForeground(new java.awt.Color(0, 0, 0));
+        RE4.setText("D");
+        RE4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(RE4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 190, 30, 130));
 
         DOSos3.setBackground(new java.awt.Color(0, 0, 0));
         DOSos3.setFont(new java.awt.Font("Arial Black", 0, 10)); // NOI18N
@@ -307,6 +355,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         DOSos1.setForeground(new java.awt.Color(255, 255, 255));
         DOSos1.setText("C#");
         DOSos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        DOSos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DOSos1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(DOSos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 20, 80));
 
         RESos1.setBackground(new java.awt.Color(0, 0, 0));
@@ -314,6 +367,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         RESos1.setForeground(new java.awt.Color(255, 255, 255));
         RESos1.setText("D#");
         RESos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        RESos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RESos1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(RESos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 20, 80));
 
         FASos1.setBackground(new java.awt.Color(0, 0, 0));
@@ -342,6 +400,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         MI1.setForeground(new java.awt.Color(0, 0, 0));
         MI1.setText("E");
         MI1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        MI1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MI1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(MI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 30, 130));
 
         FA1.setBackground(new java.awt.Color(255, 255, 255));
@@ -356,6 +419,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         RE1.setForeground(new java.awt.Color(0, 0, 0));
         RE1.setText("D");
         RE1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        RE1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RE1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(RE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 30, 130));
 
         DO1.setBackground(new java.awt.Color(255, 255, 255));
@@ -363,6 +431,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         DO1.setForeground(new java.awt.Color(0, 0, 0));
         DO1.setText("C");
         DO1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        DO1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DO1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(DO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 30, 130));
 
         SOL1.setBackground(new java.awt.Color(255, 255, 255));
@@ -389,12 +462,13 @@ public class AcordesPiano extends javax.swing.JFrame {
         jTextField7.setEditable(false);
         jTextField7.setBackground(new java.awt.Color(51, 51, 51));
         jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 450, 90));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 540, 90));
 
         jTextField8.setEditable(false);
         jTextField8.setBackground(new java.awt.Color(51, 51, 51));
         jTextField8.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jTextField8.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setText("Acorde");
         jTextField8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 80, 30));
@@ -404,17 +478,19 @@ public class AcordesPiano extends javax.swing.JFrame {
         jTextField9.setBackground(new java.awt.Color(51, 51, 51));
         jTextField9.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jTextField9.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setText("Familia");
         jTextField9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 80, 30));
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 80, 30));
 
         jTextField10.setEditable(false);
         jTextField10.setBackground(new java.awt.Color(51, 51, 51));
         jTextField10.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jTextField10.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setText("C=DO   D=RE   E=MI   F=FA   G=SOL   A=LA   B=SI   #=SOSTENIDO");
         jTextField10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 540, 30));
+        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 540, 30));
 
         jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -428,10 +504,10 @@ public class AcordesPiano extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 0, 40, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 40, 40));
 
         LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
+        getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -448,6 +524,26 @@ public class AcordesPiano extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void DO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DO1ActionPerformed
+        playNote(60);
+    }//GEN-LAST:event_DO1ActionPerformed
+
+    private void DOSos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOSos1ActionPerformed
+       playNote(61);
+    }//GEN-LAST:event_DOSos1ActionPerformed
+
+    private void RE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RE1ActionPerformed
+       playNote(62);
+    }//GEN-LAST:event_RE1ActionPerformed
+
+    private void RESos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RESos1ActionPerformed
+       playNote(63);
+    }//GEN-LAST:event_RESos1ActionPerformed
+
+    private void MI1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI1ActionPerformed
+       playNote(64);
+    }//GEN-LAST:event_MI1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -493,6 +589,7 @@ public class AcordesPiano extends javax.swing.JFrame {
         int nota4 = 0;
         int nota5 = 0;
         int nota6 = 0;
+        int nota7 = 0;
 
         if (Familia == 0) {
             nota1 = Inicio + 1;
@@ -573,7 +670,7 @@ public class AcordesPiano extends javax.swing.JFrame {
             nota1 = Inicio + 1;
             nota2 = Inicio + 8;
             nota3 = Inicio + 13;
-            LabelAcordeName.setText(" Octava");
+            LabelAcordeName.setText(" en Octava");
             LabelAcorde.setText("");
         }
         if (Familia == 12) {
@@ -788,229 +885,315 @@ public class AcordesPiano extends javax.swing.JFrame {
             LabelAcordeName.setText(" Sobre SI");
             LabelAcorde.setText("/B");
         }
+        if (Familia == 35) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 1;
+            nota6 = 5;
+            nota7 = 8;
+            LabelAcordeName.setText(" Septima sobre DO");
+            LabelAcorde.setText("7/C");
+        }
+        if (Familia == 36) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 2;
+            nota6 = 6;
+            nota7 = 9;
+            LabelAcordeName.setText(" Septima sobre DO Sostenido");
+            LabelAcorde.setText("7/C#");
+        }
+        if (Familia == 37) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 3;
+            nota6 = 7;
+            nota7 = 10;
+            LabelAcordeName.setText(" Septima sobre RE");
+            LabelAcorde.setText("7/D");
+        }
+        if (Familia == 38) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 4;
+            nota6 = 8;
+            nota7 = 11;
+            LabelAcordeName.setText(" Septima sobre RE Sostenido");
+            LabelAcorde.setText("7/D#");
+        }
+        if (Familia == 39) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 5;
+            nota6 = 9;
+            nota7 = 12;
+            LabelAcordeName.setText(" Septima sobre MI");
+            LabelAcorde.setText("7/E");
+        }
+        if (Familia == 40) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 6;
+            nota6 = 10;
+            nota7 = 13;
+            LabelAcordeName.setText(" Septima sobre FA");
+            LabelAcorde.setText("7/F");
+        }
+        if (Familia == 41) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 7;
+            nota6 = 11;
+            nota7 = 14;
+            LabelAcordeName.setText(" Septima sobre FA Sostenido");
+            LabelAcorde.setText("7/F#");
+        }
+        if (Familia == 42) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 8;
+            nota6 = 12;
+            nota7 = 15;
+            LabelAcordeName.setText(" Septima sobre SOL");
+            LabelAcorde.setText("7/G");
+        }
+        if (Familia == 43) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 9;
+            nota6 = 13;
+            nota7 = 16;
+            LabelAcordeName.setText(" Septima sobre SOL Sostenido");
+            LabelAcorde.setText("7/G#");
+        }
+        if (Familia == 44) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 10;
+            nota6 = 14;
+            nota7 = 17;
+            LabelAcordeName.setText(" Septima sobre LA");
+            LabelAcorde.setText("7/A");
+        }
+        if (Familia == 45) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 11;
+            nota6 = 15;
+            nota7 = 18;
+            LabelAcordeName.setText(" Septima sobre LA Sostenido");
+            LabelAcorde.setText("7/A#");
+        }
+        if (Familia == 46) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 12;
+            nota6 = 16;
+            nota7 = 19;
+            LabelAcordeName.setText(" Septima sobre SI");
+            LabelAcorde.setText("7/B");
+        }
+        if (Familia == 47) {
+            nota1 = Inicio + 1;
+            nota2 = Inicio + 8;
+            nota3 = Inicio + 17;
+            nota4 = Inicio + 29;
+            LabelAcordeName.setText(" Voicing");
+            LabelAcorde.setText("/vo");
+        }
+        if (Familia == 48) {
+            nota1 = Inicio + 1;
+            nota2 = Inicio + 5;
+            nota3 = Inicio + 8;
+            nota4 = Inicio + 12;
+            nota5 = Inicio + 15;
+            nota6 = Inicio + 18;
+            LabelAcordeName.setText(" con novena añadida añadido 11");
+            LabelAcorde.setText("maj9add11");
+        }
+        if (Familia == 49) {
+            nota1 = Inicio + 1;
+            nota2 = Inicio + 5;
+            nota3 = Inicio + 8;
+            nota4 = Inicio + 12;
+            nota5 = Inicio + 18;
+            nota6 = Inicio + 22;
+            LabelAcordeName.setText(" con onceaba añadida Añadido 13");
+            LabelAcorde.setText("maj11add13");
+        }
+        if (Familia == 50) {
+            nota1 = Inicio + 1;
+            nota2 = Inicio + 5;
+            nota3 = Inicio + 8;
+            nota4 = Inicio + 12;
+            nota5 = Inicio + 15;
+            nota6 = Inicio + 18;
+            nota7 = Inicio + 22;
+            LabelAcordeName.setText(" con novena añadida añadido 11 añadido 13");
+            LabelAcorde.setText("maj9add11add13");
+        }
 
-        Llenar(nota1, nota2, nota3, nota4, nota5, nota6);
+        Llenar(nota1, nota2, nota3, nota4, nota5, nota6, nota7);
     }
 
-    public void Llenar(int Nota1, int Nota2, int Nota3, int Nota4, int Nota5, int Nota6) {
+    public void Llenar(int Nota1, int Nota2, int Nota3, int Nota4, int Nota5, int Nota6, int Nota7) {
         Color ColorTecla = Color.BLUE;
         String nombreNota = "";
         String nombreAcorde = "";
         int igual = Nota4 + 12;
 
-        if (Nota1 == 1 || Nota2 == 1 || Nota3 == 1 || Nota4 == 1 || Nota5 == 1 || Nota6 == 1) {
-            DO1.setBackground(ColorTecla);
-            if (Nota1 == 1) {
-                nombreAcorde = "DO";
-                nombreNota = "C";
-            }
-        }
-        if (Nota1 == 2 || Nota2 == 2 || Nota3 == 2 || Nota4 == 2 || Nota5 == 2 || Nota6 == 2) {
-            DOSos1.setBackground(ColorTecla);
-            if (Nota1 == 2) {
-                nombreAcorde = "DO Sostenido";
-                nombreNota = "C#";
-            }
-        }
-        if (Nota1 == 3 || Nota2 == 3 || Nota3 == 3 || Nota4 == 3 || Nota5 == 3 || Nota6 == 3) {
-            RE1.setBackground(ColorTecla);
-            if (Nota1 == 3) {
-                nombreAcorde = "RE";
-                nombreNota = "D";
-            }
-        }
-        if (Nota1 == 4 || Nota2 == 4 || Nota3 == 4 || Nota4 == 4 || Nota5 == 4 || Nota6 == 4) {
-            RESos1.setBackground(ColorTecla);
-            if (Nota1 == 4) {
-                nombreAcorde = "RE Sostenido";
-                nombreNota = "D#";
-            }
-        }
-        if (Nota1 == 5 || Nota2 == 5 || Nota3 == 5 || Nota4 == 5 || Nota5 == 5 || Nota6 == 5) {
-            MI1.setBackground(ColorTecla);
-            if (Nota1 == 5) {
-                nombreAcorde = "MI";
-                nombreNota = "E";
-            }
-        }
-        if (Nota1 == 6 || Nota2 == 6 || Nota3 == 6 || Nota4 == 6 || Nota5 == 6 || Nota6 == 6) {
-            FA1.setBackground(ColorTecla);
-            if (Nota1 == 6) {
-                nombreAcorde = "FA";
-                nombreNota = "F";
-            }
-        }
-        if (Nota1 == 7 || Nota2 == 7 || Nota3 == 7 || Nota4 == 7 || Nota5 == 7 || Nota6 == 7) {
-            FASos1.setBackground(ColorTecla);
-            if (Nota1 == 7) {
-                nombreAcorde = "FA#";
-                nombreNota = "G";
-            }
-        }
-        if (Nota1 == 8 || Nota2 == 8 || Nota3 == 8 || Nota4 == 8 || Nota5 == 8 || Nota6 == 8) {
-            SOL1.setBackground(ColorTecla);
-            if (Nota1 == 8) {
-                nombreAcorde = "SOL";
-                nombreNota = "G";
-            }
-        }
-        if (Nota1 == 9 || Nota2 == 9 || Nota3 == 9 || Nota4 == 9 || Nota5 == 9 || Nota6 == 9) {
-            SOLSos1.setBackground(ColorTecla);
-            if (Nota1 == 9) {
-                nombreAcorde = "SOL Sostenido";
-                nombreNota = "G#";
-            }
-        }
-        if (Nota1 == 10 || Nota2 == 10 || Nota3 == 10 || Nota4 == 10 || Nota5 == 10 || Nota6 == 10) {
-            LA1.setBackground(ColorTecla);
-            if (Nota1 == 10) {
-                nombreAcorde = "LA";
-                nombreNota = "A";
-            }
-        }
-        if (Nota1 == 11 || Nota2 == 11 || Nota3 == 11 || Nota4 == 11 || Nota5 == 11 || Nota6 == 11) {
-            LASos1.setBackground(ColorTecla);
-            if (Nota1 == 11) {
-                nombreAcorde = "LA Sostenido";
-                nombreNota = "A#";
-            }
-        }
-        if (Nota1 == 12 || Nota2 == 12 || Nota3 == 12 || Nota4 == 12 || Nota5 == 12 || Nota6 == 12) {
-            SI1.setBackground(ColorTecla);
-            if (Nota1 == 12) {
-                nombreAcorde = "SI";
-                nombreNota = "B";
+        int[] notas = {
+            60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 
+            72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
+            84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 
+            96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107 
+        };
+
+        JButton[] teclas = {
+            DO1, DOSos1, RE1, RESos1, MI1, FA1, FASos1, SOL1, SOLSos1, LA1, LASos1, SI1,
+            DO2, DOSos2, RE2, RESos2, MI2, FA2, FASos2, SOL2, SOLSos2, LA2, LASos2, SI2,
+            DO3, DOSos3, RE3, RESos3, MI3, FA3, FASos3, SOL3, SOLSos3, LA3, LASos3, SI3,
+            DO4, DOSos4, RE4, RESos4, MI4
+        };
+
+        for (int i = 0; i < notas.length; i++) {
+            if (Nota1 == (i + 1) || Nota2 == (i + 1) || Nota3 == (i + 1) || Nota4 == (i + 1)
+                    || Nota5 == (i + 1) || Nota6 == (i + 1) || Nota7 == (i + 1)) {
+                teclas[i].setBackground(ColorTecla);
+                playNote(notas[i]);
             }
         }
 
-        if (Nota1 == 13 || Nota2 == 13 || Nota3 == 13 || Nota4 == 13 || Nota5 == 13 || Nota6 == 13) {
-            DO2.setBackground(ColorTecla);
-            if (Nota1 == 13) {
-                nombreAcorde = "DO";
-                nombreNota = "C";
-            }
+        if (Nota1 > 12) {
+            nombreAcorde = getNombreAcorde(Nota1 - 12);
+            nombreNota = getNombreNota(Nota1 - 12);
+        } else {
+            nombreAcorde = getNombreAcorde(Nota1);
+            nombreNota = getNombreNota(Nota1);
         }
-        if (Nota1 == 14 || Nota2 == 14 || Nota3 == 14 || Nota4 == 14 || Nota5 == 14 || Nota6 == 14) {
-            DOSos2.setBackground(ColorTecla);
-            if (Nota1 == 14) {
-                nombreAcorde = "Do Sostenido";
-                nombreNota = "C#";
-            }
-        }
-        if (Nota1 == 15 || Nota2 == 15 || Nota3 == 15 || Nota4 == 15 || Nota5 == 15 || Nota6 == 15) {
-            RE2.setBackground(ColorTecla);
-            if (Nota1 == 15) {
-                nombreAcorde = "RE";
-                nombreNota = "D";
-            }
-        }
-        if (Nota1 == 16 || Nota2 == 16 || Nota3 == 16 || Nota4 == 16 || Nota5 == 16 || Nota6 == 16) {
-            RESos2.setBackground(ColorTecla);
-        }
-        if (Nota1 == 16) {
-            nombreAcorde = "RE Sostenido";
-            nombreNota = "D#";
-        }
-        if (Nota1 == 17 || Nota2 == 17 || Nota3 == 17 || Nota4 == 17 || Nota5 == 17 || Nota6 == 17) {
-            MI2.setBackground(ColorTecla);
-            if (Nota1 == 17) {
-                nombreAcorde = "MI";
-                nombreNota = "E";
-            }
-        }
-        if (Nota1 == 18 || Nota2 == 18 || Nota3 == 18 || Nota4 == 18 || Nota5 == 18 || Nota6 == 18) {
-            FA2.setBackground(ColorTecla);
-            if (Nota1 == 18) {
-                nombreAcorde = "FA";
-                nombreNota = "F";
-            }
-        }
-        if (Nota1 == 19 || Nota2 == 19 || Nota3 == 19 || Nota4 == 19 || Nota5 == 19 || Nota6 == 19) {
-            FASos2.setBackground(ColorTecla);
-            if (Nota1 == 19) {
-                nombreAcorde = "FA Sostenido";
-                nombreNota = "F#";
-            }
-        }
-        if (Nota1 == 20 || Nota2 == 20 || Nota3 == 20 || Nota4 == 20 || Nota5 == 20 || Nota6 == 20) {
-            SOL2.setBackground(ColorTecla);
-            if (Nota1 == 20) {
-                nombreAcorde = "SOL";
-                nombreNota = "G";
-            }
-        }
-        if (Nota1 == 21 || Nota2 == 21 || Nota3 == 21 || Nota4 == 21 || Nota5 == 21 || Nota6 == 21) {
-            SOLSos2.setBackground(ColorTecla);
-            if (Nota1 == 21) {
-                nombreAcorde = "SOL Sostenido";
-                nombreNota = "G#";
-            }
-        }
-        if (Nota1 == 22 || Nota2 == 22 || Nota3 == 22 || Nota4 == 22 || Nota5 == 22 || Nota6 == 22) {
-            LA2.setBackground(ColorTecla);
-            if (Nota1 == 22) {
-                nombreAcorde = "LA";
-                nombreNota = "A";
-            }
-        }
-        if (Nota1 == 23 || Nota2 == 23 || Nota3 == 23 || Nota4 == 23 || Nota5 == 23 || Nota6 == 23) {
-            LASos2.setBackground(ColorTecla);
-            if (Nota1 == 23) {
-                nombreAcorde = "LA Sostenido";
-                nombreNota = "A#";
-            }
-        }
-        if (Nota1 == 24 || Nota2 == 24 || Nota3 == 24 || Nota4 == 24 || Nota5 == 24 || Nota6 == 24) {
-            SI2.setBackground(ColorTecla);
-            if (Nota1 == 24) {
-                nombreAcorde = "SI";
-                nombreNota = "B";
-            }
-        }
-
-        if (Nota1 == 25 || Nota2 == 25 || Nota3 == 25 || Nota4 == 25 || Nota5 == 25 || Nota6 == 25) {
-            DO3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 26 || Nota2 == 26 || Nota3 == 26 || Nota4 == 26 || Nota5 == 26 || Nota6 == 26) {
-            DOSos3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 27 || Nota2 == 27 || Nota3 == 27 || Nota4 == 27 || Nota5 == 27 || Nota6 == 27) {
-            RE3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 28 || Nota2 == 28 || Nota3 == 28 || Nota4 == 28 || Nota5 == 28 || Nota6 == 28) {
-            RESos3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 29 || Nota2 == 29 || Nota3 == 29 || Nota4 == 29 || Nota5 == 29 || Nota6 == 29) {
-            MI3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 30 || Nota2 == 30 || Nota3 == 30 || Nota4 == 30 || Nota5 == 30 || Nota6 == 30) {
-            FA3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 31 || Nota2 == 31 || Nota3 == 31 || Nota4 == 31 || Nota5 == 31 || Nota6 == 31) {
-            FASos3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 32 || Nota2 == 32 || Nota3 == 32 || Nota4 == 32 || Nota5 == 32 || Nota6 == 32) {
-            SOL3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 33 || Nota2 == 33 || Nota3 == 33 || Nota4 == 33 || Nota5 == 33 || Nota6 == 33) {
-            SOLSos3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 34 || Nota2 == 34 || Nota3 == 34 || Nota4 == 34 || Nota5 == 34 || Nota6 == 34) {
-            LA3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 35 || Nota2 == 35 || Nota3 == 35 || Nota4 == 35 || Nota5 == 35 || Nota6 == 35) {
-            LASos3.setBackground(ColorTecla);
-        }
-        if (Nota1 == 36 || Nota2 == 36 || Nota3 == 36 || Nota4 == 36 || Nota5 == 36 || Nota6 == 36) {
-            SI3.setBackground(ColorTecla);
-        }
-
-        if (CmbFamilia.getSelectedIndex() > 22 && CmbFamilia.getSelectedIndex() < 35 && igual == Nota1) {
+        
+        if (CmbFamilia.getSelectedIndex() > 22 && CmbFamilia.getSelectedIndex() < 46 && igual == Nota1) {
             LabelAcorde.setText(nombreNota + LabelAcorde.getText());
             LabelAcordeName.setText("Repeticion del acorde de " + nombreAcorde);
         } else {
             LabelAcorde.setText(nombreNota + LabelAcorde.getText());
             LabelAcordeName.setText(nombreAcorde + LabelAcordeName.getText());
+        }
+
+    }
+
+    private String getNombreAcorde(int nota) {
+        switch (nota) {
+            case 1:
+                return "DO";
+            case 2:
+                return "DO Sostenido";
+            case 3:
+                return "RE";
+            case 4:
+                return "RE Sostenido";
+            case 5:
+                return "MI";
+            case 6:
+                return "FA";
+            case 7:
+                return "FA Sostenido";
+            case 8:
+                return "SOL";
+            case 9:
+                return "SOL Sostenido";
+            case 10:
+                return "LA";
+            case 11:
+                return "LA Sostenido";
+            case 12:
+                return "SI";
+            default:
+                return "";
+        }
+    }
+
+    private String getNombreNota(int nota) {
+        switch (nota) {
+            case 1:
+                return "C";
+            case 2:
+                return "C#";
+            case 3:
+                return "D";
+            case 4:
+                return "D#";
+            case 5:
+                return "E";
+            case 6:
+                return "F";
+            case 7:
+                return "F#";
+            case 8:
+                return "G";
+            case 9:
+                return "G#";
+            case 10:
+                return "A";
+            case 11:
+                return "A#";
+            case 12:
+                return "B";
+            default:
+                return "";
+        }
+    }
+
+    public void initializeSynthesizer() {
+        try {
+            synthesizer = MidiSystem.getSynthesizer();
+            synthesizer.open();
+            channels = synthesizer.getChannels();
+        } catch (MidiUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void playNote(int note) {
+        if (channels != null) {
+            int channelIndex = note % channels.length;
+
+            if (!isNotePlaying[note]) {
+                channels[channelIndex].noteOn(note, 100);
+                isNotePlaying[note] = true;
+
+                timers[note] = new javax.swing.Timer(2000, e -> {
+                    channels[channelIndex].noteOff(note);
+                    isNotePlaying[note] = false;
+                    timers[note].stop();
+                    timers[note] = null;
+                });
+                timers[note].start();
+            }
         }
     }
 
@@ -1051,6 +1234,11 @@ public class AcordesPiano extends javax.swing.JFrame {
         LA3.setBackground(Color.WHITE);
         LASos3.setBackground(Color.BLACK);
         SI3.setBackground(Color.WHITE);
+        DO4.setBackground(Color.WHITE);
+        DOSos4.setBackground(Color.BLACK);
+        RE4.setBackground(Color.WHITE);
+        RESos4.setBackground(Color.BLACK);
+        MI4.setBackground(Color.WHITE);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1059,9 +1247,11 @@ public class AcordesPiano extends javax.swing.JFrame {
     private javax.swing.JButton DO1;
     private javax.swing.JButton DO2;
     private javax.swing.JButton DO3;
+    private javax.swing.JButton DO4;
     private javax.swing.JButton DOSos1;
     private javax.swing.JButton DOSos2;
     private javax.swing.JButton DOSos3;
+    private javax.swing.JButton DOSos4;
     private javax.swing.JButton FA1;
     private javax.swing.JButton FA2;
     private javax.swing.JButton FA3;
@@ -1080,12 +1270,15 @@ public class AcordesPiano extends javax.swing.JFrame {
     private javax.swing.JButton MI1;
     private javax.swing.JButton MI2;
     private javax.swing.JButton MI3;
+    private javax.swing.JButton MI4;
     private javax.swing.JButton RE1;
     private javax.swing.JButton RE2;
     private javax.swing.JButton RE3;
+    private javax.swing.JButton RE4;
     private javax.swing.JButton RESos1;
     private javax.swing.JButton RESos2;
     private javax.swing.JButton RESos3;
+    private javax.swing.JButton RESos4;
     private javax.swing.JButton SI1;
     private javax.swing.JButton SI2;
     private javax.swing.JButton SI3;

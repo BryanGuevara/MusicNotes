@@ -26,31 +26,16 @@ public class Teoria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        AreaInfo = new javax.swing.JTextArea();
         CmbIndex = new javax.swing.JComboBox<>();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        AreaInfo = new javax.swing.JTextPane();
         LabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jScrollPane1.setBorder(null);
-
-        AreaInfo.setEditable(false);
-        AreaInfo.setBackground(new java.awt.Color(51, 51, 51));
-        AreaInfo.setColumns(20);
-        AreaInfo.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        AreaInfo.setForeground(new java.awt.Color(255, 255, 255));
-        AreaInfo.setLineWrap(true);
-        AreaInfo.setRows(5);
-        AreaInfo.setWrapStyleWord(true);
-        AreaInfo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jScrollPane1.setViewportView(AreaInfo);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 780, 510));
 
         CmbIndex.setBackground(new java.awt.Color(51, 51, 51));
         CmbIndex.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
@@ -77,6 +62,16 @@ public class Teoria extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 40, 40));
+
+        AreaInfo.setEditable(false);
+        AreaInfo.setBackground(new java.awt.Color(56, 56, 56));
+        AreaInfo.setContentType("text/html"); // NOI18N
+        AreaInfo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        AreaInfo.setForeground(new java.awt.Color(0, 0, 0));
+        AreaInfo.setCaretColor(new java.awt.Color(56, 56, 56));
+        jScrollPane1.setViewportView(AreaInfo);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 760, 500));
 
         LabelWallpaper.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(LabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 590));
@@ -225,14 +220,17 @@ public class Teoria extends javax.swing.JFrame {
             AreaInfo.setText(informacion.AnalisisDeTexturasMusicalesComplejas());
         } else if (Index == 67) {
             AreaInfo.setText(informacion.ImprovisacionAvanzadaEnDiferentesGeneros());
-        }else if (Index == 68) {
+        } else if (Index == 68) {
             AreaInfo.setText(informacion.OidoMusicalYAbsoluto());
-        }else if (Index == 69) {
+        } else if (Index == 69) {
             AreaInfo.setText(informacion.Carta());
         }
 
-        AreaInfo.setVisible(true);
-        AreaInfo.setCaretPosition(0);
+        if (Index > 0) {
+            AreaInfo.setVisible(true);
+            AreaInfo.setCaretPosition(0);
+        }
+        
     }//GEN-LAST:event_CmbIndexItemStateChanged
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -248,7 +246,7 @@ public class Teoria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea AreaInfo;
+    private javax.swing.JTextPane AreaInfo;
     private javax.swing.JComboBox<String> CmbIndex;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JButton jButton2;
