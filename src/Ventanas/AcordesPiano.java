@@ -119,7 +119,7 @@ public class AcordesPiano extends javax.swing.JFrame {
         CmbFamilia.setBackground(new java.awt.Color(51, 51, 51));
         CmbFamilia.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         CmbFamilia.setForeground(new java.awt.Color(255, 255, 255));
-        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nota", "Mayor", "Primera Inversion", "Segunda Inversion", "Menor (m)", "Quinta (5)", "Suspendido 2 (sus2)", "Suspendido 4 (sus4)", "Aumentado (aug)", "Disminuido (dism)", "Séptima (7)", "Octava", "Novena (9)", "Sexta Añadida (6)", "Septima Añadida (maj7)", "Novena Añadida (maj9)", "Onceaba Añadida (maj11)", "Treceaba añadida (maj13)", "Añadido 2 (add2)", "Añadido 4 (add4)", "Añadido 9 (add9)", "Añadido 11 (add11)", "Añadido 13 (add13)", "Sobre DO (/C)", "Sobre DO Sostenido (/C#)", "Sobre RE (/D)", "Sobre RE Sostenido (/D#)", "Sobre MI (/E)", "Sobre FA (/F)", "Sobre FA# (/F#)", "Sobre SOL (/G)", "Sobre SOL# (/G#)", "Sobre LA (/A)", "Sobre LA# (/A#)", "Sobre SI (/B)", "Septima Sobre obre DO (7/C)", "Septima Sobre DO Sostenido (7/C#)", "Septima Sobre RE (/D)", "Septima Sobre RE Sostenido (7/D#)", "Septima Sobre MI (7/E)", "Septima Sobre FA (7/F)", "Septima Sobre FA# (7/F#)", "Septima Sobre SOL (7/G)", "Septima Sobre SOL# (7/G#)", "Septima Sobre LA (7/A)", "Septima Sobre LA# (7/A#)", "Septima Sobre SI (7/B)", "voicing en octavas (/vo)", "Novena añadida añadido 11 (maj9add11)", "Onceaba añadida añadido 13 (maj11add13)", "Novena añadida añadido 11, 13 (maj9add11add13)" }));
+        CmbFamilia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nota", "Mayor", "Primera Inversion", "Segunda Inversion", "Menor (m)", "Quinta (5)", "Suspendido 2 (sus2)", "Suspendido 4 (sus4)", "Aumentado (aug)", "Disminuido (dism)", "Séptima (7)", "Octava", "Novena (9)", "Sexta Añadida (6)", "Septima Añadida (maj7)", "Novena Añadida (maj9)", "Onceaba Añadida (maj11)", "Treceaba añadida (maj13)", "Añadido 2 (add2)", "Añadido 4 (add4)", "Añadido 9 (add9)", "Añadido 11 (add11)", "Añadido 13 (add13)", "Sobre DO (/C)", "Sobre DO Sostenido (/C#)", "Sobre RE (/D)", "Sobre RE Sostenido (/D#)", "Sobre MI (/E)", "Sobre FA (/F)", "Sobre FA# (/F#)", "Sobre SOL (/G)", "Sobre SOL# (/G#)", "Sobre LA (/A)", "Sobre LA# (/A#)", "Sobre SI (/B)", "Septima Sobre obre DO (7/C)", "Septima Sobre DO Sostenido (7/C#)", "Septima Sobre RE (7/D)", "Septima Sobre RE Sostenido (7/D#)", "Septima Sobre MI (7/E)", "Septima Sobre FA (7/F)", "Septima Sobre FA# (7/F#)", "Septima Sobre SOL (7/G)", "Septima Sobre SOL# (7/G#)", "Septima Sobre LA (7/A)", "Septima Sobre LA# (7/A#)", "Septima Sobre SI (7/B)", "Septima Sobre obre DO Septima(7/C7)", "Septima Sobre DO Sostenido Septima (7/C#7)", "Septima Sobre RE Septima (7/D7)", "Septima Sobre RE Sostenido Septima (7/D#7)", "Septima Sobre MI Septima (7/E7)", "Septima Sobre FA Septima (7/F7)", "Septima Sobre FASostenido Septima (7/F#7)", "Septima Sobre SOL Septima (7/G7)", "Septima Sobre SOLSostenido Septima (7/G#7)", "Septima Sobre LA Septima (7/A7)", "Septima Sobre LA Sostenido Septima (7/A#7)", "Septima Sobre SI Septima (7/B7)", "voicing en octavas (/vo)", "Novena añadida añadido 11 (maj9add11)", "Onceaba añadida añadido 13 (maj11add13)", "Novena añadida añadido 11, 13 (maj9add11add13)" }));
         CmbFamilia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(CmbFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 440, 40));
 
@@ -530,19 +530,19 @@ public class AcordesPiano extends javax.swing.JFrame {
     }//GEN-LAST:event_DO1ActionPerformed
 
     private void DOSos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOSos1ActionPerformed
-       playNote(61);
+        playNote(61);
     }//GEN-LAST:event_DOSos1ActionPerformed
 
     private void RE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RE1ActionPerformed
-       playNote(62);
+        playNote(62);
     }//GEN-LAST:event_RE1ActionPerformed
 
     private void RESos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RESos1ActionPerformed
-       playNote(63);
+        playNote(63);
     }//GEN-LAST:event_RESos1ActionPerformed
 
     private void MI1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI1ActionPerformed
-       playNote(64);
+        playNote(64);
     }//GEN-LAST:event_MI1ActionPerformed
 
     /**
@@ -590,6 +590,7 @@ public class AcordesPiano extends javax.swing.JFrame {
         int nota5 = 0;
         int nota6 = 0;
         int nota7 = 0;
+        int nota8 = 0;
 
         if (Familia == 0) {
             nota1 = Inicio + 1;
@@ -1017,7 +1018,152 @@ public class AcordesPiano extends javax.swing.JFrame {
             LabelAcordeName.setText(" Septima sobre SI");
             LabelAcorde.setText("7/B");
         }
+
         if (Familia == 47) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 1;
+            nota6 = 5;
+            nota7 = 8;
+            nota8 = 11;
+            LabelAcordeName.setText(" Septima sobre DO Septima");
+            LabelAcorde.setText("7/C7");
+        }
+        if (Familia == 48) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 2;
+            nota6 = 6;
+            nota7 = 9;
+            nota8 = 12;
+            LabelAcordeName.setText(" Septima sobre DO Sostenido Septima");
+            LabelAcorde.setText("7/C#7");
+        }
+        if (Familia == 49) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 3;
+            nota6 = 7;
+            nota7 = 10;
+            nota8 = 13;
+            LabelAcordeName.setText(" Septima sobre RE Septima");
+            LabelAcorde.setText("7/D7");
+        }
+        if (Familia == 50) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 4;
+            nota6 = 8;
+            nota7 = 11;
+            nota8 = 14;
+            LabelAcordeName.setText(" Septima sobre RE Sostenido Septima");
+            LabelAcorde.setText("7/D#7");
+        }
+        if (Familia == 51) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 5;
+            nota6 = 9;
+            nota7 = 12;
+            nota8 = 15;
+            LabelAcordeName.setText(" Septima sobre MI Septima");
+            LabelAcorde.setText("7/E7");
+        }
+        if (Familia == 52) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 6;
+            nota6 = 10;
+            nota7 = 13;
+            nota8 = 17;
+            LabelAcordeName.setText(" Septima sobre FA Septima");
+            LabelAcorde.setText("7/F7");
+        }
+        if (Familia == 53) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 7;
+            nota6 = 11;
+            nota7 = 14;
+            nota8 = 18;
+            LabelAcordeName.setText(" Septima sobre FA Sostenido Septima");
+            LabelAcorde.setText("7/F#7");
+        }
+        if (Familia == 54) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 8;
+            nota6 = 12;
+            nota7 = 15;
+            nota8 = 19;
+            LabelAcordeName.setText(" Septima sobre SOL Septima");
+            LabelAcorde.setText("7/G7");
+        }
+        if (Familia == 55) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 9;
+            nota6 = 13;
+            nota7 = 16;
+            nota8 = 20;
+            LabelAcordeName.setText(" Septima sobre SOL Sostenido Septima");
+            LabelAcorde.setText("7/G#7");
+        }
+        if (Familia == 56) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 10;
+            nota6 = 14;
+            nota7 = 17;
+            nota8 = 21;
+            LabelAcordeName.setText(" Septima sobre LA Septima");
+            LabelAcorde.setText("7/A7");
+        }
+        if (Familia == 57) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 11;
+            nota6 = 15;
+            nota7 = 18;
+            nota8 = 22;
+            LabelAcordeName.setText(" Septima sobre LA Sostenido Septima");
+            LabelAcorde.setText("7/A#7");
+        }
+        if (Familia == 58) {
+            nota1 = Inicio + 13;
+            nota2 = Inicio + 17;
+            nota3 = Inicio + 20;
+            nota4 = Inicio + 23;
+            nota5 = 12;
+            nota6 = 16;
+            nota7 = 19;
+            nota8 = 23;
+            LabelAcordeName.setText(" Septima sobre S SeptimaI");
+            LabelAcorde.setText("7/B7");
+        }
+        if (Familia == 59) {
             nota1 = Inicio + 1;
             nota2 = Inicio + 8;
             nota3 = Inicio + 17;
@@ -1025,7 +1171,7 @@ public class AcordesPiano extends javax.swing.JFrame {
             LabelAcordeName.setText(" Voicing");
             LabelAcorde.setText("/vo");
         }
-        if (Familia == 48) {
+        if (Familia == 60) {
             nota1 = Inicio + 1;
             nota2 = Inicio + 5;
             nota3 = Inicio + 8;
@@ -1035,7 +1181,7 @@ public class AcordesPiano extends javax.swing.JFrame {
             LabelAcordeName.setText(" con novena añadida añadido 11");
             LabelAcorde.setText("maj9add11");
         }
-        if (Familia == 49) {
+        if (Familia == 61) {
             nota1 = Inicio + 1;
             nota2 = Inicio + 5;
             nota3 = Inicio + 8;
@@ -1045,7 +1191,7 @@ public class AcordesPiano extends javax.swing.JFrame {
             LabelAcordeName.setText(" con onceaba añadida Añadido 13");
             LabelAcorde.setText("maj11add13");
         }
-        if (Familia == 50) {
+        if (Familia == 62) {
             nota1 = Inicio + 1;
             nota2 = Inicio + 5;
             nota3 = Inicio + 8;
@@ -1057,20 +1203,19 @@ public class AcordesPiano extends javax.swing.JFrame {
             LabelAcorde.setText("maj9add11add13");
         }
 
-        Llenar(nota1, nota2, nota3, nota4, nota5, nota6, nota7);
+        Llenar(nota1, nota2, nota3, nota4, nota5, nota6, nota7, nota8);
     }
 
-    public void Llenar(int Nota1, int Nota2, int Nota3, int Nota4, int Nota5, int Nota6, int Nota7) {
+    public void Llenar(int Nota1, int Nota2, int Nota3, int Nota4, int Nota5, int Nota6, int Nota7, int Nota8) {
         Color ColorTecla = Color.BLUE;
         String nombreNota = "";
         String nombreAcorde = "";
-        int igual = Nota4 + 12;
 
         int[] notas = {
-            60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 
+            60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
             72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
-            84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 
-            96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107 
+            84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+            96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107
         };
 
         JButton[] teclas = {
@@ -1082,7 +1227,7 @@ public class AcordesPiano extends javax.swing.JFrame {
 
         for (int i = 0; i < notas.length; i++) {
             if (Nota1 == (i + 1) || Nota2 == (i + 1) || Nota3 == (i + 1) || Nota4 == (i + 1)
-                    || Nota5 == (i + 1) || Nota6 == (i + 1) || Nota7 == (i + 1)) {
+                    || Nota5 == (i + 1) || Nota6 == (i + 1) || Nota7 == (i + 1) || Nota8 == (i + 1)) {
                 teclas[i].setBackground(ColorTecla);
                 playNote(notas[i]);
             }
@@ -1095,10 +1240,15 @@ public class AcordesPiano extends javax.swing.JFrame {
             nombreAcorde = getNombreAcorde(Nota1);
             nombreNota = getNombreNota(Nota1);
         }
-        
-        if (CmbFamilia.getSelectedIndex() > 22 && CmbFamilia.getSelectedIndex() < 46 && igual == Nota1) {
+
+        // Para ver la combinacion que usa el programa
+        // System.out.print("Nota1: " + Nota1 + "\nNota2: " + Nota2 + "\nNota3: " + Nota3 + "\nNota4: " + Nota4 + "\nNota5: " + Nota5 + "\nNota6: " + Nota6 + "\nNota7: " + Nota7 + "\nNota8: " + Nota8 + "\n------------\n");
+        if (CmbFamilia.getSelectedIndex() > 22 && CmbFamilia.getSelectedIndex() < 35 && Nota4 == (Nota1 - 12)) {
             LabelAcorde.setText(nombreNota + LabelAcorde.getText());
             LabelAcordeName.setText("Repeticion del acorde de " + nombreAcorde);
+        } else if (CmbFamilia.getSelectedIndex() > 46 && CmbFamilia.getSelectedIndex() < 59 && Nota5 == (Nota1 - 12)) {
+            LabelAcorde.setText(nombreNota + LabelAcorde.getText());
+            LabelAcordeName.setText("Repeticion del acorde de " + nombreAcorde + " Septima");
         } else {
             LabelAcorde.setText(nombreNota + LabelAcorde.getText());
             LabelAcordeName.setText(nombreAcorde + LabelAcordeName.getText());

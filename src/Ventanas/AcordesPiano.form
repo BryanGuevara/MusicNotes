@@ -84,7 +84,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="51">
+          <StringArray count="63">
             <StringItem index="0" value="Nota"/>
             <StringItem index="1" value="Mayor"/>
             <StringItem index="2" value="Primera Inversion"/>
@@ -122,7 +122,7 @@
             <StringItem index="34" value="Sobre SI (/B)"/>
             <StringItem index="35" value="Septima Sobre obre DO (7/C)"/>
             <StringItem index="36" value="Septima Sobre DO Sostenido (7/C#)"/>
-            <StringItem index="37" value="Septima Sobre RE (/D)"/>
+            <StringItem index="37" value="Septima Sobre RE (7/D)"/>
             <StringItem index="38" value="Septima Sobre RE Sostenido (7/D#)"/>
             <StringItem index="39" value="Septima Sobre MI (7/E)"/>
             <StringItem index="40" value="Septima Sobre FA (7/F)"/>
@@ -132,10 +132,22 @@
             <StringItem index="44" value="Septima Sobre LA (7/A)"/>
             <StringItem index="45" value="Septima Sobre LA# (7/A#)"/>
             <StringItem index="46" value="Septima Sobre SI (7/B)"/>
-            <StringItem index="47" value="voicing en octavas (/vo)"/>
-            <StringItem index="48" value="Novena a&#xf1;adida a&#xf1;adido 11 (maj9add11)"/>
-            <StringItem index="49" value="Onceaba a&#xf1;adida a&#xf1;adido 13 (maj11add13)"/>
-            <StringItem index="50" value="Novena a&#xf1;adida a&#xf1;adido 11, 13 (maj9add11add13)"/>
+            <StringItem index="47" value="Septima Sobre obre DO Septima(7/C7)"/>
+            <StringItem index="48" value="Septima Sobre DO Sostenido Septima (7/C#7)"/>
+            <StringItem index="49" value="Septima Sobre RE Septima (7/D7)"/>
+            <StringItem index="50" value="Septima Sobre RE Sostenido Septima (7/D#7)"/>
+            <StringItem index="51" value="Septima Sobre MI Septima (7/E7)"/>
+            <StringItem index="52" value="Septima Sobre FA Septima (7/F7)"/>
+            <StringItem index="53" value="Septima Sobre FASostenido Septima (7/F#7)"/>
+            <StringItem index="54" value="Septima Sobre SOL Septima (7/G7)"/>
+            <StringItem index="55" value="Septima Sobre SOLSostenido Septima (7/G#7)"/>
+            <StringItem index="56" value="Septima Sobre LA Septima (7/A7)"/>
+            <StringItem index="57" value="Septima Sobre LA Sostenido Septima (7/A#7)"/>
+            <StringItem index="58" value="Septima Sobre SI Septima (7/B7)"/>
+            <StringItem index="59" value="voicing en octavas (/vo)"/>
+            <StringItem index="60" value="Novena a&#xf1;adida a&#xf1;adido 11 (maj9add11)"/>
+            <StringItem index="61" value="Onceaba a&#xf1;adida a&#xf1;adido 13 (maj11add13)"/>
+            <StringItem index="62" value="Novena a&#xf1;adida a&#xf1;adido 11, 13 (maj9add11add13)"/>
           </StringArray>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
