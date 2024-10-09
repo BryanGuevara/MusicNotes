@@ -9,6 +9,7 @@ import java.awt.Toolkit;
 import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JTextPane;
 
 /**
  *
@@ -29,8 +30,6 @@ public class Info extends javax.swing.JFrame {
                 LabelWallpaper.getHeight(), Image.SCALE_DEFAULT));
         LabelWallpaper.setIcon(icon);
 
-        jTextArea1.setCaretPosition(0);
-
         ImageIcon Facebook = new ImageIcon("src/img/facebook.png");
         Icon iconf = new ImageIcon(Facebook.getImage().getScaledInstance(BtnFacebook.getWidth(),
                 BtnFacebook.getHeight(), Image.SCALE_DEFAULT));
@@ -47,6 +46,7 @@ public class Info extends javax.swing.JFrame {
                 BtnGithub.getHeight(), Image.SCALE_DEFAULT));
         BtnGithub.setIcon(icong);
 
+        AreaInfo.setCaretPosition(0);
     }
 
     @Override
@@ -73,9 +73,9 @@ public class Info extends javax.swing.JFrame {
         BtnFacebook = new javax.swing.JButton();
         BtnGithub = new javax.swing.JButton();
         BtnInstagram = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        AreaInfo = new javax.swing.JTextPane();
+        jTextField5 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
@@ -122,6 +122,15 @@ public class Info extends javax.swing.JFrame {
         });
         getContentPane().add(BtnInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 60, 60));
 
+        AreaInfo.setEditable(false);
+        AreaInfo.setBackground(new java.awt.Color(56, 56, 56));
+        AreaInfo.setContentType("text/html"); // NOI18N
+        AreaInfo.setForeground(new java.awt.Color(0, 0, 0));
+        AreaInfo.setText("<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <style>\n        body {\n            background-color: rgb(56, 56, 56);\n            color: rgb(255, 255, 255);\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n            margin: 20px;\n            font-size: 10px; \n        }\n        h1 {\n            font-size: 16px; \n            border-bottom: 2px solid;\n            padding-bottom: 5px;\n            margin-top: 30px;\n            text-align: center;\n        }\n        ul {\n            margin: 10px 0;\n            padding-left: 20px;\n        }\n        li {\n            color: rgb(220, 220, 220);\n            font-size: 10px; /* Tamaño reducido a un cuarto */\n            margin-bottom: 5px;\n            position: relative;\n        }\n        li::before {\n            content: \"•\";\n            color: rgb(255, 204, 0);\n            position: absolute;\n            left: -20px;\n        }\n        .version-section {\n            padding: 10px;\n            border-radius: 5px;\n            background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */\n            margin-bottom: 20px;\n        }\n    </style>\n</head>\n<body>\n    <section id=\"v2.5\" class=\"version-section\">\n        <h1>Music Notes Beta v2.5</h1>\n        <ul>\n            <li>Cambio de Wallpaper en \"Acordes Guitarra\"</li>\n            <li>Cambios en el Software de formación de acordes en \"Acordes Guitarra\"</li>\n            <li>Adición de 1 familia de acordes a \"Acordes Guitarra\"</li>\n            <li>Modificación de los reinicios en \"Generador de Escalas\"</li>\n            <li>Adición de más teclas al teclado dibujado en \"Acordes Piano\"</li>\n            <li>Adición de 16 familias de acordes a \"Acordes Piano\"</li>\n            <li>Adición de 5 Escalas modales faltantes en \"Galería de Escalas\"</li>\n            <li>Actualización del software para formar círculos en \"Galería de Escalas\"</li>\n            <li>Solución de incoherencias en los acordes en las escalas menores en \"Galería de Escalas\"</li>\n            <li>Eliminación de la tabla \"Acordes\" de la pestaña \"Galería de Escalas\"</li>\n            <li>Modificación de la tabla \"Notas\" de la pestaña \"Galería de Escalas\" para cumplir la función de la tabla \"Acordes\"</li>\n            <li>Adición de sonidos en \"Acordes de Piano\"</li>\n            <li>Cambio en el estilo de los contenidos de los capítulos de \"Teoría Musical\"</li>\n            <li>Optimización del Software de \"Teoría Musical\"</li>\n            <li>Cambios en el Software de \"Generador de Escalas\"</li>\n            <li>Se modificó el nombre de 7 escalas en \"Generador de Escalas\"</li>\n            <li>Se añadieron 5 escalas en \"Generador de Escalas\"</li>\n            <li>Cambio de estilo en las \"Notas de la Version\" de la pestaña \"Info\"</li>\n        </ul>\n    </section>\n    <hr>\n\n    <section id=\"v2.0\" class=\"version-section\">\n        <h1>MusicNotes v2.0</h1>\n        <ul>\n            <li>Reorganización de botones</li>\n            <li>\"Acordes Piano\" movido a Inicio</li>\n            <li>\"Acordes Guitarra\" movido a Inicio</li>\n            <li>\"Generador de Escalas\" movido a Extra</li>\n            <li>Botones de redes sociales movido a Info</li>\n            <li>Eliminación de la pestaña \"Redes Sociales\"</li>\n            <li>Optimización del Software para sacar los tonos de las escalas Precargadas en \"Generador de Escalas\"</li>\n            <li>Adición de 22 escalas Precargadas en la pestaña \"Generador de Escalas\"</li>\n            <li>Adición de 23 temas nuevos en \"Teoría Musical\"</li>\n            <li>Adición de 1 Carta de agradecimiento en \"Teoría Musical\"</li>\n        </ul>\n    </section>\n    <hr>\n\n    <section id=\"v1.0\" class=\"version-section\">\n        <h1>MusicNotes v1.0</h1>\n        <ul>\n            <li>Cambio en el diseño de todas las pestañas</li>\n            <li>Adición de 39 Temas a la pestaña \"Teoría Musical\"</li>\n            <li>Modificación de Nombre de \"Acordes\" a \"Acordes de Piano\"</li>\n            <li>Adición de la Pestaña \"Acordes de guitarra\"</li>\n            <li>Adición de 2 familias de acordes a \"Acordes de Guitarra\"</li>\n            <li>Adición de la tabla \"Acordes\" en la pestaña \"Galería de Escalas\"</li>\n        </ul>\n    </section>\n    <hr>\n\n    <section id=\"beta-1.5\" class=\"version-section\">\n        <h1>MusicNotes Beta v1.5</h1>\n        <ul>\n            <li>Actualización del software para formar los acordes</li>\n            <li>Modificación de la pestaña \"Extra\" para añadir sus funciones</li>\n            <li>Adición de pestaña \"Redes Sociales\"</li>\n            <li>Adición de Pestaña \"Teoría Musical\"</li>\n            <li>Adición de Pestaña \"Información de la Aplicación\"</li>\n            <li>Modificación de estilo en las Tablas de \"Galería de Escalas\" y \"Generador de Escalas\"</li>\n            <li>Adición de 20 Familias a \"Galería de Acordes\"</li>\n            <li>Adición de 9 Temas a la pestaña \"Teoría Musical\"</li>\n        </ul>\n    </section>\n    <hr>\n\n    <section id=\"beta-1.0\" class=\"version-section\">\n        <h1>MusicNotes Beta v1.0</h1>\n        <ul>\n            <li>Adición de la pestaña \"Generador de Escalas\"</li>\n            <li>Modificación del estilo en todo el programa</li>\n            <li>Adición de fondos en todas las pestañas</li>\n            <li>Apertura del programa a todo el público</li>\n            <li>Adición de 6 escalas PreCargadas en la pestaña \"Generador de Escalas\"</li>\n        </ul>\n    </section>\n    <hr>\n\n    <section id=\"alfa-0.1\" class=\"version-section\">\n        <h1>MusicNotes Alfa v0.1</h1>\n        <ul>\n            <li>Adición de la pestaña \"Galería de Acordes\"</li>\n            <li>Adición de la pestaña \"Galería de Escalas\"</li>\n            <li>Adición de 15 familias de acordes en la pestaña \"Galería de Acordes\"</li>\n            <li>Adición de las 24 escalas (12 mayores, 12 menores) en la pestaña \"Galería de Escalas\"</li>\n        </ul>\n    </section>\n    <hr>\n\n    <section id=\"pre-alfa-0.0.1\" class=\"version-section\">\n        <h1>MusicNotes Pre Alfa v0.0.1</h1>\n        <ul>\n            <li>Creación del Software para generar escalas</li>\n            <li>Adición de las 12 notas disponibles</li>\n            <li>Adición de la escala Mayor al generador de escalas de consola</li>\n        </ul>\n    </section>\n</body>\n</html>\n");
+        jScrollPane1.setViewportView(AreaInfo);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 520, 230));
+
         jTextField5.setEditable(false);
         jTextField5.setBackground(new java.awt.Color(51, 51, 51));
         jTextField5.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -131,28 +140,12 @@ public class Info extends javax.swing.JFrame {
         jTextField5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 220, 30));
 
-        jScrollPane1.setBorder(null);
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(51, 51, 51));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("# Music Notes v3.0\n\n-  Cambio de Wallpaper en \"Acordes Guitarra\"\n-  Cambios en el Software de formacion de acordes en \"Acordes Guitarra\"\n-  Adicion de 1 familia de acordes a \"Acordes Guitarra\"\n-  Modificacion de los reinicios en \"Generador de Escalas\"\n-  Adicion de mas teclas al teclado dibujado en \"Acordes Piano\"\n-  Adicion de 16 familia de acordes a \"Acordes Piano\"\n-  Adicion de 5 las Escalas modales faltantes en \"Galeria de Escalas\"\n-  Actualización del software para formar circulos en \"Galeria de Escalas\"\n-  Solución de incoherencias en los acordes en las escalas menores en \"Galeria de Escalas\"\n-  Eliminación de la tabla \"Acordes\" de la pestaña \"Galeria de Escalas\"\n-  Modificación de la tabla \"Notas\" de la pestaña \"Galeria de Escalas\" para cumplir la funcion de la tabla \"Acordes\"\n-  Adicion de sonidos en \"Acordes de Piano\"\n-  Cambio en el estilo de los contenidos de los capitulos de \"Teoria Musical\"\n- Optimización del Software de \"Teoria Musical\"\n- Cambios en el Software de \"Generador de Escalas\"\n- Se modifico el nombre de 7 escalas en \"Generador de Escalas\"\n- Se añadieron 5 escalas en \"Generador de Escalas\"\n\n----------------------------------------------------------------\n# MusicNotes v2.0\n\n- Reorganizaion de botones\n- \"Acordes Piano\" movido a Inicio\n- \"Acordes Guitarra\" movido a Inicio\n- \"Generador de Escalas\" movido a Extra\n- Botones de redes sociales movido a Info\n- Eliminacion de la pestaña \"Redes Sociales\"\n- Optimizacion del Software para sacar los tonos de las escalas Precargadas en \"Generador de Escalas\"\n- Adicion de 22 escalas Precargadas en la pestaña \"Generador de Escalas\"\n- Adicion de 23 tema nuevos en \"Teoria Musical\"\n- Adicion de 1 Carta de agradecimiento en \"Teoria Musical\"\n\n----------------------------------------------------------------\n# MusicNotes v1.0\n\n- Cambio en el diseño de todas las pestañas\n- Adicion de 39 Temas a la pestaña \"Teoria Muscal\"\n- Modificacion de Nombre de \"Acordes\" a \"Acordes de Piano\"\n- Adicion de la Pestaña \"Acordes de guitarra\"\n- Adicion de 2 familias de acordes a \"Acordes de Guitarra\"\n- Adicion de la tabla \"Acordes\" en la pestaña \"Galeria de Escalas\"\n\n----------------------------------------------------------------\n# MusicNotes Beta v1.5\n\n- Actualización del software para formar los acordes\n- Modificación de la pestaña \"Extra\" para añadir sus funciones\n- Adición de pestaña \"Redes Sociales\"\n- Adición de Pestaña \"Teoría Musical\"\n- Adicion de Pestaña \"Informacion de la Aplicación\"\n- Modificación de estilo en las Tablas de \"Galería de Escalas\" y \"Generador de Escalas\"\n- Adicion de 20 Familias a \"Galeria de Acordes\"\n- Adicion de 9 Temas a la pestaña \"Teoria Musical\"\n\n----------------------------------------------------------------\n# MusicNotes Beta v1.0\n\n- Adición de la pestaña \"Generador de Escalas\"\n- Modificación del estilo en todo el programa\n- Adición de fondos en todas las pestañas\n- Apertura del programa a todo el público\n- Adicion de 6 escalas PreCargadas en la pestaña \"Generador de Escalas\"\n\n----------------------------------------------------------------\n# MusicNotes Alfa v0.1\n\n- Adición de la pestaña \"Galería de Acordes\"\n- Adición de la pestaña \"Galería de Escalas\"\n- Adición de 15 familias de acordes en la pestaña \"Galería de Acordes\"\n- Adición de las 24 escalas (12 mayores, 12 menores) en la pestaña \"Galería de Escalas\"\n\n----------------------------------------------------------------\n# MusicNotes Pre Alfa v0.0.1\n\n- Creacion del Software para genera escalas\n- Adicion de las 12 notas disponibles\n- Adicion de la escala Mayor al generador de escalas de consola");
-        jTextArea1.setWrapStyleWord(true);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 540, 240));
-
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(51, 51, 51));
         jTextField1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("MusicNotes v3.0");
+        jTextField1.setText("MusicNotes Beta v2.5");
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 520, 70));
 
@@ -288,13 +281,13 @@ public class Info extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextPane AreaInfo;
     private javax.swing.JButton BtnFacebook;
     private javax.swing.JButton BtnGithub;
     private javax.swing.JButton BtnInstagram;
     private javax.swing.JLabel LabelWallpaper;
     private javax.swing.JButton jButton3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
