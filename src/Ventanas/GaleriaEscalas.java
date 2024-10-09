@@ -68,7 +68,7 @@ public class GaleriaEscalas extends javax.swing.JFrame {
         jScrollPane2.setViewportView(TableCirculo);
 
         circulo.addColumn("Tonica");
-        circulo.addColumn("Tension°");
+        circulo.addColumn("Tension");
         circulo.addColumn("Acompañante");
         circulo.addColumn("Complemento");
 

@@ -2,64 +2,55 @@ package Clases;
 
 public class Enciclopedia {
 
-public String CSS() {
-    return "<style>" +
-           "body {" +
-           "   background-color: #121212;" +
-           "   color: #E0E0E0;" +
-           "   font-family: Arial, sans-serif;" +
-           "   padding: 20px;" +
-           "}" +
-           
-           "h1 {" +
-           "   color: #4A90E2;" +
-           "   text-align: center;" +
-           "   text-decoration: underline;" +
-           "   text-decoration-color: #2C3E50;" +
-           "   margin: 30px 0 10px;" +
-           "   font-size: 3em;" +
-           "}" +
-           
-           "h2 {" +
-           "   color: #5B8FF9;" +
-           "   text-align: center;" +
-           "   text-decoration: underline;" +
-           "   text-decoration-color: #3498DB;" +
-           "   margin: 25px 0 10px;" +
-           "   font-size: 2.5em;" +
-           "}" +
-           
-           "h3 {" +
-           "   color: #66B2FF;" +
-           "   text-align: center;" +
-           "   text-decoration: underline;" +
-           "   text-decoration-color: #1ABC9C;" +
-           "   margin: 20px 0 10px;" +
-           "   font-size: 2em;" +
-           "}" +
-           
-           "h4, h5, h6 {" +
-           "   color: #A0C4FF;" +
-           "   margin: 10px 0 0;" +
-           "   font-size: 1.5em;" +
-           "}" +
-           
-           "strong {" +
-           "   color: #C0E0FF;" +
-           "   font-weight: bold;" +
-           "}" +
-           
-           "ul {" +
-           "   list-style-type: disc;" +
-           "   padding-left: 20px;" +
-           "}" +
-           
-           "li {" +
-           "   margin: 5px 0;" +
-           "}" +
-           "</style>";
-}
-
+    public String CSS() {
+        return "<style>"
+                + "body {"
+                + "   background-color: #121212;"
+                + "   color: #E0E0E0;"
+                + "   font-family: Arial, sans-serif;"
+                + "   padding: 20px;"
+                + "}"
+                + "h1 {"
+                + "   color: #4A90E2;"
+                + "   text-align: center;"
+                + "   border-bottom: 4px solid #4A90E2;"
+                + "   margin: 30px 0 10px;"
+                + "   font-size: 3em;"
+                + "}"
+                + "h2 {"
+                + "   color: #5B8FF9;"
+                + "   text-align: center;"
+                + "   text-decoration: underline;"
+                + "   text-decoration-color: #3498DB;"
+                + "   margin: 25px 0 10px;"
+                + "   font-size: 2.5em;"
+                + "}"
+                + "h3 {"
+                + "   color: #66B2FF;"
+                + "   text-align: center;"
+                + "   text-decoration: underline;"
+                + "   text-decoration-color: #1ABC9C;"
+                + "   margin: 20px 0 10px;"
+                + "   font-size: 2em;"
+                + "}"
+                + "h4, h5, h6 {"
+                + "   color: #A0C4FF;"
+                + "   margin: 10px 0 0;"
+                + "   font-size: 1.5em;"
+                + "}"
+                + "strong {"
+                + "   color: #C0E0FF;"
+                + "   font-weight: bold;"
+                + "}"
+                + "ul {"
+                + "   list-style-type: disc;"
+                + "   padding-left: 20px;"
+                + "}"
+                + "li {"
+                + "   margin: 5px 0;"
+                + "}"
+                + "</style>";
+    }
 
     public String Staccato() {
         return "<!DOCTYPE html>"

@@ -355,11 +355,6 @@ public class AcordesPiano extends javax.swing.JFrame {
         DOSos1.setForeground(new java.awt.Color(255, 255, 255));
         DOSos1.setText("C#");
         DOSos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        DOSos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DOSos1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(DOSos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 20, 80));
 
         RESos1.setBackground(new java.awt.Color(0, 0, 0));
@@ -367,11 +362,6 @@ public class AcordesPiano extends javax.swing.JFrame {
         RESos1.setForeground(new java.awt.Color(255, 255, 255));
         RESos1.setText("D#");
         RESos1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        RESos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RESos1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(RESos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 20, 80));
 
         FASos1.setBackground(new java.awt.Color(0, 0, 0));
@@ -400,11 +390,6 @@ public class AcordesPiano extends javax.swing.JFrame {
         MI1.setForeground(new java.awt.Color(0, 0, 0));
         MI1.setText("E");
         MI1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        MI1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MI1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(MI1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 30, 130));
 
         FA1.setBackground(new java.awt.Color(255, 255, 255));
@@ -419,11 +404,6 @@ public class AcordesPiano extends javax.swing.JFrame {
         RE1.setForeground(new java.awt.Color(0, 0, 0));
         RE1.setText("D");
         RE1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        RE1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RE1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(RE1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 30, 130));
 
         DO1.setBackground(new java.awt.Color(255, 255, 255));
@@ -431,11 +411,6 @@ public class AcordesPiano extends javax.swing.JFrame {
         DO1.setForeground(new java.awt.Color(0, 0, 0));
         DO1.setText("C");
         DO1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        DO1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DO1ActionPerformed(evt);
-            }
-        });
         getContentPane().add(DO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 30, 130));
 
         SOL1.setBackground(new java.awt.Color(255, 255, 255));
@@ -524,26 +499,6 @@ public class AcordesPiano extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void DO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DO1ActionPerformed
-        playNote(60);
-    }//GEN-LAST:event_DO1ActionPerformed
-
-    private void DOSos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DOSos1ActionPerformed
-        playNote(61);
-    }//GEN-LAST:event_DOSos1ActionPerformed
-
-    private void RE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RE1ActionPerformed
-        playNote(62);
-    }//GEN-LAST:event_RE1ActionPerformed
-
-    private void RESos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RESos1ActionPerformed
-        playNote(63);
-    }//GEN-LAST:event_RESos1ActionPerformed
-
-    private void MI1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MI1ActionPerformed
-        playNote(64);
-    }//GEN-LAST:event_MI1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1215,7 +1170,7 @@ public class AcordesPiano extends javax.swing.JFrame {
             60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
             72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
             84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
-            96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107
+            96, 97, 98, 99, 100
         };
 
         JButton[] teclas = {
@@ -1323,6 +1278,8 @@ public class AcordesPiano extends javax.swing.JFrame {
             synthesizer = MidiSystem.getSynthesizer();
             synthesizer.open();
             channels = synthesizer.getChannels();
+
+            addListenersToKeys();
         } catch (MidiUnavailableException e) {
             e.printStackTrace();
         }
@@ -1332,18 +1289,39 @@ public class AcordesPiano extends javax.swing.JFrame {
         if (channels != null) {
             int channelIndex = note % channels.length;
 
-            if (!isNotePlaying[note]) {
-                channels[channelIndex].noteOn(note, 100);
-                isNotePlaying[note] = true;
+            // Reproduce la nota sin verificar si está sonando
+            channels[channelIndex].noteOn(note, 100); // Inicia la nota
 
-                timers[note] = new javax.swing.Timer(2000, e -> {
-                    channels[channelIndex].noteOff(note);
-                    isNotePlaying[note] = false;
-                    timers[note].stop();
-                    timers[note] = null;
-                });
-                timers[note].start();
-            }
+            // Crear un nuevo Timer para apagar la nota
+            javax.swing.Timer timer = new javax.swing.Timer(2000, e -> {
+                channels[channelIndex].noteOff(note); // Apagar la nota
+                // O puedes optar por no mantener un estado isNotePlaying para permitir
+                // la nota que suene de nuevo inmediatamente si se presiona
+            });
+            timer.setRepeats(false); // Solo ejecutar una vez
+            timer.start(); // Inicia el Timer
+        }
+    }
+
+    public void addListenersToKeys() {
+
+        int[] notas = {
+            60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71,
+            72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
+            84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95,
+            96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107
+        };
+
+        JButton[] teclas = {
+            DO1, DOSos1, RE1, RESos1, MI1, FA1, FASos1, SOL1, SOLSos1, LA1, LASos1, SI1,
+            DO2, DOSos2, RE2, RESos2, MI2, FA2, FASos2, SOL2, SOLSos2, LA2, LASos2, SI2,
+            DO3, DOSos3, RE3, RESos3, MI3, FA3, FASos3, SOL3, SOLSos3, LA3, LASos3, SI3,
+            DO4, DOSos4, RE4, RESos4, MI4
+        };
+
+        for (int i = 0; i < teclas.length; i++) {
+            final int note = notas[i];  // Necesario para usar dentro del ActionListener
+            teclas[i].addActionListener(e -> playNote(note));
         }
     }
 
