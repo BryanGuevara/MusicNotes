@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+      <Connection component="Form" name="iconImage" type="property"/>
+    </Property>
+    <Property name="undecorated" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-51,0,0,2,73"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="BtnFacebook">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnFacebookActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="490" y="130" width="60" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnGithub">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnGithubActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="410" y="130" width="60" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnInstagram">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnInstagramActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="330" y="130" width="60" height="60"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="30" y="210" width="520" height="230"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextPane" name="AreaInfo">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="38" green="38" red="38" type="rgb"/>
+            </Property>
+            <Property name="contentType" type="java.lang.String" value="text/html" noResource="true"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&lt;!DOCTYPE html&gt;&#xa;&lt;html lang=&quot;es&quot;&gt;&#xa;&lt;head&gt;&#xa;    &lt;meta charset=&quot;UTF-8&quot;&gt;&#xa;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&#xa;        &lt;style&gt;&#xa;        body {&#xa;            background-color: rgb(56, 56, 56);&#xa;            color: rgb(255, 255, 255);&#xa;            font-family: Arial, sans-serif;&#xa;            line-height: 1.6;&#xa;            margin: 20px;&#xa;            font-size: 10px; &#xa;        }&#xa;        h1 {&#xa;            font-size: 16px; &#xa;            border-bottom: 2px solid;&#xa;            padding-bottom: 5px;&#xa;            margin-top: 30px;&#xa;            text-align: center;&#xa;        }&#xa;        ul {&#xa;            margin: 10px 0;&#xa;            padding-left: 20px;&#xa;        }&#xa;        li {&#xa;            color: rgb(220, 220, 220);&#xa;            font-size: 10px; /* Tama&#xf1;o reducido a un cuarto */&#xa;            margin-bottom: 5px;&#xa;            position: relative;&#xa;        }&#xa;        li::before {&#xa;            content: &quot;&#x2022;&quot;;&#xa;            color: rgb(255, 204, 0);&#xa;            position: absolute;&#xa;            left: -20px;&#xa;        }&#xa;        .version-section {&#xa;            padding: 10px;&#xa;            border-radius: 5px;&#xa;            background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil */&#xa;            margin-bottom: 20px;&#xa;        }&#xa;    &lt;/style&gt;&#xa;&lt;/head&gt;&#xa;&lt;body&gt;&#xa;    &lt;section id=&quot;v2.5&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;Music Notes Beta v2.5&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Cambio de Wallpaper en &quot;Acordes Guitarra&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Cambios en el Software de formaci&#xf3;n de acordes en &quot;Acordes Guitarra&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 1 familia de acordes a &quot;Acordes Guitarra&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Modificaci&#xf3;n de los reinicios en &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de m&#xe1;s teclas al teclado dibujado en &quot;Acordes Piano&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 16 familias de acordes a &quot;Acordes Piano&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 5 Escalas modales faltantes en &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Actualizaci&#xf3;n del software para formar c&#xed;rculos en &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Soluci&#xf3;n de incoherencias en los acordes en las escalas menores en &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Eliminaci&#xf3;n de la tabla &quot;Acordes&quot; de la pesta&#xf1;a &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Modificaci&#xf3;n de la tabla &quot;Notas&quot; de la pesta&#xf1;a &quot;Galer&#xed;a de Escalas&quot; para cumplir la funci&#xf3;n de la tabla &quot;Acordes&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de sonidos en &quot;Acordes de Piano&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Cambio en el estilo de los contenidos de los cap&#xed;tulos de &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Optimizaci&#xf3;n del Software de &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Cambios en el Software de &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Se modific&#xf3; el nombre de 7 escalas en &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Se a&#xf1;adieron 5 escalas en &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Cambio de estilo en las &quot;Notas de la Version&quot; de la pesta&#xf1;a &quot;Info&quot;&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;    &lt;hr&gt;&#xa;&#xa;    &lt;section id=&quot;v2.0&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;MusicNotes v2.0&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Reorganizaci&#xf3;n de botones&lt;/li&gt;&#xa;            &lt;li&gt;&quot;Acordes Piano&quot; movido a Inicio&lt;/li&gt;&#xa;            &lt;li&gt;&quot;Acordes Guitarra&quot; movido a Inicio&lt;/li&gt;&#xa;            &lt;li&gt;&quot;Generador de Escalas&quot; movido a Extra&lt;/li&gt;&#xa;            &lt;li&gt;Botones de redes sociales movido a Info&lt;/li&gt;&#xa;            &lt;li&gt;Eliminaci&#xf3;n de la pesta&#xf1;a &quot;Redes Sociales&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Optimizaci&#xf3;n del Software para sacar los tonos de las escalas Precargadas en &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 22 escalas Precargadas en la pesta&#xf1;a &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 23 temas nuevos en &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 1 Carta de agradecimiento en &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;    &lt;hr&gt;&#xa;&#xa;    &lt;section id=&quot;v1.0&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;MusicNotes v1.0&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Cambio en el dise&#xf1;o de todas las pesta&#xf1;as&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 39 Temas a la pesta&#xf1;a &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Modificaci&#xf3;n de Nombre de &quot;Acordes&quot; a &quot;Acordes de Piano&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de la Pesta&#xf1;a &quot;Acordes de guitarra&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 2 familias de acordes a &quot;Acordes de Guitarra&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de la tabla &quot;Acordes&quot; en la pesta&#xf1;a &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;    &lt;hr&gt;&#xa;&#xa;    &lt;section id=&quot;beta-1.5&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;MusicNotes Beta v1.5&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Actualizaci&#xf3;n del software para formar los acordes&lt;/li&gt;&#xa;            &lt;li&gt;Modificaci&#xf3;n de la pesta&#xf1;a &quot;Extra&quot; para a&#xf1;adir sus funciones&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de pesta&#xf1;a &quot;Redes Sociales&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de Pesta&#xf1;a &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de Pesta&#xf1;a &quot;Informaci&#xf3;n de la Aplicaci&#xf3;n&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Modificaci&#xf3;n de estilo en las Tablas de &quot;Galer&#xed;a de Escalas&quot; y &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 20 Familias a &quot;Galer&#xed;a de Acordes&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 9 Temas a la pesta&#xf1;a &quot;Teor&#xed;a Musical&quot;&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;    &lt;hr&gt;&#xa;&#xa;    &lt;section id=&quot;beta-1.0&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;MusicNotes Beta v1.0&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de la pesta&#xf1;a &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Modificaci&#xf3;n del estilo en todo el programa&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de fondos en todas las pesta&#xf1;as&lt;/li&gt;&#xa;            &lt;li&gt;Apertura del programa a todo el p&#xfa;blico&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 6 escalas PreCargadas en la pesta&#xf1;a &quot;Generador de Escalas&quot;&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;    &lt;hr&gt;&#xa;&#xa;    &lt;section id=&quot;alfa-0.1&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;MusicNotes Alfa v0.1&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de la pesta&#xf1;a &quot;Galer&#xed;a de Acordes&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de la pesta&#xf1;a &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de 15 familias de acordes en la pesta&#xf1;a &quot;Galer&#xed;a de Acordes&quot;&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de las 24 escalas (12 mayores, 12 menores) en la pesta&#xf1;a &quot;Galer&#xed;a de Escalas&quot;&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;    &lt;hr&gt;&#xa;&#xa;    &lt;section id=&quot;pre-alfa-0.0.1&quot; class=&quot;version-section&quot;&gt;&#xa;        &lt;h1&gt;MusicNotes Pre Alfa v0.0.1&lt;/h1&gt;&#xa;        &lt;ul&gt;&#xa;            &lt;li&gt;Creaci&#xf3;n del Software para generar escalas&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de las 12 notas disponibles&lt;/li&gt;&#xa;            &lt;li&gt;Adici&#xf3;n de la escala Mayor al generador de escalas de consola&lt;/li&gt;&#xa;        &lt;/ul&gt;&#xa;    &lt;/section&gt;&#xa;&lt;/body&gt;&#xa;&lt;/html&gt;&#xa;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JTextField" name="jTextField5">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Redes Sociales"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="330" y="90" width="220" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="36" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="MusicNotes Beta v2.5"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="30" y="10" width="520" height="70"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField2">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Notas de la version"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="30" y="180" width="170" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField4">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Hecho con Java 17"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="30" y="130" width="230" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField3">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Creado Por Bryan Guevara"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="30" y="90" width="230" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="X"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+        <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="550" y="0" width="40" height="40"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelWallpaper">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+            <BevelBorder/>
+          </Border>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="590" height="460"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>
